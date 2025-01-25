@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LearnHub - Online Tutorials</title>
+    <title>LearnHub - SQL Tutorial</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         /* Global Styles */
@@ -16,31 +16,10 @@
         }
 
         header {
-            background: #f4f4f4;
-            color: ffffff;
-            text-align: left;
-            padding: 1rem;
-        
-        }
-
-        header {
-        background: #e2e2e2;
-        color: #000000; /* Use the hex color code for white */
-        text-align: left;
-        padding: 1rem;
-        display: flex; /* Added flex for aligning the logo and text */
-        align-items: center;
-        }
-
-        header img {
-            width: 100px;
-            height: 100px;
-            margin-right: 20px; /* Adds space between the logo and text */
-        }
-
-        header h1 {
-            font-size: 1.5rem;
-            margin: 0; /* Removes default margin from <h1> */
+            background: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
         }
 
         nav {
@@ -176,46 +155,72 @@
 </head>
 <body>
     <header>
-        <a href="index.html"><img src="logo.png" alt="LearnHub Logo"></a>
-        
-        <h1>Armenian Programming School</h1>
-        <nav>
-            <a href="#home" onclick="navigateTo('#home')">Home</a>
-            <a href="#tutorials" onclick="navigateTo('#tutorials')">Tutorials</a>
-            <a href="#about" onclick="navigateTo('#about')">About</a>
-            <a href="#contact" onclick="navigateTo('#contact')">Contact</a>
-        </nav>
+        <h1>LearnHub - SQL Tutorial</h1>
     </header>
 
     <nav>
-        <li><a href="#html" onclick="navigateTo('#html')">HTML</a></li>
-        <li><a href="#css" onclick="navigateTo('#css')">CSS</a></li>
-        <li><a href="#javascript" onclick="navigateTo('#javascript')">JavaScript</a></li>
-        <li><a href="python.html" onclick="navigateTo('#python')">Python</a></li>
-        <li><a href="sql.html" onclick="navigateTo('#sql')">SQL</a></li>
+        <a href="index.html" onclick="navigateTo('#home')">Home</a>
+        <a href="python.html" onclick="navigateTo('#python')">Python</a>
+        <a href="sql.html" onclick="navigateTo('#sql')">SQL</a>
+        <a href="#tutorials" onclick="navigateTo('#tutorials')">Tutorials</a>
+        <a href="#about" onclick="navigateTo('#about')">About</a>
+        <a href="#contact" onclick="navigateTo('#contact')">Contact</a>
     </nav>
 
     <div class="container">
+        <aside class="sidebar">
+            <h3>SQL Tutorial</h3>
+            <ul>
+                <li><a href="#sql-basics" onclick="navigateTo('#sql-basics')">SQL Basics</a></li>
+                <li><a href="#sql-advanced" onclick="navigateTo('#sql-advanced')">Advanced SQL</a></li>
+                <li><a href="#sql-syntax" onclick="navigateTo('#sql-syntax')">SQL Syntax</a></li>
+                <li><a href="#sql-examples" onclick="navigateTo('#sql-examples')">Examples</a></li>
+                <li><a href="#sql-resources" onclick="navigateTo('#sql-resources')">Resources</a></li>
+            </ul>
+        </aside>
 
         <main class="content">
-            <section id="home">
-                <h1>Welcome to LearnHub</h1>
-                <p>LearnHub provides free tutorials, references, and examples for web development, programming, and more. Explore our comprehensive guides to start learning today!</p>
+            <section id="sql-basics">
+                <h1>SQL Basics</h1>
+                <p>SQL (Structured Query Language) is a standard programming language used to manage and manipulate databases. In this section, you will learn about basic SQL commands such as SELECT, INSERT, UPDATE, and DELETE.</p>
             </section>
 
-            <section id="tutorials" class="hidden">
-                <h1>Tutorials</h1>
-                <p>Here you can find tutorials on various topics like HTML, CSS, JavaScript, and more.</p>
+            <section id="sql-advanced" class="hidden">
+                <h1>Advanced SQL</h1>
+                <p>Learn more advanced SQL techniques, such as subqueries, joins, and indexing to optimize your database queries and structure.</p>
             </section>
 
-            <section id="about" class="hidden">
-                <h1>About Us</h1>
-                <p>LearnHub is dedicated to providing high-quality educational content to learners worldwide. Our mission is to empower individuals by offering free resources for professional growth and personal development.</p>
+            <section id="sql-syntax" class="hidden">
+                <h1>SQL Syntax</h1>
+                <p>Here are the basic SQL syntax rules for creating and manipulating databases:</p>
+                <pre><code>
+-- Example of SQL syntax for selecting data
+SELECT column_name
+FROM table_name
+WHERE condition;
+                </code></pre>
             </section>
 
-            <section id="contact" class="hidden">
-                <h1>Contact Us</h1>
-                <p>If you have any questions, feel free to reach out to us at support@learnhub.com.</p>
+            <section id="sql-examples" class="hidden">
+                <h1>SQL Examples</h1>
+                <p>Explore common SQL queries with examples on how to interact with databases:</p>
+                <pre><code>
+-- Example of SQL query to select all records from a table
+SELECT * FROM customers;
+
+-- Example of SQL query to insert a new record
+INSERT INTO customers (name, age) VALUES ('John Doe', 30);
+                </code></pre>
+            </section>
+
+            <section id="sql-resources" class="hidden">
+                <h1>SQL Resources</h1>
+                <p>Here are some great resources to learn SQL:</p>
+                <ul>
+                    <li><a href="https://www.w3schools.com/sql/" target="_blank">W3Schools SQL Tutorial</a></li>
+                    <li><a href="https://www.sqlbolt.com/" target="_blank">SQLBolt</a></li>
+                    <li><a href="https://www.learn-sql.org/" target="_blank">Learn SQL</a></li>
+                </ul>
             </section>
         </main>
     </div>

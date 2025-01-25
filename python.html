@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LearnHub - Online Tutorials</title>
+    <title>LearnHub - Python Tutorial</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         /* Global Styles */
@@ -179,12 +179,6 @@
         <a href="index.html"><img src="logo.png" alt="LearnHub Logo"></a>
         
         <h1>Armenian Programming School</h1>
-        <nav>
-            <a href="#home" onclick="navigateTo('#home')">Home</a>
-            <a href="#tutorials" onclick="navigateTo('#tutorials')">Tutorials</a>
-            <a href="#about" onclick="navigateTo('#about')">About</a>
-            <a href="#contact" onclick="navigateTo('#contact')">Contact</a>
-        </nav>
     </header>
 
     <nav>
@@ -196,26 +190,60 @@
     </nav>
 
     <div class="container">
+        <aside class="sidebar">
+            <h3>Python Tutorial</h3>
+            <ul>
+                <li><a href="#python-basics" onclick="navigateTo('#python-basics')">Python Basics</a></li>
+                <li><a href="#python-advanced" onclick="navigateTo('#python-advanced')">Advanced Python</a></li>
+                <li><a href="#python-syntax" onclick="navigateTo('#python-syntax')">Python Syntax</a></li>
+                <li><a href="#python-examples" onclick="navigateTo('#python-examples')">Examples</a></li>
+                <li><a href="#python-resources" onclick="navigateTo('#python-resources')">Resources</a></li>
+            </ul>
+        </aside>
 
         <main class="content">
-            <section id="home">
-                <h1>Welcome to LearnHub</h1>
-                <p>LearnHub provides free tutorials, references, and examples for web development, programming, and more. Explore our comprehensive guides to start learning today!</p>
+            <section id="python-basics">
+                <h1>Python Basics</h1>
+                <p>Python is a popular programming language that is known for its simplicity and readability. In this section, you will learn the fundamentals of Python, such as variables, data types, and operators.</p>
             </section>
 
-            <section id="tutorials" class="hidden">
-                <h1>Tutorials</h1>
-                <p>Here you can find tutorials on various topics like HTML, CSS, JavaScript, and more.</p>
+            <section id="python-advanced" class="hidden">
+                <h1>Advanced Python</h1>
+                <p>Once you've mastered the basics, you can explore advanced Python topics like object-oriented programming, decorators, generators, and more!</p>
             </section>
 
-            <section id="about" class="hidden">
-                <h1>About Us</h1>
-                <p>LearnHub is dedicated to providing high-quality educational content to learners worldwide. Our mission is to empower individuals by offering free resources for professional growth and personal development.</p>
+            <section id="python-syntax" class="hidden">
+                <h1>Python Syntax</h1>
+                <p>Learn how to write correct Python syntax. This includes indentation, writing functions, and the rules for creating valid Python code.</p>
+                <pre><code>
+# Example of a simple Python function
+def greet(name):
+    print(f"Hello, {name}!")
+
+greet("World")
+                </code></pre>
             </section>
 
-            <section id="contact" class="hidden">
-                <h1>Contact Us</h1>
-                <p>If you have any questions, feel free to reach out to us at support@learnhub.com.</p>
+            <section id="python-examples" class="hidden">
+                <h1>Python Examples</h1>
+                <p>Explore some common Python code examples to see how to solve different problems using Python.</p>
+                <pre><code>
+# Python program to add two numbers
+a = 5
+b = 3
+sum = a + b
+print(f"The sum of {a} and {b} is {sum}")
+                </code></pre>
+            </section>
+
+            <section id="python-resources" class="hidden">
+                <h1>Python Resources</h1>
+                <p>Here are some great resources to learn Python:</p>
+                <ul>
+                    <li><a href="https://www.python.org/doc/" target="_blank">Python Official Documentation</a></li>
+                    <li><a href="https://realpython.com/" target="_blank">Real Python</a></li>
+                    <li><a href="https://www.learnpython.org/" target="_blank">Learn Python</a></li>
+                </ul>
             </section>
         </main>
     </div>
