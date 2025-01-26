@@ -16,31 +16,23 @@
         }
 
         header {
-            background: #f4f4f4;
-            color: ffffff;
+            background: #e2e2e2;
+            color: #000000;
             text-align: left;
             padding: 1rem;
-        
-        }
-
-        header {
-        background: #e2e2e2;
-        color: #000000; /* Use the hex color code for white */
-        text-align: left;
-        padding: 1rem;
-        display: flex; /* Added flex for aligning the logo and text */
-        align-items: center;
+            display: flex;
+            align-items: center;
         }
 
         header img {
             width: 100px;
             height: 100px;
-            margin-right: 20px; /* Adds space between the logo and text */
+            margin-right: 20px;
         }
 
         header h1 {
             font-size: 1.5rem;
-            margin: 0; /* Removes default margin from <h1> */
+            margin: 0;
         }
 
         nav {
@@ -157,28 +149,25 @@
         }
     </style>
     <script>
-        // Function to dynamically load footer text from data.json
+        // Function to dynamically load footer text and Python basics content from data.json
         async function loadFooterText() {
-        try {
-            const response = await fetch('data.json'); // Fetch the JSON file
-            const data = await response.json(); // Parse the JSON data
+            try {
+                const response = await fetch('data.json'); // Fetch the JSON file
+                const data = await response.json(); // Parse the JSON data
 
-            // Update footer text
-            document.getElementById('footer-text').innerHTML = data.footer.text;
+                // Update footer text
+                document.getElementById('footer-text').innerHTML = data.footer.text;
 
-            // Update Python basics content
-            const pythonBasicsSection = document.querySelector('#python-basics');
-            pythonBasicsSection.querySelector('h1').textContent = data['python-basics'].title;
-            pythonBasicsSection.querySelector('p').textContent = data['python-basics'].text;
-        } catch (error) {
-            console.error("Error loading footer or content:", error);
+                // Update Python basics content
+                const pythonBasicsSection = document.querySelector('#python-basics');
+                pythonBasicsSection.querySelector('h1').textContent = data['python-basics'].title;
+                pythonBasicsSection.querySelector('p').textContent = data['python-basics'].text;
+            } catch (error) {
+                console.error("Error loading footer or content:", error);
+            }
         }
-    }
 
-    </script>
-
-
-    <script>
+        // Navigation function to switch between sections
         function navigateTo(sectionId) {
             const sections = document.querySelectorAll('main > section');
             const navLinks = document.querySelectorAll('nav a');
@@ -196,11 +185,9 @@
         }
     </script>
 </head>
-<body>
+<body onload="loadFooterText()">
     <header>
-        <a href="index.html"><img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/logo.png
-            " alt="LearnHub Logo"></a>
-        
+        <a href="index.html"><img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/logo.png" alt="LearnHub Logo"></a>
         <h1>Armenian Programming School</h1>
     </header>
 
@@ -270,6 +257,8 @@ print(f"The sum of {a} and {b} is {sum}")
         </main>
     </div>
 
-
+    <div class="footer">
+        <p id="footer-text"></p>
+    </div>
 </body>
 </html>
