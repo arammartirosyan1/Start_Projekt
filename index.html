@@ -152,20 +152,17 @@
         }
     </style>
     <script>
-        // Function to dynamically load footer text from data.json
         async function loadFooterText() {
             try {
                 const response = await fetch('data.json'); // Fetch the JSON file
                 const data = await response.json(); // Parse the JSON data
                 
-                // Inject the footer text into the footer element
                 document.getElementById('footer-text').innerHTML = data.footer.text;
             } catch (error) {
                 console.error("Error loading footer text:", error);
             }
         }
 
-        // Call the function when the page loads
         window.onload = loadFooterText;
     </script>
 </head>
@@ -174,7 +171,6 @@
         <a href="index.html"><img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/logo.png" alt="LearnHub Logo"></a>
         <h2>Հայակական օնլայն ծրագրավորման դպրոց</h2>
     </header>
-
     <nav>
         <a href="#html" onclick="navigateTo('#html')">HTML</a>
         <a href="#css" onclick="navigateTo('#css')">CSS</a>

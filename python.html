@@ -157,6 +157,28 @@
         }
     </style>
     <script>
+        // Function to dynamically load footer text from data.json
+        async function loadFooterText() {
+        try {
+            const response = await fetch('data.json'); // Fetch the JSON file
+            const data = await response.json(); // Parse the JSON data
+
+            // Update footer text
+            document.getElementById('footer-text').innerHTML = data.footer.text;
+
+            // Update Python basics content
+            const pythonBasicsSection = document.querySelector('#python-basics');
+            pythonBasicsSection.querySelector('h1').textContent = data['python-basics'].title;
+            pythonBasicsSection.querySelector('p').textContent = data['python-basics'].text;
+        } catch (error) {
+            console.error("Error loading footer or content:", error);
+        }
+    }
+
+    </script>
+
+
+    <script>
         function navigateTo(sectionId) {
             const sections = document.querySelectorAll('main > section');
             const navLinks = document.querySelectorAll('nav a');
@@ -204,8 +226,8 @@
 
         <main class="content">
             <section id="python-basics">
-                <h1>Python Basics</h1>
-                <p>Python is a popular programming language that is known for its simplicity and readability. In this section, you will learn the fundamentals of Python, such as variables, data types, and operators.</p>
+                <h1></h1>
+                <p></p>
             </section>
 
             <section id="python-advanced" class="hidden">
@@ -220,7 +242,6 @@
 # Example of a simple Python function
 def greet(name):
     print(f"Hello, {name}!")
-
 greet("World")
                 </code></pre>
             </section>
@@ -249,8 +270,6 @@ print(f"The sum of {a} and {b} is {sum}")
         </main>
     </div>
 
-    <footer class="footer">
-        <p>&copy; 2025 LearnHub. All rights reserved.</p>
-    </footer>
+
 </body>
 </html>
