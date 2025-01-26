@@ -159,6 +159,13 @@
                 document.getElementById('footer-text').innerHTML = data.footer.text;
 
                 // Update Python basics content
+                const pythonHomeSection = document.querySelector('#python-home');
+                pythonHomeSection.querySelector('h2').textContent = data['python-home'].title1;
+                pythonHomeSection.querySelector('p').textContent = data['python-home'].text1;
+                pythonHomeSection.querySelector('h2').textContent = data['python-home'].title2;
+                pythonHomeSection.querySelector('p').textContent = data['python-home'].text2;
+
+                // Update Python basics content
                 const pythonBasicsSection = document.querySelector('#python-basics');
                 pythonBasicsSection.querySelector('h1').textContent = data['python-basics'].title;
                 pythonBasicsSection.querySelector('p').textContent = data['python-basics'].text;
@@ -197,18 +204,19 @@
     </header>
 
     <nav>
-        <li><a href="#html" onclick="navigateTo('#html')">HTML</a></li>
-        <li><a href="#css" onclick="navigateTo('#css')">CSS</a></li>
-        <li><a href="#javascript" onclick="navigateTo('#javascript')">JavaScript</a></li>
-        <li><a href="python.html" onclick="navigateTo('#python')">Python</a></li>
-        <li><a href="sql.html" onclick="navigateTo('#sql')">SQL</a></li>
+        <a href="#html" onclick="navigateTo('#html')">HTML</a>
+        <a href="#css" onclick="navigateTo('#css')">CSS</a>
+        <a href="#javascript" onclick="navigateTo('#javascript')">JavaScript</a>
+        <a href="python.html" onclick="navigateTo('#python')">Python</a>
+        <a href="sql.html" onclick="navigateTo('#sql')">SQL</a>
     </nav>
 
     <div class="container">
         <aside class="sidebar">
             <h3>Python Tutorial</h3>
             <ul>
-                <li><a href="#python-basics" onclick="navigateTo('#python-basics')">Python Basics</a></li>
+                <li><a href="#python-home" onclick="navigateTo('#python-home')">Home</a></li>
+                <li><a href="#python-basics" onclick="navigateTo('#python-basics')">Basics</a></li>
                 <li><a href="#python-advanced" onclick="navigateTo('#python-advanced')">Advanced Python</a></li>
                 <li><a href="#python-syntax" onclick="navigateTo('#python-syntax')">Python Syntax</a></li>
                 <li><a href="#python-examples" onclick="navigateTo('#python-examples')">Examples</a></li>
@@ -217,12 +225,19 @@
         </aside>
 
         <main class="content">
+            <section id="python-home">
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+            </section>
+
             <section id="python-basics">
                 <h1></h1>
                 <p></p>
             </section>
 
-            <section id="python-advanced">
+            <section id="python-advanced" class="hidden">
                 <h1></h1>
                 <p></p>
             </section>
