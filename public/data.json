@@ -1,14 +1,6 @@
 {
-    "sections": [
-        {
-            "id": "python-basics",
-            "title": "Python Basics",
-            "text": "Python is a popular programming language that is known for its simplicity and readability. In this section, you will learn the fundamentals of Python, such as variables, data types, and operators."
-        },
-        {
-            "id": "python-advanced",
-            "title": "Advanced Python",
-            "text": "Once you've mastered the basics, you can explore advanced Python topics like object-oriented programming, decorators, generators, and more!"
-        }
-    ]
-}
+    "footer": {
+      "text": "&copy; Կայքի տվյալները վերցված են պաշտոնական կայքերից։<br>Կայքը նախատեսված է հայերեն լեզվով ծրագրավորում սովորելու համար։"
+    }
+  }
+  

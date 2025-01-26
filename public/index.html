@@ -16,46 +16,38 @@
         }
 
         header {
-            background: #f4f4f4;
-            color: ffffff;
+            background: #e2e2e2;
+            color: #000000;
             text-align: left;
             padding: 1rem;
-        
-        }
-
-        header {
-        background: #e2e2e2;
-        color: #000000; /* Use the hex color code for white */
-        text-align: left;
-        padding: 1rem;
-        display: flex; /* Added flex for aligning the logo and text */
-        align-items: center;
+            display: flex; 
+            align-items: center;
         }
 
         header img {
-            width: 100px;
-            height: 100px;
-            margin-right: 20px; /* Adds space between the logo and text */
+            width: 70px;
+            height: 70px;
+            margin-right: 20px; 
         }
 
         header h1 {
-            font-size: 1.5rem;
-            margin: 0; /* Removes default margin from <h1> */
+            font-size: 2rem;
+            margin: 0; 
         }
 
         nav {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            background: #333;
+            background: #aeaeae;
             padding: 0.5rem 1rem;
         }
 
         nav a {
-            color: white;
+            color: black;
             text-decoration: none;
             margin: 0 1rem;
-            padding: 0.5rem 1rem;
+            padding: 0.3rem 1rem;
             transition: background 0.3s;
         }
 
@@ -70,7 +62,6 @@
             min-height: 100vh;
         }
 
-        /* Sidebar Styles */
         .sidebar {
             flex: 1;
             background: #f4f4f4;
@@ -106,7 +97,6 @@
             background: #ddd;
         }
 
-        /* Main Content Styles */
         .content {
             flex: 3;
             padding: 1.5rem;
@@ -127,7 +117,6 @@
             display: none;
         }
 
-        /* Footer Styles */
         .footer {
             background: #333;
             color: white;
@@ -140,7 +129,13 @@
             margin: 0;
         }
 
-        /* Responsive Design */
+        .hero-image {
+            width: 100%; 
+            height: 100%; 
+            display: block;  
+            margin-bottom: 20px;  
+        }
+
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
@@ -157,71 +152,43 @@
         }
     </style>
     <script>
-        function navigateTo(sectionId) {
-            const sections = document.querySelectorAll('main > section');
-            const navLinks = document.querySelectorAll('nav a');
-
-            // Hide all sections
-            sections.forEach(section => section.classList.add('hidden'));
-
-            // Remove active class from all links
-            navLinks.forEach(link => link.classList.remove('active'));
-
-            // Show selected section and set active link
-            document.querySelector(sectionId).classList.remove('hidden');
-            const activeLink = document.querySelector(`nav a[href="${sectionId}"]`);
-            if (activeLink) activeLink.classList.add('active');
+        // Function to dynamically load footer text from data.json
+        async function loadFooterText() {
+            try {
+                const response = await fetch('data.json'); // Fetch the JSON file
+                const data = await response.json(); // Parse the JSON data
+                
+                // Inject the footer text into the footer element
+                document.getElementById('footer-text').innerHTML = data.footer.text;
+            } catch (error) {
+                console.error("Error loading footer text:", error);
+            }
         }
+
+        // Call the function when the page loads
+        window.onload = loadFooterText;
     </script>
 </head>
 <body>
     <header>
-        <a href="index.html"><img src="logo.png" alt="LearnHub Logo"></a>
-        
-        <h1>Armenian Programming School</h1>
-        <nav>
-            <a href="#home" onclick="navigateTo('#home')">Home</a>
-            <a href="#tutorials" onclick="navigateTo('#tutorials')">Tutorials</a>
-            <a href="#about" onclick="navigateTo('#about')">About</a>
-            <a href="#contact" onclick="navigateTo('#contact')">Contact</a>
-        </nav>
+        <a href="index.html"><img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/public/logo.png" alt="LearnHub Logo"></a>
+        <h2>Հայակական օնլայն ծրագրավորման դպրոց</h2>
     </header>
 
     <nav>
-        <li><a href="#html" onclick="navigateTo('#html')">HTML</a></li>
-        <li><a href="#css" onclick="navigateTo('#css')">CSS</a></li>
-        <li><a href="#javascript" onclick="navigateTo('#javascript')">JavaScript</a></li>
-        <li><a href="python.html" onclick="navigateTo('#python')">Python</a></li>
-        <li><a href="sql.html" onclick="navigateTo('#sql')">SQL</a></li>
+        <a href="#html" onclick="navigateTo('#html')">HTML</a>
+        <a href="#css" onclick="navigateTo('#css')">CSS</a>
+        <a href="#javascript" onclick="navigateTo('#javascript')">JavaScript</a>
+        <a href="python.html" onclick="navigateTo('#python')">Python</a>
+        <a href="sql.html" onclick="navigateTo('#sql')">SQL</a>
     </nav>
 
     <div class="container">
-
-        <main class="content">
-            <section id="home">
-                <h1>Welcome to LearnHub</h1>
-                <p>LearnHub provides free tutorials, references, and examples for web development, programming, and more. Explore our comprehensive guides to start learning today!</p>
-            </section>
-
-            <section id="tutorials" class="hidden">
-                <h1>Tutorials</h1>
-                <p>Here you can find tutorials on various topics like HTML, CSS, JavaScript, and more.</p>
-            </section>
-
-            <section id="about" class="hidden">
-                <h1>About Us</h1>
-                <p>LearnHub is dedicated to providing high-quality educational content to learners worldwide. Our mission is to empower individuals by offering free resources for professional growth and personal development.</p>
-            </section>
-
-            <section id="contact" class="hidden">
-                <h1>Contact Us</h1>
-                <p>If you have any questions, feel free to reach out to us at support@learnhub.com.</p>
-            </section>
-        </main>
+        <img src="main_page_img.jpg" alt="Image Description" class="hero-image">  
     </div>
 
     <footer class="footer">
-        <p>&copy; 2025 LearnHub. All rights reserved.</p>
+        <p id="footer-text"></p> <!-- Footer content will be dynamically inserted here -->
     </footer>
 </body>
 </html>
