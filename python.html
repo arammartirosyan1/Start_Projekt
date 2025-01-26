@@ -162,6 +162,11 @@
                 const pythonBasicsSection = document.querySelector('#python-basics');
                 pythonBasicsSection.querySelector('h1').textContent = data['python-basics'].title;
                 pythonBasicsSection.querySelector('p').textContent = data['python-basics'].text;
+
+                const pythonAdvancedSection = document.querySelector('#python-advanced');
+                pythonAdvancedSection.querySelector('h1').textContent = data['python-advanced'].title;
+                pythonAdvancedSection.querySelector('p').textContent = data['python-advanced'].text;
+                
             } catch (error) {
                 console.error("Error loading footer or content:", error);
             }
@@ -217,9 +222,9 @@
                 <p></p>
             </section>
 
-            <section id="python-advanced" class="hidden">
-                <h1>Advanced Python</h1>
-                <p>Once you've mastered the basics, you can explore advanced Python topics like object-oriented programming, decorators, generators, and more!</p>
+            <section id="python-advanced">
+                <h1></h1>
+                <p></p>
             </section>
 
             <section id="python-syntax" class="hidden">
