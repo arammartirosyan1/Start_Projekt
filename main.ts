@@ -41,7 +41,7 @@ async function handler(req: Request): Promise<Response> {
 
     // Serve the logo.png image
     else if (pathname === "/logo.png") {
-        const response = await fetch("https://github.com/arammartirosyan1/Start_Projekt/raw/main/public/logo.png");
+        const response = await fetch("https://github.com/arammartirosyan1/Start_Projekt/raw/main/logo.png");
         const image = await response.arrayBuffer();
         return new Response(image, {
             headers: { "Content-Type": mimeTypes[".png"] },
