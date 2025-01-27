@@ -159,11 +159,15 @@
                 document.getElementById('footer-text').innerHTML = data.footer.text;
 
                 // Update Python home content
-                const pythonHomeSection = document.querySelector('#python-home');
-                pythonHomeSection.querySelector('h2:nth-of-type(1)').textContent = data['python-home'].title1;
-                pythonHomeSection.querySelector('p:nth-of-type(1)').innerHTML = data['python-home'].text1;
-                pythonHomeSection.querySelector('h2:nth-of-type(2)').textContent = data['python-home'].title2;
-                pythonHomeSection.querySelector('p:nth-of-type(2)').innerHTML = data['python-home'].text2;
+                const pythonHomeSection = document.querySelector('#python-intro');
+                pythonHomeSection.querySelector('h2:nth-of-type(1)').textContent = data['python-intro'].title1;
+                pythonHomeSection.querySelector('p:nth-of-type(1)').innerHTML = data['python-intro'].text1;
+                pythonHomeSection.querySelector('h2:nth-of-type(2)').textContent = data['python-intro'].title2;
+                pythonHomeSection.querySelector('p:nth-of-type(2)').innerHTML = data['python-intro'].text2;
+                pythonHomeSection.querySelector('h2:nth-of-type(3)').textContent = data['python-intro'].title3;
+                pythonHomeSection.querySelector('p:nth-of-type(3)').innerHTML = data['python-intro'].text3;
+                pythonHomeSection.querySelector('h2:nth-of-type(4)').textContent = data['python-intro'].title4;
+                pythonHomeSection.querySelector('p:nth-of-type(4)').innerHTML = data['python-intro'].text4;
 
                 // Update Python basics content
                 const pythonBasicsSection = document.querySelector('#python-basics');
@@ -215,7 +219,7 @@
         <aside class="sidebar">
             <h3>Python Tutorial</h3>
             <ul>
-                <li><a href="#python-home" onclick="navigateTo('#python-home')">Home</a></li>
+                <li><a href="#python-intro" onclick="navigateTo('#python-intro')">Ներածություն</a></li>
                 <li><a href="#python-basics" onclick="navigateTo('#python-basics')">Basics</a></li>
                 <li><a href="#python-advanced" onclick="navigateTo('#python-advanced')">Advanced Python</a></li>
                 <li><a href="#python-syntax" onclick="navigateTo('#python-syntax')">Python Syntax</a></li>
@@ -225,7 +229,11 @@
         </aside>
 
         <main class="content">
-            <section id="python-home">
+            <section id="python-intro">
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
                 <h2></h2>
                 <p></p>
                 <h2></h2>
