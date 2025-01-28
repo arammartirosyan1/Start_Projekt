@@ -14,13 +14,13 @@
       },
   "python-install": {
     "title1": "Python-ի տեղադրում",
-    "text1": "Շատ համակարգիչներում արդեն տեղադրված կլինի python-ը: <br>Ստուգելու համար, թե արդյոք ունեք python-ը տեղադրված համակարգչի վրա, տերմինալում մուտքագրեք հետևյալ հրամանը <br><b>python --version</b><br><br>",
+    "text1": "Շատ համակարգիչներում արդեն տեղադրված կլինի python-ը: <br>Ստուգելու համար, թե արդյոք ունեք python-ը տեղադրված համակարգչի վրա, տերմինալում մուտքագրեք հետևյալ հրամանը <br><b>python --version</b><br>",
     "title2": "",
-    "text2": "Եթե ​​գտնում եք, որ ձեր համակարգչում Python-ը տեղադրված չէ, ապա այն կարող եք անվճար ներբեռնել հետևյալ կայքից՝<b> https://www.python.org/</b><br>",
+    "text2": "Եթե ​​գտնում եք, որ ձեր համակարգչում Python-ը տեղադրված չէ, ապա այն կարող եք անվճար ներբեռնել հետևյալ կայքից՝<b> https://www.python.org/</b><br><br>",
     "title3": "Python-ի գործարկում",
-    "text3": "Python կոդը աշխատացնելու համար անհրաժեշտ է՝ կոդը գրել python(.py) ֆայլի մեջ, վերջինիս հասցեն գրելով python տերմինալում <br> <b>C:/Users/Your Name>python helloworld.py</b><br><br>Որտեղ «helloworld.py»-ը ձեր python ֆայլի անունն է:",
+    "text3": "Python կոդը աշխատացնելու համար անհրաժեշտ է՝ կոդը գրել python(.py) ֆայլի մեջ, վերջինիս հասցեն գրելով python տերմինալում <br> <b>C:/Users/Your Name>python helloworld.py</b><br>Որտեղ «helloworld.py»-ը ձեր python ֆայլի անունն է:<br><br>",
     "title4": "Python հրամանի տող",
-    "text4": "Python-ում փոքր կոդեր փորձարկելու համար ավելի արագ և հեշտ է կոդը չգրել ֆայլում այլ Python տերմինալի միջոցով կարող եք աշխատացնել կոդը,<br>Windows, Mac կամ Linux հրամանի տողում մուտքագրեք հետևյալը.<br>C:/Users/Your Name>python կամ C:/Users/Your Name>py <br>պայմանավորված python-ի վերսիայից<br><br>Գրեք հետևյալ կոդը<br><b> >>> print('Hello, World!') </b>"
+    "text4": "Python-ում փոքր կոդեր փորձարկելու համար ավելի արագ և հեշտ է կոդը չգրել ֆայլում այլ Python տերմինալի միջոցով կարող եք աշխատացնել կոդը,<br>Windows, Mac կամ Linux հրամանի տողում մուտքագրեք հետևյալը.<br>C:/Users/Your Name>python կամ C:/Users/Your Name>py <br>պայմանավորված python-ի տարբերակից<br>Գրեք հետևյալ կոդը<br><b> >>> print('Hello, World!') </b>"
   },
   "python-advanced": {
     "title": "Python python-advanced",
