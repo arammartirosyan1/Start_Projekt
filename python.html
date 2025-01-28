@@ -169,10 +169,16 @@
                 pythonHomeSection.querySelector('h2:nth-of-type(4)').textContent = data['python-intro'].title4;
                 pythonHomeSection.querySelector('p:nth-of-type(4)').innerHTML = data['python-intro'].text4;
 
-                // Update Python basics content
-                const pythonBasicsSection = document.querySelector('#python-basics');
-                pythonBasicsSection.querySelector('h1').textContent = data['python-basics'].title;
-                pythonBasicsSection.querySelector('p').textContent = data['python-basics'].text;
+                // Update Python install content
+                const pythonBasicsSection = document.querySelector('#python-install');
+                pythonBasicsSection.querySelector('h2:nth-of-type(1)').textContent = data['python-install'].title1;
+                pythonBasicsSection.querySelector('p:nth-of-type(1)').innerHTML = data['python-install'].text1;
+                pythonBasicsSection.querySelector('h2:nth-of-type(2)').textContent = data['python-install'].title2;
+                pythonBasicsSection.querySelector('p:nth-of-type(2)').innerHTML = data['python-install'].text2;
+                pythonBasicsSection.querySelector('h2:nth-of-type(3)').textContent = data['python-install'].title3;
+                pythonBasicsSection.querySelector('p:nth-of-type(3)').innerHTML = data['python-install'].text3;
+                pythonBasicsSection.querySelector('h2:nth-of-type(4)').textContent = data['python-install'].title4;
+                pythonBasicsSection.querySelector('p:nth-of-type(4)').innerHTML = data['python-install'].text4;
 
                 const pythonAdvancedSection = document.querySelector('#python-advanced');
                 pythonAdvancedSection.querySelector('h1').textContent = data['python-advanced'].title;
@@ -220,7 +226,7 @@
             <h3>Python Tutorial</h3>
             <ul>
                 <li><a href="#python-intro" onclick="navigateTo('#python-intro')">Ներածություն</a></li>
-                <li><a href="#python-basics" onclick="navigateTo('#python-basics')">Basics</a></li>
+                <li><a href="#python-install" onclick="navigateTo('#python-install')">Ներբեռնել</a></li>
                 <li><a href="#python-advanced" onclick="navigateTo('#python-advanced')">Advanced Python</a></li>
                 <li><a href="#python-syntax" onclick="navigateTo('#python-syntax')">Python Syntax</a></li>
                 <li><a href="#python-examples" onclick="navigateTo('#python-examples')">Examples</a></li>
@@ -240,10 +246,17 @@
                 <p></p>
             </section>
 
-            <section id="python-basics">
-                <h1></h1>
+            <section id="python-install">
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+                <h2></h2>
                 <p></p>
             </section>
+            
 
             <section id="python-advanced" class="hidden">
                 <h1></h1>
