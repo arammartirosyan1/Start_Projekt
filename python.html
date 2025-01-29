@@ -170,20 +170,28 @@
                 pythonHomeSection.querySelector('p:nth-of-type(4)').innerHTML = data['python-intro'].text4;
 
                 // Update Python install content
-                const pythonBasicsSection = document.querySelector('#python-install');
-                pythonBasicsSection.querySelector('h2:nth-of-type(1)').textContent = data['python-install'].title1;
-                pythonBasicsSection.querySelector('p:nth-of-type(1)').innerHTML = data['python-install'].text1;
-                pythonBasicsSection.querySelector('h2:nth-of-type(2)').textContent = data['python-install'].title2;
-                pythonBasicsSection.querySelector('p:nth-of-type(2)').innerHTML = data['python-install'].text2;
-                pythonBasicsSection.querySelector('h2:nth-of-type(3)').textContent = data['python-install'].title3;
-                pythonBasicsSection.querySelector('p:nth-of-type(3)').innerHTML = data['python-install'].text3;
-                pythonBasicsSection.querySelector('h2:nth-of-type(4)').textContent = data['python-install'].title4;
-                pythonBasicsSection.querySelector('p:nth-of-type(4)').innerHTML = data['python-install'].text4;
+                const pythonInstallSection = document.querySelector('#python-install');
+                pythonInstallSection.querySelector('h2:nth-of-type(1)').textContent = data['python-install'].title1;
+                pythonInstallSection.querySelector('p:nth-of-type(1)').innerHTML = data['python-install'].text1;
+                pythonInstallSection.querySelector('h2:nth-of-type(2)').textContent = data['python-install'].title2;
+                pythonInstallSection.querySelector('p:nth-of-type(2)').innerHTML = data['python-install'].text2;
+                pythonInstallSection.querySelector('h2:nth-of-type(3)').textContent = data['python-install'].title3;
+                pythonInstallSection.querySelector('p:nth-of-type(3)').innerHTML = data['python-install'].text3;
+                pythonInstallSection.querySelector('h2:nth-of-type(4)').textContent = data['python-install'].title4;
+                pythonInstallSection.querySelector('p:nth-of-type(4)').innerHTML = data['python-install'].text4;
 
-                const pythonAdvancedSection = document.querySelector('#python-advanced');
-                pythonAdvancedSection.querySelector('h1').textContent = data['python-advanced'].title;
-                pythonAdvancedSection.querySelector('p').textContent = data['python-advanced'].text;
-                
+
+                // Update Python variables content
+                const pythonVariablesSection = document.querySelector('#python-variables');
+                pythonVariablesSection.querySelector('h2:nth-of-type(1)').textContent = data['python-variables'].title1;
+                pythonVariablesSection.querySelector('p:nth-of-type(1)').innerHTML = data['python-variables'].text1;
+                pythonVariablesSection.querySelector('h2:nth-of-type(2)').textContent = data['python-variables'].title2;
+                pythonVariablesSection.querySelector('p:nth-of-type(2)').innerHTML = data['python-variables'].text2;
+                pythonVariablesSection.querySelector('h2:nth-of-type(3)').textContent = data['python-variables'].title3;
+                pythonVariablesSection.querySelector('p:nth-of-type(3)').innerHTML = data['python-variables'].text3;
+                pythonVariablesSection.querySelector('h2:nth-of-type(4)').textContent = data['python-variables'].title4;
+                pythonVariablesSection.querySelector('p:nth-of-type(4)').innerHTML = data['python-variables'].text4;
+
             } catch (error) {
                 console.error("Error loading footer or content:", error);
             }
@@ -209,17 +217,18 @@
 </head>
 <body onload="loadFooterText()">
     <header>
-        <a href="index.html"><img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/logo.png" alt="LearnHub Logo"></a>
-        <h1>Armenian Programming School</h1>
+        <a href="index.html">
+            <img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/logo.png" alt="LearnHub Logo">
+        </a>
+        <nav>
+            <a href="python.html" onclick="navigateTo('#python')">Python</a>
+            <a href="#pandas" onclick="navigateTo('#pandas')">Pandas</a>
+            <a href="sql.html" onclick="navigateTo('#sql')">SQL</a>
+            <a href="#html" onclick="navigateTo('#html')">HTML</a>
+            <a href="#css" onclick="navigateTo('#css')">CSS</a>
+            <a href="#javascript" onclick="navigateTo('#javascript')">JavaScript</a>
+        </nav>
     </header>
-
-    <nav>
-        <a href="#html" onclick="navigateTo('#html')">HTML</a>
-        <a href="#css" onclick="navigateTo('#css')">CSS</a>
-        <a href="#javascript" onclick="navigateTo('#javascript')">JavaScript</a>
-        <a href="python.html" onclick="navigateTo('#python')">Python</a>
-        <a href="sql.html" onclick="navigateTo('#sql')">SQL</a>
-    </nav>
 
     <div class="container">
         <aside class="sidebar">
@@ -227,8 +236,7 @@
             <ul>
                 <li><a href="#python-intro" onclick="navigateTo('#python-intro')">Ներածություն</a></li>
                 <li><a href="#python-install" onclick="navigateTo('#python-install')">Ներբեռնել</a></li>
-                <li><a href="#python-advanced" onclick="navigateTo('#python-advanced')">Advanced Python</a></li>
-                <li><a href="#python-syntax" onclick="navigateTo('#python-syntax')">Python Syntax</a></li>
+                <li><a href="#python-variables" onclick="navigateTo('#python-variables')">Փոփոխականներ</a></li>
                 <li><a href="#python-examples" onclick="navigateTo('#python-examples')">Examples</a></li>
                 <li><a href="#python-resources" onclick="navigateTo('#python-resources')">Resources</a></li>
             </ul>
@@ -256,23 +264,20 @@
                 <h2></h2>
                 <p></p>
             </section>
-            
 
-            <section id="python-advanced" class="hidden">
-                <h1></h1>
+            <section id="python-variables">
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+                <h2></h2>
                 <p></p>
             </section>
+            
 
-            <section id="python-syntax" class="hidden">
-                <h1>Python Syntax</h1>
-                <p>Learn how to write correct Python syntax. This includes indentation, writing functions, and the rules for creating valid Python code.</p>
-                <pre><code>
-# Example of a simple Python function
-def greet(name):
-    print(f"Hello, {name}!")
-greet("World")
-                </code></pre>
-            </section>
+
 
             <section id="python-examples" class="hidden">
                 <h1>Python Examples</h1>
@@ -289,11 +294,11 @@ print(f"The sum of {a} and {b} is {sum}")
             <section id="python-resources" class="hidden">
                 <h1>Python Resources</h1>
                 <p>Here are some great resources to learn Python:</p>
-                <ul>
+                <!-- <ul>
                     <li><a href="https://www.python.org/doc/" target="_blank">Python Official Documentation</a></li>
                     <li><a href="https://realpython.com/" target="_blank">Real Python</a></li>
                     <li><a href="https://www.learnpython.org/" target="_blank">Learn Python</a></li>
-                </ul>
+                </ul> -->
             </section>
         </main>
     </div>
