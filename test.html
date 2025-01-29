@@ -1,59 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JSON Data Fetch</title>
-  <style>
-    button {
-      padding: 10px 20px;
-      margin: 10px;
-      font-size: 16px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .red-button {
-      background-color: red;
-      color: white;
-    }
-    .blue-button {
-      background-color: blue;
-      color: white;
-    }
-    #output {
-      margin-top: 20px;
-      font-size: 18px;
-      font-weight: bold;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image with Text</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            background: url('photo.jpg') no-repeat center center/cover;
+            color: white;
+            font-family: Arial, sans-serif;
+            flex-direction: column;
+            text-align: left;
+            margin-left: 10%;
+        }
+        h3.text-box, h4.text-box {
+            background: rgba(0, 0, 0, 0);
+            padding: 20px;
+            border-radius: 10px;
+            width: 30%;
+            margin-top: 5%;
+        }
+        .background-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    </style>
 </head>
-<body>
-  <button class="red-button" onclick="fetchData()">Red Button</button>
-  <button class="blue-button" onclick="clearData()">Blue Button</button>
-  <div id="output"></div>
-
-  <script>
-    function fetchData() {
-      fetch('data.json')
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('Failed to fetch data');
-          }
-          return response.json();
-        })
-        .then(data => {
-          document.getElementById('output').textContent = data.message;
-        })
-        .catch(error => {
-          console.error(error);
-          document.getElementById('output').textContent = "Error loading data.";
-        });
-    }
-
-    function clearData() {
-      document.getElementById('output').textContent = '';
-    }
-  </script>
+<body class="background">
+    <img src="photo.jpg" alt="Background Image" class="background-img">
+    <h3 class="text-box">Armenia Coding Path<br><br>Հայաստանի կոդավորման ուղի</h3>
+    <h4 class="text-box">Մենք այստեղ ենք՝ մեր ներդրումն ունենալու այս աշխարհում: Այլապես ինչո՞ւ ենք այստեղ:
+      Միայն նպատակ ունենալն է կյանքն իմաստավորում  և  բավարարվածություն բերում:<br><p style="font-size: 13px;">Սթիվ Ջոբս</p></h4>
 </body>
 </html>

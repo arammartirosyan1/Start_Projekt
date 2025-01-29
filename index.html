@@ -6,7 +6,44 @@
     <title>LearnHub - Online Tutorials</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        /* Global Styles */
+        .background {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            background: url('start_back.jpg') no-repeat center center/cover;
+            color: white;
+            flex-direction: column;
+            text-align: left;
+        }
+        h2.text-box {
+            background: rgba(0, 0, 0, 0);
+            padding: 20px;
+            border-radius: 10px;
+            width: 30%;
+            margin-top: 5%;
+            margin-left:5%;
+            font-family: Courier, sans-serif;
+
+        }
+
+        h4.text-box {
+            background: rgba(0, 0, 0, 0);
+            padding: 20px;
+            border-radius: 10px;
+            width: 30%;
+            margin-top: 5%;
+            margin-left: 5%;
+            font-family: Courier, sans-serif;
+        }
+        .background-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
@@ -183,20 +220,12 @@
         </nav>
     </header>
     
-    <div class="container">
-<<<<<<< HEAD
-        <img src="photo.jpg" alt="Image Description" class="hero-image">  
+    <div class="background">
+        <img src="start_back.jpg" alt="Background Image" class="background-img">
+        <h2 class="text-box">Armenia Coding Path<br><br>Հայաստանի կոդավորման ուղի</h2>
+        <h4 class="text-box">Մենք այստեղ ենք՝ մեր ներդրումն ունենալու այս աշխարհում: Այլապես ինչո՞ւ ենք այստեղ:
+          Միայն նպատակ ունենալն է կյանքն իմաստավորում  և  բավարարվածություն բերում:<br><p style="font-size: 13px;">Սթիվ Ջոբս</p></h4>
     </div>
-    <div class="container">
-        <img src="photo.jpg" alt="Image Description" class="hero-image">  
-=======
-        <img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/photo.jpg" alt="Image Description" class="hero-image">  
-    </div>
-    <div class="container">
-        <img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/photo.jpg" alt="Image Description" class="hero-image">  
->>>>>>> e9c13d2 (add python variables)
-    </div>
-
     <footer class="footer">
         <p id="footer-text"></p> <!-- Footer content will be dynamically inserted here -->
     </footer>
