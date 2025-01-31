@@ -32,7 +32,7 @@
     "title4": "Շատ արժեք ունեցող փոփոխականներ",
     "text4": "Python-ը թույլ է տալիս արժեքներ վերագրել մի քանի փոփոխականների մեկ տողում.<br>Օրինակ՝ <br> x, y, z = 'Նարինջ', 'Բանան', 'Խնձոր'<br><br>Եվ դուք կարող եք նույն արժեքը վերագրել մի շարք փոփոխականների մեկ տողում.<br> x = y = z = 'Նարինջ'"
   },
-  "python-data-type": {
+  "python-datatype": {
     "title1": "Python տվյալների տեսակները",
     "text1": "Ծրագրավորման մեջ տվյալների տեսակը կարևոր հասկացություն է:<br><br>Փոփոխականները կարող են լինել տարբեր տեսակի, ամեն տեսակ առանձնահատուկ է իր ֆունկցիոնալությամբ:<br><br>",
     "title2": "Python-ն ունի տվյալների հետևյալ տեսակները՝<br><br>",
@@ -42,6 +42,33 @@
     "title4": "Տվյալների տիպի կարգավորում",
     "text4": "Python-ում տվյալների տեսակը սահմանվում է, երբ դուք արժեք եք վերագրում փոփոխականին.<br><br>x = 'Hello World' - str<br<x = 20 - int<br<x = 20.5 - float<br<x = 1j - complex<br<x = ['apple', 'banana', 'cherry'] - list<br<x = ('apple', 'banana', 'cherry') - tuple<br<x = range(6) - range<br<x = {'name' : 'John', 'age' : 36} - dict<br<x = {'apple', 'banana', 'cherry'} - set<br<x = frozenset({'apple', 'banana', 'cherry'}) - frozenset<br<x = True - bool<br<x = b'Hello' - bytes<br<x = bytearray(5) - bytearray<br<x = memoryview(bytes(5)) - memoryview<br<x = None - NoneType"
   },
+
+  "python-numbers": {
+    "title1": "Python թվեր",
+    "text1": "Python-ում թվերը լինում են 3 տեսակ՝<ul><li>int</li><li>float</li><li>complex</li></ul><br>Թվային տեսակների փոփոխականները ստեղծվում են, երբ դրանց արժեք եք վերագրում.<br>Օրինակ՝<b>x = 1    # int<br>y = 2.8  # float<br>z = 1j   # complex</b><br>",
+    "title2": "Int",
+    "text2": "Int-ը ամբողջ թիվ է առանց տասնորդական մասի, կարող է լինել կամ դրական կամ բացասական, չունի երկարության սահմանափակում։<br>Օրինակ՝<b>x = 1<br>y = 35656222554887711<br>z = -3255522</b>",
+    "title3": "Float",
+    "text3": "Fload թվերը ռացիոնալ թվերն են, որոնք պարունակում են տասնորդական թիվ, կարող են լինել կամ դրական կամ բացասական։<br>Օրինակ՝<b>x = 1.10<br>y = 1.0<br>z = -35.59</b><br><br>float թվերը կարող են բաղկացած լինել նաև 'e' գիտական թվից<br>Օրինակ՝<b>x = 35e3<br>y = 12E4<br>",
+    "title4": "Complex",
+    "text4": "Complex թվերը համարվում են բարդ թվեր, և գրվում են «j»-ով որպես երևակայական մաս.<br>Օրինակ՝<b>x = 3+5j<br>y = 5j<br>z = -5j</b>",
+    "title5": "Տիպի փոխակերպում",
+    "text5": "Դուք կարող եք փոխարկել մի տեսակից մյուսը int(), float(), և complex() մեթոդներով.<br>Օրինակ՝<b>x = 1    # int<br>y = 2.8  # float<br>z = 1j   # complex<br># int to float:<br>a = float(x)   ->  1.0 <br># float to int:<br>b = int(y)   ->  2<br># int to complex:<br>c = complex(x)   ->  (1+0j)</b>"
+  },
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
   "python-advanced": {
     "title": "Python python-advanced",
     "text": "Կայքը նախատեսված է հայերեն լեզվով ծրագրավորում սովորելու համար։"

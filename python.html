@@ -197,6 +197,20 @@
                 pythonDataTypeSection.querySelector('h2:nth-of-type(4)').textContent = data['python-datatype'].title4;
                 pythonDataTypeSection.querySelector('p:nth-of-type(4)').innerHTML = data['python-datatype'].text4;
 
+                
+                // Update Python datatype content
+                const pythonNumbersSection = document.querySelector('#python-numbers');
+                pythonNumbersSection.querySelector('h2:nth-of-type(1)').textContent = data['python-numbers'].title1;
+                pythonNumbersSection.querySelector('p:nth-of-type(1)').innerHTML = data['python-numbers'].text1;
+                pythonNumbersSection.querySelector('h2:nth-of-type(2)').textContent = data['python-numbers'].title2;
+                pythonNumbersSection.querySelector('p:nth-of-type(2)').innerHTML = data['python-numbers'].text2;
+                pythonNumbersSection.querySelector('h2:nth-of-type(3)').textContent = data['python-numbers'].title3;
+                pythonNumbersSection.querySelector('p:nth-of-type(3)').innerHTML = data['python-numbers'].text3;
+                pythonNumbersSection.querySelector('h2:nth-of-type(4)').textContent = data['python-numbers'].title4;
+                pythonNumbersSection.querySelector('p:nth-of-type(4)').innerHTML = data['python-numbers'].text4;
+                pythonNumbersSection.querySelector('h2:nth-of-type(5)').textContent = data['python-numbers'].title5;
+                pythonNumbersSection.querySelector('p:nth-of-type(5)').innerHTML = data['python-numbers'].text5;
+
 
             } catch (error) {
                 console.error("Error loading footer or content:", error);
@@ -244,6 +258,7 @@
                 <li><a href="#python-install" onclick="navigateTo('#python-install')">Ներբեռնել</a></li>
                 <li><a href="#python-variables" onclick="navigateTo('#python-variables')">Փոփոխականներ</a></li>
                 <li><a href="#python-datatype" onclick="navigateTo('#python-datatype')">Տվյալների տեսակներ</a></li>
+                <li><a href="#python-numbers" onclick="navigateTo('#python-numbers')">Թվեր</a></li>
                 <li><a href="#python-resources" onclick="navigateTo('#python-resources')">Resources</a></li>
             </ul>
         </aside>
@@ -283,6 +298,19 @@
             </section>
 
             <section id="python-datatype">
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+            </section>
+
+            <section id="python-numbers">
+                <h2></h2>
+                <p></p>
                 <h2></h2>
                 <p></p>
                 <h2></h2>
