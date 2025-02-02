@@ -251,6 +251,7 @@
         }
 
         // Navigation function to switch between sections
+        // Navigation function to switch between sections
         function navigateTo(sectionId) {
             const sections = document.querySelectorAll('main > section');
             const navLinks = document.querySelectorAll('nav a');
@@ -262,10 +263,23 @@
             navLinks.forEach(link => link.classList.remove('active'));
 
             // Show selected section and set active link
-            document.querySelector(sectionId).classList.remove('hidden');
+            const selectedSection = document.querySelector(sectionId);
+            if (selectedSection) {
+                selectedSection.classList.remove('hidden');
+            }
+
             const activeLink = document.querySelector(`nav a[href="${sectionId}"]`);
-            if (activeLink) activeLink.classList.add('active');
+            if (activeLink) {
+                activeLink.classList.add('active');
+            }
+
+            // Ensure content is loaded if it's the first time being accessed
+            if (!selectedSection.classList.contains('content-loaded')) {
+                loadSectionData(sectionId); // Assuming you have a function to load data into sections
+                selectedSection.classList.add('content-loaded');
+            }
         }
+
     </script>
 </head>
 <body onload="loadFooterText()">
@@ -293,8 +307,7 @@
                 <li><a href="#python-datatype" onclick="navigateTo(event, '#python-datatype')">Տվյալների տեսակներ (Data Types)</a></li>
                 <li><a href="#python-numbers" onclick="navigateTo(event, '#python-numbers')">Թվեր (Numbers)</a></li>
                 <li><a href="#python-string" onclick="navigateTo(event, '#python-string')">Տողեր (String)</a></li>
-                <li><a href="#python-booleans" onclick="navigateTo(event, '#python-booleans')">Բուլյան (Boolean)</a></li>
-                
+                <li><a href="#python-booleans" onclick="navigateTo(event, '#python-booleans')">Բուլյան (Boolean)</a></li>                
             </ul>
         </aside>
 
