@@ -86,6 +86,25 @@
     "text4": "Դուք կարող եք գործարկել կոդը՝ հիմնվելով ֆունկցիայի բուլյան պատասխանի վրա.<br><br>Օրինակ՝<br>Տպել «ԱՅՈ»: եթե ֆունկցիան վերադարձնում է True, հակառակ դեպքում տպեք «NO!»:<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>def myFunction():<br>___return True<br>if myFunction():<br>___print('YES!')<br>else:<br>___print('NO!')</div><br>Այս դեպքում ֆունկցիան վերադարձնում է True, այսինքն կտպի «ԱՅՈ»:<br>"
   },
 
+  "python-list": {
+    "title1": "Ցուցակ/զանգված (List)",
+    "text1": "Հայերենում List-ին ասում են և ցուցակ և զանգված, այս կայքում օգտագործված է ցուցակ բառը, եթե այլ տեղեր տեսնեք զանգված իմացեք խոսկը գնում է list-ի մասին<br><br>Ցուցակները օգտագործվում են մեկ փոփոխականում մի քանի տարրեր պահելու համար:<br><span style=\"color:red;\"><b>mylist = ['խնձոր', 'բանան', 'բալ']</b></span><br><br>Ցուցակի տարերը ինդեքսավովում են սկսած 0-ից<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>mylist = ['խնձոր', 'բանան', 'բալ']<br>print(mylist[0]  -->  'խնձոր'</div",
+    "title2": "Ցուցակի երկարություն",
+    "text2": "Որոշելու համար, թե քանի տարր ունի ցուցակը, օգտագործեք len() ֆունկցիան.<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>mylist = ['խնձոր', 'բանան', 'բալ']<br>print(len(mylist))  -->  3</div><br><br>",
+    "title3": "Ցուցակների միջակայք",
+    "text3": "Դուք կարող եք նշել ինդեքսների մի շարք՝ նշելով, թե որտեղից սկսել և որտեղ ավարտել տիրույթը:<br>Շրջանակ նշելիս վերադարձվող արժեքը կլինի նոր ցուցակ՝ նշված տարրերով:<br>Օրինակ՝<br><br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>mylist = ['խնձոր', 'բանան', 'նարինջ', 'կիվի', 'մանգո', 'բալ']<br>print(mylist[2:5])</div><br>Ձեր արդյունքը կլինի ['նարինջ', 'կիվի', 'մանգո']<br><br>Միջակայքը կարող եք վերցնել մինչև որևէ տարր կամ նշված տարրից սկսած<br>Օրինակ՝<br><br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>mylist = ['խնձոր', 'բանան', 'նարինջ', 'կիվի', 'մանգո', 'բալ']<br>print(mylist[:3]) -->['խնձոր', 'բանան', 'նարինջ']</div><br>print(mylist[2:]) -->['նարինջ', 'կիվի', 'մանգո', 'բալ']<br><br>",
+    "title4": "Փոխել ցուցակի տարրերը", 
+    "text4": "Որևէ ցուցակի արժեք փոխելու համար դիմեք ինդեքսի համարին.<br>Օրինակ՝<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>mylist = ['խնձոր', 'բանան', 'բալ']<br>mylist[1] = 'նարինջ'<br>print(mylist)  -->  ['խնձոր', 'նարինջ', 'բալ']</div><br><br>",
+    "title5": "Ավելացնել ցուցակի տարրերը",
+    "text5": "Ցուցակի վերջում տարր ավելացնելու համար օգտագործեք append() մեթոդը.<br>Օրինակ՝<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>mylist = ['խնձոր', 'բանան', 'բալ']<br>mylist.append('նարինջ')<br>print(mylist)  -->  ['խնձոր', 'բանան', 'բալ', 'նարինջ']</div><br><br>",
+    "title6": "Ցուցակում տեղադրել տարր",
+    "text6": "Ցուցակում նշված ինդեքսում տարր տեղադրելու համար օգտագործեք insert() մեթոդը.<br>Օրինակ՝<br> <div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>mylist = ['խնձոր', 'բանան', 'բալ']<br>mylist.insert(1, 'նարինջ')<br>print(mylist)  -->  ['խնձոր', 'նարինջ', 'բանան', 'բալ']</div><br><br>",
+    "title7": "Հեռացնել ցուցակից տարրերը",
+    "text7": "Ցուցակից տարր հեռացնելու համար օգտագործում ենք remove() մեթոդը.<br>Օրինակ՝<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>mylist = ['խնձոր', 'բանան', 'բալ']<br>mylist.remove('բանան')<br>print(mylist)  -->  ['խնձոր', 'բալ']</div><br><br>Եթե ցուցակում նշված տարրի քանակը մեկից ավել է,<br>Օրինակ՝<br> mylist = ['բանան', 'խնձոր', 'բանան', 'բալ', 'բանան'] ապա հեռացնում է միայն առաջինը:<br><br>",
+    "title8": "Ցուցակի տեսակավորում", 
+    "text8": "Ցուցակի տարրերը դասակարգելու համար օգտագործում ենէ sort() մեթոդը․<br>Օրինակ`<br> mylist = ['բանան', 'խնձոր', 'բալ']<br>mylist.sort()<br> ապա դասակարգվում է այսպես` ['բալ', 'բանան', 'խնձոր']<br><br>Օրինակ`<br> mylist =  [100, 50, 65, 82, 23]<br>mylist.sort()<br> ապա դասակարգվում է այսպես` [23, 50, 65, 82, 100]<br><br>Օրինակ`<br> mylist =  [100, 50, 65, 82, 23]<br>mylist.sort(reverse = True)<br> ապա դասակարգվում է այսպես` [100, 82, 65, 50, 23]<br><br>"
+  },
+
   
   "python-advanced": {
     "title": "Python python-advanced",

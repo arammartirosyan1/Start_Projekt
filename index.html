@@ -81,11 +81,12 @@
 
         .text-box {
             position: absolute;
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.8);
             padding: 20px;
             border-radius: 10px;
             z-index: 2;
-            font-family: Courier, sans-serif;
+            font-family: "Times New Roman", sans-serif;
+            text-align: left;
             
         }
 
@@ -100,7 +101,7 @@
             font-size: 24px;
             cursor: pointer;
             border-radius: 50%;
-            transition: 1s;
+            transition: 1.5s;
             z-index: 3;
         }
 
@@ -174,10 +175,12 @@
     </header>
 
     <div class="background">
-        <img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/img_1.jpg" class="background-img active">
-        <img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/img_2.jpg" class="background-img">
-        <img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/img_1.jpg" class="background-img">
-        <img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/img_2.jpg" class="background-img">
+        <img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/main_page.jpg" class="background-img active">
+        <img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/apple.jpg" class="background-img">
+        <img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/web_bage_icons.jpg" class="background-img">
+        <img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/microsoft.jpg" class="background-img">
+        <img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/spacex.jpg" class="background-img">
+
 
         <button class="slider-btn prev" onclick="prevImage()">❮</button>
         <button class="slider-btn next" onclick="nextImage()">❯</button>
@@ -190,6 +193,7 @@
         <span class="dot" onclick="goToSlide(1)"></span>
         <span class="dot" onclick="goToSlide(2)"></span>
         <span class="dot" onclick="goToSlide(3)"></span>
+        <span class="dot" onclick="goToSlide(4)"></span>
     </div>
     
 
@@ -207,9 +211,11 @@
     
         const textArray = [
             "Armenia Coding Path<br><br>Հայաստանի կոդավորման ուղի",
-            "Learn Programming with Ease<br><br>Ծրագրավորում սովորեք հեշտությամբ",
-            "Master Python & Data Science<br><br>Իմացեք Python և տվյալագիտություն",
-            "Join Our Coding Community<br><br>Միացեք մեր կոդավորման համայնքին"
+            "<p style='font-size: 20px;''>Մենք այստեղ ենք՝ մեր ներդրումն ունենալու այս աշխարհում:<br> Այլապես ինչո՞ւ ենք այստեղ:<br>Միայն նպատակ ունենալն է կյանքն իմաստավորում<br>  և  բավարարվածություն բերում:<br><br><p style='font-size: 13px;''>Սթիվ Ջոբս</p></p>",
+            "<p style='font-size: 20px;''>Գաղափարները պատրաստի տեսքով չեն գալիս։<br> Դրանք հստակ են դառնում միայն այն ժամանակ,<br> երբ սկսում ենք աշխատել դրանց վրա։<br> Դուք պարզապես պետք է սկսեք։<br><br><p style='font-size: 13px;''>Մարկ Ցուկերբերգ</p></p>",
+            "<p style='font-size: 20px;''>Համալսարանն ավարտելով, Դուք չեք դառնա կազմակերպության նախագահ,<br> մինչև չգտնեք արժանապատիվ աշխատանք, որը թույլ կտա հասնել այդ ամենին<br><br><p style='font-size: 13px;''>Բիլլ Գեյթս</p></p>",
+            "<p style='font-size: 20px;''>Ճիշտ պատասխան ստանալու համար հարկավոր է ճիշտ հարց տալ<br><br><p style='font-size: 13px;''>Իլոն Մասկ</p></p>",
+            
         ];
     
         function updateSlider() {
