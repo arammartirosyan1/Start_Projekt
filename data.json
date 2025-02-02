@@ -83,7 +83,7 @@
     "title3": "Գնահատեք արժեքները և փոփոխականները",
     "text3": "Bool() ֆունկցիան թույլ է տալիս գնահատել ցանկացած արժեք և դրա դիմաց տալ True կամ False․<br>Օրինակ՝<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>print(bool('Hello'))   -->  True<br>print(bool(15))   -->  True</div><br><br>Ցանկացած արժեք, որը ոչ զրոյական է, կվերադարձնի True:<br>Օրինակ՝<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>print(bool(''))   -->  False<br>print(bool(0))   -->  False</div><br><br>",
     "title4": "Բուլյան ֆունկցիաներ", 
-    "text4": "Դուք կարող եք գործարկել կոդը՝ հիմնվելով ֆունկցիայի բուլյան պատասխանի վրա.<br><br>Օրինակ՝<br>Տպել «ԱՅՈ»: եթե ֆունկցիան վերադարձնում է True, հակառակ դեպքում տպեք «NO!»:<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%; font-family: monospace;'><pre>def myFunction():return Trueif myFunction():print('YES!')else:print('NO!')</pre></div><br>Այս դեպքում ֆունկցիան վերադարձնում է True, այսինքն կտպի «ԱՅՈ»:<br>"
+    "text4": "Դուք կարող եք գործարկել կոդը՝ հիմնվելով ֆունկցիայի բուլյան պատասխանի վրա.<br><br>Օրինակ՝<br>Տպել «ԱՅՈ»: եթե ֆունկցիան վերադարձնում է True, հակառակ դեպքում տպեք «NO!»:<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>def myFunction():<br>___return True<br>if myFunction():<br>___print('YES!')<br>else:<br>___print('NO!')</div><br>Այս դեպքում ֆունկցիան վերադարձնում է True, այսինքն կտպի «ԱՅՈ»:<br>"
   },
 
   
