@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnHub - pandas Tutorial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #ffffff;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+            background: #ffffff;
+            color: #000000;
+        }
+
+        header img {
+            width: 90px;
+            height: 90px;
+            margin-left: 10px;
+        }
+
+        nav {
+            display: flex;
+            gap: 1rem; /* Space between navigation links */
+            margin-right: 100px;
+            
+        }
+
+        nav a {
+            color: black;
+            text-decoration: none;
+            padding: 0.3rem 1rem;
+            transition: background 0.3s;
+            font-family: 'Arial', sans-serif; /* Change the font to Arial (or any other font you prefer) */
+            font-weight: 500; /* Optional: adjust the weight of the font */
+        }
+
+        nav a:hover, nav a.active {
+            background: #f4f4f4;
+            border-radius: 5px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            min-height: 100vh;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            flex: 1;
+            background: #f4f4f4;
+            border-right: 1px solid #ddd;
+            padding: 1rem;
+            max-width: 250px;
+        }
+
+        .sidebar h3 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .sidebar ul li a {
+            color: #333;
+            text-decoration: none;
+            padding: 0.5rem;
+            display: block;
+            border-radius: 3px;
+            transition: background 0.3s;
+        }
+
+        .sidebar ul li a:hover {
+            background: #ddd;
+        }
+
+        /* Main Content Styles */
+        .content {
+            flex: 3;
+            padding: 1.5rem;
+        }
+
+        .content h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .content p {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: auto;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                max-width: 100%;
+                border-right: none;
+            }
+
+            .content {
+                padding: 1rem;
+            }
+        }
+    </style>
+    <script>
+        // Function to dynamically load footer text and pandas basics content from data.json
+        async function loadFooterText() {
+            try {
+                const response = await fetch('data/pandas.json'); // Fetch the JSON file
+                const data = await response.json(); // Parse the JSON data
+
+                // Update footer text
+                document.getElementById('footer-text').innerHTML = data.footer.text;
+
+                // Update pandas home content
+                const pandasHomeSection = document.querySelector('#pandas-intro');
+                pandasHomeSection.querySelector('h2:nth-of-type(1)').textContent = data['pandas-intro'].title1;
+                pandasHomeSection.querySelector('p:nth-of-type(1)').innerHTML = data['pandas-intro'].text1;
+                pandasHomeSection.querySelector('h2:nth-of-type(2)').textContent = data['pandas-intro'].title2;
+                pandasHomeSection.querySelector('p:nth-of-type(2)').innerHTML = data['pandas-intro'].text2;
+                pandasHomeSection.querySelector('h2:nth-of-type(3)').textContent = data['pandas-intro'].title3;
+                pandasHomeSection.querySelector('p:nth-of-type(3)').innerHTML = data['pandas-intro'].text3;
+                pandasHomeSection.querySelector('h2:nth-of-type(4)').textContent = data['pandas-intro'].title4;
+                pandasHomeSection.querySelector('p:nth-of-type(4)').innerHTML = data['pandas-intro'].text4;
+
+                // Update pandas install content
+                const pandasInstallSection = document.querySelector('#pandas-install');
+                pandasInstallSection.querySelector('h2:nth-of-type(1)').textContent = data['pandas-install'].title1;
+                pandasInstallSection.querySelector('p:nth-of-type(1)').innerHTML = data['pandas-install'].text1;
+                pandasInstallSection.querySelector('h2:nth-of-type(2)').textContent = data['pandas-install'].title2;
+                pandasInstallSection.querySelector('p:nth-of-type(2)').innerHTML = data['pandas-install'].text2;
+                pandasInstallSection.querySelector('h2:nth-of-type(3)').textContent = data['pandas-install'].title3;
+                pandasInstallSection.querySelector('p:nth-of-type(3)').innerHTML = data['pandas-install'].text3;
+                pandasInstallSection.querySelector('h2:nth-of-type(4)').textContent = data['pandas-install'].title4;
+                pandasInstallSection.querySelector('p:nth-of-type(4)').innerHTML = data['pandas-install'].text4;
+
+
+                // Update pandas variables content
+                const pandasVariablesSection = document.querySelector('#pandas-variables');
+                pandasVariablesSection.querySelector('h2:nth-of-type(1)').textContent = data['pandas-variables'].title1;
+                pandasVariablesSection.querySelector('p:nth-of-type(1)').innerHTML = data['pandas-variables'].text1;
+                pandasVariablesSection.querySelector('h2:nth-of-type(2)').textContent = data['pandas-variables'].title2;
+                pandasVariablesSection.querySelector('p:nth-of-type(2)').innerHTML = data['pandas-variables'].text2;
+                pandasVariablesSection.querySelector('h2:nth-of-type(3)').textContent = data['pandas-variables'].title3;
+                pandasVariablesSection.querySelector('p:nth-of-type(3)').innerHTML = data['pandas-variables'].text3;
+                pandasVariablesSection.querySelector('h2:nth-of-type(4)').textContent = data['pandas-variables'].title4;
+                pandasVariablesSection.querySelector('p:nth-of-type(4)').innerHTML = data['pandas-variables'].text4;
+
+                // Update pandas datatype content
+                const pandasDataTypeSection = document.querySelector('#pandas-datatype');
+                pandasDataTypeSection.querySelector('h2:nth-of-type(1)').textContent = data['pandas-datatype'].title1;
+                pandasDataTypeSection.querySelector('p:nth-of-type(1)').innerHTML = data['pandas-datatype'].text1;
+                pandasDataTypeSection.querySelector('h2:nth-of-type(2)').textContent = data['pandas-datatype'].title2;
+                pandasDataTypeSection.querySelector('p:nth-of-type(2)').innerHTML = data['pandas-datatype'].text2;
+                pandasDataTypeSection.querySelector('h2:nth-of-type(3)').textContent = data['pandas-datatype'].title3;
+                pandasDataTypeSection.querySelector('p:nth-of-type(3)').innerHTML = data['pandas-datatype'].text3;
+                pandasDataTypeSection.querySelector('h2:nth-of-type(4)').textContent = data['pandas-datatype'].title4;
+                pandasDataTypeSection.querySelector('p:nth-of-type(4)').innerHTML = data['pandas-datatype'].text4;
+
+                
+                // Update pandas datatype content
+                const pandasNumbersSection = document.querySelector('#pandas-numbers');
+                pandasNumbersSection.querySelector('h2:nth-of-type(1)').textContent = data['pandas-numbers'].title1;
+                pandasNumbersSection.querySelector('p:nth-of-type(1)').innerHTML = data['pandas-numbers'].text1;
+                pandasNumbersSection.querySelector('h2:nth-of-type(2)').textContent = data['pandas-numbers'].title2;
+                pandasNumbersSection.querySelector('p:nth-of-type(2)').innerHTML = data['pandas-numbers'].text2;
+                pandasNumbersSection.querySelector('h2:nth-of-type(3)').textContent = data['pandas-numbers'].title3;
+                pandasNumbersSection.querySelector('p:nth-of-type(3)').innerHTML = data['pandas-numbers'].text3;
+                pandasNumbersSection.querySelector('h2:nth-of-type(4)').textContent = data['pandas-numbers'].title4;
+                pandasNumbersSection.querySelector('p:nth-of-type(4)').innerHTML = data['pandas-numbers'].text4;
+                pandasNumbersSection.querySelector('h2:nth-of-type(5)').textContent = data['pandas-numbers'].title5;
+                pandasNumbersSection.querySelector('p:nth-of-type(5)').innerHTML = data['pandas-numbers'].text5;
+                
+                // Update pandas datatype content
+                const pandasStringSection = document.querySelector('#pandas-string');
+                pandasStringSection.querySelector('h2:nth-of-type(1)').textContent = data['pandas-string'].title1;
+                pandasStringSection.querySelector('p:nth-of-type(1)').innerHTML = data['pandas-string'].text1;
+                pandasStringSection.querySelector('h2:nth-of-type(2)').textContent = data['pandas-string'].title2;
+                pandasStringSection.querySelector('p:nth-of-type(2)').innerHTML = data['pandas-string'].text2;
+                pandasStringSection.querySelector('h2:nth-of-type(3)').textContent = data['pandas-string'].title3;
+                pandasStringSection.querySelector('p:nth-of-type(3)').innerHTML = data['pandas-string'].text3;
+                pandasStringSection.querySelector('h2:nth-of-type(4)').textContent = data['pandas-string'].title4;
+                pandasStringSection.querySelector('p:nth-of-type(4)').innerHTML = data['pandas-string'].text4;
+                pandasStringSection.querySelector('h2:nth-of-type(5)').textContent = data['pandas-string'].title5;
+                pandasStringSection.querySelector('p:nth-of-type(5)').innerHTML = data['pandas-string'].text5;
+                pandasStringSection.querySelector('h2:nth-of-type(6)').textContent = data['pandas-string'].title6;
+                pandasStringSection.querySelector('p:nth-of-type(6)').innerHTML = data['pandas-string'].text6;
+                pandasStringSection.querySelector('h2:nth-of-type(7)').textContent = data['pandas-string'].title7;
+                pandasStringSection.querySelector('p:nth-of-type(7)').innerHTML = data['pandas-string'].text7;
+                pandasStringSection.querySelector('h2:nth-of-type(8)').textContent = data['pandas-string'].title8;
+                pandasStringSection.querySelector('p:nth-of-type(8)').innerHTML = data['pandas-string'].text8;
+
+
+                // Update pandas install content
+                const pandasBooleansSection = document.querySelector('#pandas-booleans');
+                pandasBooleansSection.querySelector('h2:nth-of-type(1)').textContent = data['pandas-booleans'].title1;
+                pandasBooleansSection.querySelector('p:nth-of-type(1)').innerHTML = data['pandas-booleans'].text1;
+                pandasBooleansSection.querySelector('h2:nth-of-type(2)').textContent = data['pandas-booleans'].title2;
+                pandasBooleansSection.querySelector('p:nth-of-type(2)').innerHTML = data['pandas-booleans'].text2;
+                pandasBooleansSection.querySelector('h2:nth-of-type(3)').textContent = data['pandas-booleans'].title3;
+                pandasBooleansSection.querySelector('p:nth-of-type(3)').innerHTML = data['pandas-booleans'].text3;
+                pandasBooleansSection.querySelector('h2:nth-of-type(4)').textContent = data['pandas-booleans'].title4;
+                pandasBooleansSection.querySelector('p:nth-of-type(4)').innerHTML = data['pandas-booleans'].text4;
+                
+                // Update pandas datatype content
+                const pandasListSection = document.querySelector('#pandas-list');
+                pandasListSection.querySelector('h2:nth-of-type(1)').textContent = data['pandas-list'].title1;
+                pandasListSection.querySelector('p:nth-of-type(1)').innerHTML = data['pandas-list'].text1;
+                pandasListSection.querySelector('h2:nth-of-type(2)').textContent = data['pandas-list'].title2;
+                pandasListSection.querySelector('p:nth-of-type(2)').innerHTML = data['pandas-list'].text2;
+                pandasListSection.querySelector('h2:nth-of-type(3)').textContent = data['pandas-list'].title3;
+                pandasListSection.querySelector('p:nth-of-type(3)').innerHTML = data['pandas-list'].text3;
+                pandasListSection.querySelector('h2:nth-of-type(4)').textContent = data['pandas-list'].title4;
+                pandasListSection.querySelector('p:nth-of-type(4)').innerHTML = data['pandas-list'].text4;
+                pandasListSection.querySelector('h2:nth-of-type(5)').textContent = data['pandas-list'].title5;
+                pandasListSection.querySelector('p:nth-of-type(5)').innerHTML = data['pandas-list'].text5;
+                pandasListSection.querySelector('h2:nth-of-type(6)').textContent = data['pandas-list'].title6;
+                pandasListSection.querySelector('p:nth-of-type(6)').innerHTML = data['pandas-list'].text6;
+                pandasListSection.querySelector('h2:nth-of-type(7)').textContent = data['pandas-list'].title7;
+                pandasListSection.querySelector('p:nth-of-type(7)').innerHTML = data['pandas-list'].text7;
+                pandasListSection.querySelector('h2:nth-of-type(8)').textContent = data['pandas-list'].title8;
+                pandasListSection.querySelector('p:nth-of-type(8)').innerHTML = data['pandas-list'].text8;
+
+
+
+
+            } catch (error) {
+                console.error("Error loading footer or content:", error);
+            }
+        }
+
+        // Navigation function to switch between sections
+        function navigateTo(sectionId) {
+            const sections = document.querySelectorAll('main > section');
+            const navLinks = document.querySelectorAll('nav a');
+
+            // Hide all sections
+            sections.forEach(section => section.classList.add('hidden'));
+
+            // Remove active class from all links
+            navLinks.forEach(link => link.classList.remove('active'));
+
+            // Show selected section and set active link
+            document.querySelector(sectionId).classList.remove('hidden');
+            const activeLink = document.querySelector(`nav a[href="${sectionId}"]`);
+            if (activeLink) activeLink.classList.add('active');
+        }
+    </script>
+</head>
+<body onload="loadFooterText()">
+    <header>
+        <a href="index.html">
+            <img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/logo.png" alt="LearnHub Logo">
+        </a>
+        <nav>
+            <a href="pandas.html" onclick="navigateTo('#pandas')">pandas</a>
+            <a href="#pandas" onclick="navigateTo('#pandas')">Pandas</a>
+            <a href="sql.html" onclick="navigateTo('#sql')">SQL</a>
+            <a href="#html" onclick="navigateTo('#html')">HTML</a>
+            <a href="#css" onclick="navigateTo('#css')">CSS</a>
+            <a href="#javascript" onclick="navigateTo('#javascript')">JavaScript</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>pandas Tutorial</h3>
+            <ul>
+                <li><a href="#pandas-intro" onclick="navigateTo('#pandas-intro')">Ներածություն (Intro)</a></li>
+                <li><a href="#pandas-install" onclick="navigateTo('#pandas-install')">Ներբեռնել (Install)</a></li>
+                <li><a href="#pandas-variables" onclick="navigateTo('#pandas-variables')">Փոփոխականներ (Variables)</a></li>
+                <li><a href="#pandas-datatype" onclick="navigateTo('#pandas-datatype')">Տվյալների տեսակներ (Data Types)</a></li>
+                <li><a href="#pandas-numbers" onclick="navigateTo('#pandas-numbers')">Թվեր (Numbers)</a></li>
+                <li><a href="#pandas-string" onclick="navigateTo('#pandas-string')">Տողեր (String)</a></li>
+                <li><a href="#pandas-booleans" onclick="navigateTo('#pandas-booleans')">Բուլյան (Boolean)</a></li>
+                <li><a href="#pandas-list" onclick="navigateTo('#pandas-list')">Ցուցակ (List)</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <section id="pandas-intro">
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+            </section>
+
+            <section id="pandas-install">
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+            </section>
+
+            <section id="pandas-variables">
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+            </section>
+
+            <section id="pandas-datatype">
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+            </section>
+
+            <section id="pandas-numbers">
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+            </section>
+
+            <section id="pandas-string">
+                <h2></h2>
+                <p></p>
+                <hr style="width: 50%; height: 1px; background-color: black; border: none; margin-left: 0;">
+                <h2></h2>
+                <p></p>
+                <hr style="width: 50%; height: 1px; background-color: black; border: none; margin-left: 0;">
+                <h2></h2>
+                <p></p>
+                <hr style="width: 50%; height: 1px; background-color: black; border: none; margin-left: 0;">
+                <h2></h2>
+                <p></p>
+                <hr style="width: 50%; height: 1px; background-color: black; border: none; margin-left: 0;">
+                <h2></h2>
+                <p></p>
+                <hr style="width: 50%; height: 1px; background-color: black; border: none; margin-left: 0;">
+                <h2></h2>
+                <p></p>
+                <hr style="width: 50%; height: 1px; background-color: black; border: none; margin-left: 0;">
+                <h2></h2>
+                <p></p>
+                <hr style="width: 50%; height: 1px; background-color: black; border: none; margin-left: 0;">
+                <h2></h2>
+                <p></p>
+            </section>
+
+
+            <section id="pandas-booleans">
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+            </section>
+
+
+            <section id="pandas-list">
+                <h2></h2>
+                <p></p>
+                <hr style="width: 50%; height: 1px; background-color: black; border: none; margin-left: 0;">
+                <h2></h2>
+                <p></p>
+                <hr style="width: 50%; height: 1px; background-color: black; border: none; margin-left: 0;">
+                <h2></h2>
+                <p></p>
+                <hr style="width: 50%; height: 1px; background-color: black; border: none; margin-left: 0;">
+                <h2></h2>
+                <p></p>
+                <hr style="width: 50%; height: 1px; background-color: black; border: none; margin-left: 0;">
+                <h2></h2>
+                <p></p>
+                <hr style="width: 50%; height: 1px; background-color: black; border: none; margin-left: 0;">
+                <h2></h2>
+                <p></p>
+                <hr style="width: 50%; height: 1px; background-color: black; border: none; margin-left: 0;">
+                <h2></h2>
+                <p></p>
+                <hr style="width: 50%; height: 1px; background-color: black; border: none; margin-left: 0;">
+                <h2></h2>
+                <p></p>
+            </section>
+
+
+
+            <section id="pandas-resources" class="hidden">
+                <h1>pandas Resources</h1>
+                <p>Here are some great resources to learn pandas:</p>
+                <!-- <ul>
+                    <li><a href="https://www.pandas.org/doc/" target="_blank">pandas Official Documentation</a></li>
+                    <li><a href="https://realpandas.com/" target="_blank">Real pandas</a></li>
+                    <li><a href="https://www.learnpandas.org/" target="_blank">Learn pandas</a></li>
+                </ul> -->
+            </section>
+        </main>
+    </div>
+
+    <div class="footer">
+        <p id="footer-text"></p>
+    </div>
+</body>
+</html>

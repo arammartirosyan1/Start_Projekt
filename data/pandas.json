@@ -1,0 +1,106 @@
+{
+  "footer": {
+    "text": "Կայքը նախատեսված է հայերեն լեզվով տարբեր ծրագրավորման լեզուներ անվճար սովորելու համար։"
+  },
+  "pandas-intro": {
+    "title1": "Ի՞նչ է Pandas-ը",
+    "text1": "Pandas-ը Python գրադարան է, որն օգտագործվում է տվյալների հավաքածուների հետ աշխատելու համար:<br>«Pandas» անվանումը հղում ունի և՛ «Panel Data», և՛ «Python Data Analysis»,<br> և ստեղծվել է Ուես ՄակՔիննիի կողմից 2008 թվականին:",
+    "title2": "Ի՞նչ կարող է անել Pandas-ը:",
+    "text2": "Այն ունի տվյալների վերլուծության, մաքրման, հետազոտման և մանիպուլյացիայի գործառույթներ:<br><br>Պանդաները կարող են մաքրել կեղտոտ տվյալների հավաքածուները և դրանք դարձնել ընթեռնելի և համապատասխան:",
+    "title3": "Ինչու՞ Pandas:",
+    "text3": "Pandas-ը կարող է աշխատել ցանկացած տիպի տվյալների հետ և<br>գիտի տվյալների հետ կապված բոլոր հարցերի պատասխանը`<ul><li>Ո՞րն է միջին արժեքը</li><li>Առավելագույն արժեք</li><li>Նվազագույն արժեքը?</li><li>Քանի տող ունեն տվյալնեը</li></ul><br>և շատ այլ հարցերի պատասխան, որոնք կօգնեն ձեզ տվյլաների հետ աշխատելիս։",
+    "title4": "Ի՞նչ աշխատանքի կարելի է անցնել Python-ի իմացությամբ",
+    "text4": "<ul><li>Վեբ ծրագրավորող (Web Developer)</li><li>Տվյալների վերլուծաբան (Data Analyst)</li><li>Մեքենայական ուսուցման ինժեներ (Machine Learning Engineer)</li><li>Տվյալագիտության մասնագետ (Data Scientist)</li><li>Ֆինանսներ և առևտուր (Finance & Trading)</li></ul>"
+  },
+
+  "pandas-install": {
+    "title1": "Pandas-ի տեղադրում (installation)",
+    "text1": "Եթե ​​ունեք համակարգում արդեն տեղադրված Python և PIP, ապա Panda-ների տեղադրումը շատ հեշտ է:<br><div style='background-color:#000000; color:white; padding:5px; display:inline-block; width:50%; '>C:/Users/Your Name>pip install pandas</div>",
+    "title2": "Import Pandas",
+    "text2": "Pandas-ը տեղադրվելուց հետո ներմուծեք այն ձեր հավելվածներում՝ ավելացնելով ներմուծման հիմնաբառը՝ <span style=\"color:red;\"><b>Import Pandas</b></span><br>"
+    },
+
+  "pandas-variables": {
+    "title1": "",
+    "text1": "",
+    "title2": "",
+    "text2": ""
+     },
+    "pandas-variables1": {
+      "title1": "",
+      "text1": "",
+      "title2": "",
+      "text2": ""
+       },
+
+  "pandas-numbers": {
+    "title1": "pandas թվեր (number)",
+    "text1": "pandas-ում թվերը լինում են 3 տեսակ՝<ul><li>int</li><li>float</li><li>complex</li></ul><br>Թվային տեսակների փոփոխականները ստեղծվում են, երբ դրանց արժեք եք վերագրում.<br>Օրինակ`<br><b>x = 1    # int<br>y = 2.8  # float<br>z = 1j   # complex</b><br>",
+    "title2": "Int",
+    "text2": "Int-ը ամբողջ թիվ է առանց տասնորդական մասի, կարող է լինել կամ դրական կամ բացասական, չունի երկարության սահմանափակում։<br>Օրինակ`<br><b>x = 1<br>y = 35656222554887711<br>z = -3255522</b>",
+    "title3": "Float",
+    "text3": "Fload թվերը ռացիոնալ թվերն են, որոնք պարունակում են տասնորդական թիվ, կարող են լինել կամ դրական կամ բացասական։<br>Օրինակ`<br><b>x = 1.10<br>y = 1.0<br>z = -35.59</b><br><br>float թվերը կարող են բաղկացած լինել նաև 'e' գիտական թվից<br>Օրինակ`<br><b>x = 35e3<br>y = 12E4<br>",
+    "title4": "Complex",
+    "text4": "Complex թվերը համարվում են բարդ թվեր, և գրվում են «j»-ով որպես երևակայական մաս.<br>Օրինակ`<br><b>x = 3+5j<br>y = 5j<br>z = -5j</b>",
+    "title5": "Տիպի փոխակերպում",
+    "text5": "Դուք կարող եք փոխարկել մի տեսակից մյուսը int(), float(), և complex() մեթոդներով.<br>Օրինակ՝<br><b>x = 1    # int<br>y = 2.8  # float<br>z = 1j   # complex<br><span style=\"color:red;\"><b> int to float</b></span><br>a = float(x)   -->  1.0 <br><span style=\"color:red;\"><b>float to int</b></span><br>b = int(y)   -->  2<br> <span style=\"color:red;\"><b>int to complex</b></span><br>c = complex(x)   -->  (1+0j)</b>"
+  },
+
+  "pandas-string": {
+    "title1": "pandas տող (string)",
+    "text1": "pandas տողերը շրջապատված են կամ մեկ չակերտներով, կամ կրկնակի չակերտներով:<br><span style='background-color:#b0e59b; padding:5px;'>'բարև'-ը նույնն է, ինչ \"բարև\"</span>:<br><br>Դուք կարող եք չակերտներ օգտագործել տողի ներսում, քանի դեռ դրանք չեն համընկնում տողի շրջապատող չակերտների հետ.<br>Օրինակ՝<br\"Բարև, իմ անունը 'Արմեն' է\"։",
+    "title2": "Բազմատող տեքստեր",
+    "text2": "Դուք կարող եք բազմատող տեքստ վերագրել փոփոխականին՝ օգտագործելով երեք չակերտ.<br>x = ' ' 'Համակարգիչն ամենահիանալի գործիքն է, որ ես երբևէ հանդիպել եմ: Այն մեր գիտակցության հեծանիվ է:' ' ' ",
+    "title3": "Ինչպես աշխատել տողերի հետ",
+    "text3": "pandas-ը թույլ է տալիս աշխատել տողերի հետ, ինչպես այլ տվյալների տեսակների հետ.<br>Օրինակ՝ <br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>a = 'Hello, World!' <br> print(a[1])   -->  'e'</div><br>հաշվարկը սկսում ենք 0-ից <b>a = 'Hello, World!'</b> այս դեպքում եթե ցանկանում ենք տպել 'H' տառը պետք է գրել <b>print(a[0])</b><br><br>Եթե ​​ուզում եք տպել մի մասը տողից, կարող եք օգտագործել սլայսի միջոցով.<br>Օրինակ՝<br><b>b = 'Hello, World!'<br>print(b[2:5])   -->  'llo'</b>այս դեպքում տպում է 2, 3 և 4 տառերը, չի վերցնում 5-րդ տառը։<br><br>Կարող եք տպել տողի առաջին 5 տառերը կամ անտեսլով սկզբի 6 տառերը տպել մնացածը օգտագործելով [:5] կամ [7:].<br>Օրինակ՝<br><b>c = 'Hello, World!'<br>print(c[:5])   -->  'Hello'<br>print(c[7:])   -->  'World!'</b><br><br>",
+    "title4": "Տողի հեռթականություն",
+    "text4": "Տողի հետ աշխատելիս կարող ենք օգտագործել 'for' ֆունկցիան, որի միջոցով կարող ենք տպել տողի բոլոր տառերը.<br>Օրինակ՝<br><b>for x in 'Նարինջ':<br>  print(x)</b><br> <b>Նարինջ</b> տողը կտպի ամեն տառը մեկ տողում։<br><br>",
+    "title5": "Տողի երկարություն",
+    "text5": "Տողի երկարությունը իմանալու համար օգտագործում ենք len() ֆունկցիան.<br>Օրինակ՝<br><b>a = 'Hello, World!'<br>print(len(a))</b> այս դեպքում կտպի 13-ը, քանի որ տողը 13 սիմվոլ ունի։",
+    "title6": "Տողի ստուգում",
+    "text6": "Ստուգելու համար, արդյոք որոշակի արտահայտություն կամ նիշ առկա է տողում, մենք կարող ենք օգտագործել «in» հիմնաբառը:<br>Օրինակ՝<br><b>txt = 'The best things in life are free!'<br>print('free' in txt)   -->  True</b>",
+    "title7": "Տողի ձևափոխություն (Modify Strings)",
+    "text7": "pandas-ն ունի մի շարք ներկառուցված մեթոդներ, որոնք կարող եք օգտագործել տողերի վրա:<br><br><span style=\"color:red;\"><b>Upper()</b></span><br>Տողը մեծատառով է վերադարձնում:<br>a = 'Hello, World!'<br>print(a.upper())   -->  'HELLO, WORLD!'<br><br><span style=\"color:red;\"><b>Lower()</b></span><br>Տողը փոքրատառով է վերադարձնում:<br>a = 'Hello, World!'<br>print(a.lower())   -->  'hello, world!'<br><br><span style=\"color:red;\"><b>Strip()</b></span><br>Մաքրում է սկզբի և վերջի բացատները:<br>a = ' Hello, World! '<br>print(a.strip())   -->  'Hello, World!'<br><br><span style=\"color:red;\"><b>Replace()</b></span><br>Փոխարինում է տողի մի մասը մյուսով:<br>a = 'Hello, World!'<br>print(a.replace('H', 'J'))   -->  'Jello, World!'<br><br><span style=\"color:red;\"><b>Split()</b></span><br>Տողը բաժանում է տառերի ցուցակի ընթացքում:<br>a = 'Hello, World!'<br>print(a.split(','))   -->  ['Hello', ' World!']<br><br><span style=\"color:red;\"><b>Format()</b></span><br>Տողը կարող է պահպանել տվյալները որպես տեքստ՝ օգտագործելով {} կամ {} փոփոխականները:<br>age = 36, name = 'Արմեն' <br>txt = 'Իմ անունը {} է, և ես {} տարեկան եմ'<br>print(txt.format(name, age))<br>այս դեպքում կտպի 'Իմ անունը Արմեն է, և ես 36 տարեկան եմ'<br><br>",
+    "title8": "Տողի մեթոդներ (String Methods)",
+    "text8": "pandas-ն ունի մի շարք ներկառուցված մեթոդներ, որոնք կարող եք օգտագործել տողերի վրա:<br><span style=\"color:red;\"><b>Նշում. Բոլոր լարային մեթոդները վերադարձնում են նոր արժեքներ: Նրանք չեն փոխում բնօրինակ տողը:</b></span><br><br><b>Մեթոդ'           'նկարագրություն</b><br>capitalize()--->Տողի սկզբի տառը մեծատառով է վերադարձնում<br>casefold()--->  Տողը փոքրատառով է վերադարձնում<br>center()--->    Տողը կենտրոնական երկարությամբ է վերադարձնում<br>count()--->Տողի մեջ տառերի քանակը հաշվում է<br>encode()--->    Տողը կոդավորում է<br>endswith()--->  Տողը ավարտվում է նշված արժեքով<br>expandtabs()--->Տողի բոլոր տառերը վերադարձնում է ստորակետով<br>find()---> Տողի մեջ տառի առաջին հանգույցը վերադարձնում է<br>format()--->    Տողը ձևափոխում է տվյալների հետ<br>format_map()--->Տողը ձևափոխում է տվյալների հետ<br>index()--->Տողի մեջ տառի առաջին հանգույցը վերադարձնում է<br>isalnum()--->   Տողը պարունակում է միայն թվեր և տառեր<br>isalpha()--->   Տողը պարունակում է միայն տառեր<br>isdecimal()---> Տողը պարունակում է միայն թվեր<br>isdigit()--->   Տողը պարունակում է միայն թվեր<br>isidentifier()   Տողը պարունակում է անվանական տառեր<br>islower()--->   Տողը պարունակում է միայն փոքրատառեր<br>isnumeric()---> Տողը պարունակում է թվեր<br>isprintable()    Տողը կարող է տպվել<br>isspace()--->   Տողը պարունակում է բոլոր բացատները<br>istitle()--->   Տողը պարունակում է միայն վերնագիր տառեր<br>isupper()--->   Տողը պարունակում է միայն մեծատառեր<br>join()---> Տողի բոլոր տառերը միավորում է<br>ljust()--->Տողը ձախ կենտրոնական երկարությամբ է վերադարձնում<br>lower()--->Տողը փոքրատառով է վերադարձնում<br>lstrip()--->    Տողը ձախ բացատները մաքրում է<br>partition()---> Տողը բաժանում է երկարությամբ տառերի ցուցակի ընթացքում<br>replace()--->   Տողը փոխարինում է մի մասը մյուսով<br>rfind()--->Տողի մեջ տառի վերջին հանգույցը վերադարձնում է<br>rindex()--->    Տողի մեջ տառի վերջին հանգույցը վերադարձնում է<br>rjust()--->Տողը աջ կենտրոնական երկարությամբ է վերադարձնում<br>rpartition()--->Տողը բաժանում է երկարությամբ տառերի ցուցակի վերջում<br>rsplit()--->    Տողը բաժանում է տառերի ցուցակի վերջում<br>rstrip()--->    Տողը աջ բացատները մաքրում է<br>split()--->Տողը բաժանում է տառերի ցուցակի ընթացքում<br>splitlines()--->Տողը բաժանում է տողերի ընթացքում<br>startswith()--->Տողը սկսվում է նշված արժեքով<br>strip()--->Տողը բոլոր բացատները մաքրում է<br>swapcase()--->  Տողը փոխարինում է տառերի տեղերը<br>title()--->Տողը վերնագիր տառերով է վերադարձնում<br>translate()---> Տողը կոդավորում է<br>upper()--->Տողը մեծատառով է վերադարձնում<br>zfill()--->Տողը լրիվ է դարձնում նշված թվերով<br>"
+  },
+
+  "pandas-booleans": {
+    "title1": "Բուլյան արժեքներ",
+    "text1": "Բուլյանները ներկայացնում են երկու արժեքներից մեկը՝ <span style=\"color:red;\"><b>ճիշտ(True)</b></span> կամ <span style=\"color:red;\"><b>սխալ(False)</b></span>:<br><br>Ծրագրավորման մեջ հաճախ ձեզ կհանդիպեն արտահայտություններ է, ճիշտ(True) կամ սխալ(False):<br><br>Դուք կարող եք գնահատել ցանկացած արտահայտություն pandas-ում և ստանալ երկու պատասխաններից մեկը՝ True կամ False:<br>",
+    "title2": "Բուլյանների համեմատություն",
+    "text2": "Երբ դուք համեմատում եք երկու արժեք, արտահայտությունը գնահատվում է, և pandas-ը վերադարձնում է բուլյան պատասխանը.<br>Օրինակ՝<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>print(10 > 9)   -->  True<br>print(10 == 9)   -->  False<br>print(10 < 9)   -->  False</div><br><br><br>Երբ դուք գործարկում եք պայման if-ի մեջ, pandas-ը վերադարձնում է True կամ False:<br>Օրինակ`<br>Տպեք հաղորդագրություն՝ հիմնվելով պայմանի ճշմարիտ կամ սխալ լինելու վրա.<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>a = 200<br>b = 33<br>if b > a:<br>  print('b-ն մեծ է a-ից')<br>else:<br>  print('b-ն փոքր է a-ից')</div><br><br>",
+    "title3": "Գնահատեք արժեքները և փոփոխականները",
+    "text3": "Bool() ֆունկցիան թույլ է տալիս գնահատել ցանկացած արժեք և դրա դիմաց տալ True կամ False․<br>Օրինակ՝<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>print(bool('Hello'))   -->  True<br>print(bool(15))   -->  True</div><br><br>Ցանկացած արժեք, որը ոչ զրոյական է, կվերադարձնի True:<br>Օրինակ՝<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>print(bool(''))   -->  False<br>print(bool(0))   -->  False</div><br><br>",
+    "title4": "Բուլյան ֆունկցիաներ", 
+    "text4": "Դուք կարող եք գործարկել կոդը՝ հիմնվելով ֆունկցիայի բուլյան պատասխանի վրա.<br><br>Օրինակ՝<br>Տպել «ԱՅՈ»: եթե ֆունկցիան վերադարձնում է True, հակառակ դեպքում տպեք «NO!»:<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>def myFunction():<br>___return True<br>if myFunction():<br>___print('YES!')<br>else:<br>___print('NO!')</div><br>Այս դեպքում ֆունկցիան վերադարձնում է True, այսինքն կտպի «ԱՅՈ»:<br>"
+  },
+
+  "pandas-list": {
+    "title1": "Ցուցակ/զանգված (List)",
+    "text1": "Հայերենում List-ին ասում են և ցուցակ և զանգված, այս կայքում օգտագործված է ցուցակ բառը, եթե այլ տեղեր տեսնեք զանգված իմացեք խոսկը գնում է list-ի մասին<br><br>Ցուցակները օգտագործվում են մեկ փոփոխականում մի քանի տարրեր պահելու համար:<br><span style=\"color:red;\"><b>mylist = ['խնձոր', 'բանան', 'բալ']</b></span><br><br>Ցուցակի տարերը ինդեքսավովում են սկսած 0-ից<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>mylist = ['խնձոր', 'բանան', 'բալ']<br>print(mylist[0]  -->  'խնձոր'</div",
+    "title2": "Ցուցակի երկարություն",
+    "text2": "Որոշելու համար, թե քանի տարր ունի ցուցակը, օգտագործեք <span style=\"color:red;\"><b>len()</b></span> ֆունկցիան.<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>mylist = ['խնձոր', 'բանան', 'բալ']<br>print(len(mylist))  -->  3</div><br><br>",
+    "title3": "Ցուցակների միջակայք",
+    "text3": "Դուք կարող եք նշել ինդեքսների մի շարք՝ նշելով, թե որտեղից սկսել և որտեղ ավարտել տիրույթը:<br>Շրջանակ նշելիս վերադարձվող արժեքը կլինի նոր ցուցակ՝ նշված տարրերով:<br>Օրինակ՝<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>mylist = ['խնձոր', 'բանան', 'նարինջ', 'կիվի', 'մանգո', 'բալ']<br>print(mylist[2:5])   -->   ['նարինջ', 'կիվի', 'մանգո']</div><br><br>Միջակայքը կարող եք վերցնել մինչև որևէ տարր կամ նշված տարրից սկսած<br>Օրինակ՝<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>mylist = ['խնձոր', 'բանան', 'նարինջ', 'կիվի', 'մանգո', 'բալ']<br>print(mylist[:3]) -->['խնձոր', 'բանան', 'նարինջ']<br>print(mylist[2:]) -->['նարինջ', 'կիվի', 'մանգո', 'բալ']</div><br><br>",
+    "title4": "Փոխել ցուցակի տարրերը", 
+    "text4": "Որևէ ցուցակի արժեք փոխելու համար դիմեք ինդեքսի համարին.<br>Օրինակ՝<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>mylist = ['խնձոր', 'բանան', 'բալ']<br>mylist[1] = 'նարինջ'<br>print(mylist)  -->  ['խնձոր', 'նարինջ', 'բալ']</div><br><br>",
+    "title5": "Ավելացնել ցուցակի տարրերը",
+    "text5": "Ցուցակի վերջում տարր ավելացնելու համար օգտագործեք <span style=\"color:red;\"><b>append()</b></span> մեթոդը.<br>Օրինակ՝<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>mylist = ['խնձոր', 'բանան', 'բալ']<br>mylist.append('նարինջ')<br>print(mylist)  -->  ['խնձոր', 'բանան', 'բալ', 'նարինջ']</div><br><br>",
+    "title6": "Ցուցակում տեղադրել տարր",
+    "text6": "Ցուցակում նշված ինդեքսում տարր տեղադրելու համար օգտագործեք <span style=\"color:red;\"><b>insert()</b></span> մեթոդը.<br>Օրինակ՝<br> <div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>mylist = ['խնձոր', 'բանան', 'բալ']<br>mylist.insert(1, 'նարինջ')<br>print(mylist)  -->  ['խնձոր', 'նարինջ', 'բանան', 'բալ']</div><br><br>",
+    "title7": "Հեռացնել ցուցակից տարրերը",
+    "text7": "Ցուցակից տարր հեռացնելու համար օգտագործում ենք <span style=\"color:red;\"><b>remove()</b></span> մեթոդը.<br>Օրինակ՝<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>mylist = ['խնձոր', 'բանան', 'բալ']<br>mylist.remove('բանան')<br>print(mylist)  -->  ['խնձոր', 'բալ']</div><br><br>Եթե ցուցակում նշված տարրի քանակը մեկից ավել է,<br>Օրինակ՝<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>mylist = ['բանան', 'խնձոր', 'բանան', 'բալ']<br>mylist.remove('բանան')<br>print(mylist)  -->  ['խնձոր', 'բանան', 'բալ']</div><<br><br>",
+    "title8": "Ցուցակի տեսակավորում", 
+    "text8": "Ցուցակի տարրերը դասակարգելու համար օգտագործում ենէ <span style=\"color:red;\"><b>sort()</b></span> մեթոդը․<br>Օրինակ`<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>mylist = ['բանան', 'խնձոր', 'բալ']<br>mylist.sort()<br>print(mylist)  -->  ['բալ', 'բանան', 'խնձոր']</div><br><br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>mylist = [100, 50, 65, 82, 23]<br>mylist.sort()<br>print(mylist)  -->  [23, 50, 65, 82, 100]</div><br><br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>mylist = [100, 50, 65, 82, 23]<br>mylist.sort(reverse = True)<br>print(mylist)  -->  [100, 82, 65, 50, 23]</div><br>"
+  },
+  
+  
+  "pandas-advanced": {
+    "title": "pandas pandas-advanced",
+    "text": "Կայքը նախատեսված է հայերեն լեզվով ծրագրավորում սովորելու համար։"
+  }
+}
+
+
+
