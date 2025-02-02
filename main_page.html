@@ -193,7 +193,7 @@
     <script>
         async function loadFooterText() {
             try {
-                const response = await fetch('data.json'); // Fetch the JSON file
+                const response = await fetch('data/python.json'); // Fetch the JSON file
                 const data = await response.json(); // Parse the JSON data
                 
                 document.getElementById('footer-text').innerHTML = data.footer.text;

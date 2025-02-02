@@ -3,43 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LearnHub - SQL Tutorial</title>
+    <title>LearnHub - sql Tutorial</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        /* Global Styles */
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background-color: #f9f9f9;
+            background-color: #ffffff;
         }
 
         header {
-            background: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+            background: #ffffff;
+            color: #000000;
+        }
+
+        header img {
+            width: 90px;
+            height: 90px;
+            margin-left: 10px;
         }
 
         nav {
             display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            background: #333;
-            padding: 0.5rem 1rem;
+            gap: 1rem; /* Space between navigation links */
+            margin-right: 100px;
+            
         }
 
         nav a {
-            color: white;
+            color: black;
             text-decoration: none;
-            margin: 0 1rem;
-            padding: 0.5rem 1rem;
+            padding: 0.3rem 1rem;
             transition: background 0.3s;
+            font-family: 'Arial', sans-serif; /* Change the font to Arial (or any other font you prefer) */
+            font-weight: 500; /* Optional: adjust the weight of the font */
         }
 
         nav a:hover, nav a.active {
-            background: #4CAF50;
+            background: #f4f4f4;
             border-radius: 5px;
         }
 
@@ -136,6 +143,134 @@
         }
     </style>
     <script>
+        // Function to dynamically load footer text and sql basics content from data.json
+        async function loadFooterText() {
+            try {
+                const response = await fetch('data/python.json'); // Fetch the JSON file
+                const data = await response.json(); // Parse the JSON data
+
+                // Update footer text
+                document.getElementById('footer-text').innerHTML = data.footer.text;
+
+                // Update sql home content
+                const sqlHomeSection = document.querySelector('#sql-intro');
+                sqlHomeSection.querySelector('h2:nth-of-type(1)').textContent = data['sql-intro'].title1;
+                sqlHomeSection.querySelector('p:nth-of-type(1)').innerHTML = data['sql-intro'].text1;
+                sqlHomeSection.querySelector('h2:nth-of-type(2)').textContent = data['sql-intro'].title2;
+                sqlHomeSection.querySelector('p:nth-of-type(2)').innerHTML = data['sql-intro'].text2;
+                sqlHomeSection.querySelector('h2:nth-of-type(3)').textContent = data['sql-intro'].title3;
+                sqlHomeSection.querySelector('p:nth-of-type(3)').innerHTML = data['sql-intro'].text3;
+                sqlHomeSection.querySelector('h2:nth-of-type(4)').textContent = data['sql-intro'].title4;
+                sqlHomeSection.querySelector('p:nth-of-type(4)').innerHTML = data['sql-intro'].text4;
+
+
+                // Update sql install content
+                const sqlInstallSection = document.querySelector('#sql-install');
+                sqlInstallSection.querySelector('h2:nth-of-type(1)').textContent = data['sql-install'].title1;
+                sqlInstallSection.querySelector('p:nth-of-type(1)').innerHTML = data['sql-install'].text1;
+                sqlInstallSection.querySelector('h2:nth-of-type(2)').textContent = data['sql-install'].title2;
+                sqlInstallSection.querySelector('p:nth-of-type(2)').innerHTML = data['sql-install'].text2;
+                sqlInstallSection.querySelector('h2:nth-of-type(3)').textContent = data['sql-install'].title3;
+                sqlInstallSection.querySelector('p:nth-of-type(3)').innerHTML = data['sql-install'].text3;
+                sqlInstallSection.querySelector('h2:nth-of-type(4)').textContent = data['sql-install'].title4;
+                sqlInstallSection.querySelector('p:nth-of-type(4)').innerHTML = data['sql-install'].text4;
+
+
+                // Update sql variables content
+                const sqlVariablesSection = document.querySelector('#sql-variables');
+                sqlVariablesSection.querySelector('h2:nth-of-type(1)').textContent = data['sql-variables'].title1;
+                sqlVariablesSection.querySelector('p:nth-of-type(1)').innerHTML = data['sql-variables'].text1;
+                sqlVariablesSection.querySelector('h2:nth-of-type(2)').textContent = data['sql-variables'].title2;
+                sqlVariablesSection.querySelector('p:nth-of-type(2)').innerHTML = data['sql-variables'].text2;
+                sqlVariablesSection.querySelector('h2:nth-of-type(3)').textContent = data['sql-variables'].title3;
+                sqlVariablesSection.querySelector('p:nth-of-type(3)').innerHTML = data['sql-variables'].text3;
+                sqlVariablesSection.querySelector('h2:nth-of-type(4)').textContent = data['sql-variables'].title4;
+                sqlVariablesSection.querySelector('p:nth-of-type(4)').innerHTML = data['sql-variables'].text4;
+
+                // Update sql datatype content
+                const sqlDataTypeSection = document.querySelector('#sql-datatype');
+                sqlDataTypeSection.querySelector('h2:nth-of-type(1)').textContent = data['sql-datatype'].title1;
+                sqlDataTypeSection.querySelector('p:nth-of-type(1)').innerHTML = data['sql-datatype'].text1;
+                sqlDataTypeSection.querySelector('h2:nth-of-type(2)').textContent = data['sql-datatype'].title2;
+                sqlDataTypeSection.querySelector('p:nth-of-type(2)').innerHTML = data['sql-datatype'].text2;
+                sqlDataTypeSection.querySelector('h2:nth-of-type(3)').textContent = data['sql-datatype'].title3;
+                sqlDataTypeSection.querySelector('p:nth-of-type(3)').innerHTML = data['sql-datatype'].text3;
+                sqlDataTypeSection.querySelector('h2:nth-of-type(4)').textContent = data['sql-datatype'].title4;
+                sqlDataTypeSection.querySelector('p:nth-of-type(4)').innerHTML = data['sql-datatype'].text4;
+
+                
+                // Update sql datatype content
+                const sqlNumbersSection = document.querySelector('#sql-numbers');
+                sqlNumbersSection.querySelector('h2:nth-of-type(1)').textContent = data['sql-numbers'].title1;
+                sqlNumbersSection.querySelector('p:nth-of-type(1)').innerHTML = data['sql-numbers'].text1;
+                sqlNumbersSection.querySelector('h2:nth-of-type(2)').textContent = data['sql-numbers'].title2;
+                sqlNumbersSection.querySelector('p:nth-of-type(2)').innerHTML = data['sql-numbers'].text2;
+                sqlNumbersSection.querySelector('h2:nth-of-type(3)').textContent = data['sql-numbers'].title3;
+                sqlNumbersSection.querySelector('p:nth-of-type(3)').innerHTML = data['sql-numbers'].text3;
+                sqlNumbersSection.querySelector('h2:nth-of-type(4)').textContent = data['sql-numbers'].title4;
+                sqlNumbersSection.querySelector('p:nth-of-type(4)').innerHTML = data['sql-numbers'].text4;
+                sqlNumbersSection.querySelector('h2:nth-of-type(5)').textContent = data['sql-numbers'].title5;
+                sqlNumbersSection.querySelector('p:nth-of-type(5)').innerHTML = data['sql-numbers'].text5;
+                
+                // Update sql datatype content
+                const sqlStringSection = document.querySelector('#sql-string');
+                sqlStringSection.querySelector('h2:nth-of-type(1)').textContent = data['sql-string'].title1;
+                sqlStringSection.querySelector('p:nth-of-type(1)').innerHTML = data['sql-string'].text1;
+                sqlStringSection.querySelector('h2:nth-of-type(2)').textContent = data['sql-string'].title2;
+                sqlStringSection.querySelector('p:nth-of-type(2)').innerHTML = data['sql-string'].text2;
+                sqlStringSection.querySelector('h2:nth-of-type(3)').textContent = data['sql-string'].title3;
+                sqlStringSection.querySelector('p:nth-of-type(3)').innerHTML = data['sql-string'].text3;
+                sqlStringSection.querySelector('h2:nth-of-type(4)').textContent = data['sql-string'].title4;
+                sqlStringSection.querySelector('p:nth-of-type(4)').innerHTML = data['sql-string'].text4;
+                sqlStringSection.querySelector('h2:nth-of-type(5)').textContent = data['sql-string'].title5;
+                sqlStringSection.querySelector('p:nth-of-type(5)').innerHTML = data['sql-string'].text5;
+                sqlStringSection.querySelector('h2:nth-of-type(6)').textContent = data['sql-string'].title6;
+                sqlStringSection.querySelector('p:nth-of-type(6)').innerHTML = data['sql-string'].text6;
+                sqlStringSection.querySelector('h2:nth-of-type(7)').textContent = data['sql-string'].title7;
+                sqlStringSection.querySelector('p:nth-of-type(7)').innerHTML = data['sql-string'].text7;
+                sqlStringSection.querySelector('h2:nth-of-type(8)').textContent = data['sql-string'].title8;
+                sqlStringSection.querySelector('p:nth-of-type(8)').innerHTML = data['sql-string'].text8;
+
+
+                // Update sql install content
+                const sqlBooleansSection = document.querySelector('#sql-booleans');
+                sqlBooleansSection.querySelector('h2:nth-of-type(1)').textContent = data['sql-booleans'].title1;
+                sqlBooleansSection.querySelector('p:nth-of-type(1)').innerHTML = data['sql-booleans'].text1;
+                sqlBooleansSection.querySelector('h2:nth-of-type(2)').textContent = data['sql-booleans'].title2;
+                sqlBooleansSection.querySelector('p:nth-of-type(2)').innerHTML = data['sql-booleans'].text2;
+                sqlBooleansSection.querySelector('h2:nth-of-type(3)').textContent = data['sql-booleans'].title3;
+                sqlBooleansSection.querySelector('p:nth-of-type(3)').innerHTML = data['sql-booleans'].text3;
+                sqlBooleansSection.querySelector('h2:nth-of-type(4)').textContent = data['sql-booleans'].title4;
+                sqlBooleansSection.querySelector('p:nth-of-type(4)').innerHTML = data['sql-booleans'].text4;
+                
+                // Update sql datatype content
+                const sqlListSection = document.querySelector('#sql-list');
+                sqlListSection.querySelector('h2:nth-of-type(1)').textContent = data['sql-list'].title1;
+                sqlListSection.querySelector('p:nth-of-type(1)').innerHTML = data['sql-list'].text1;
+                sqlListSection.querySelector('h2:nth-of-type(2)').textContent = data['sql-list'].title2;
+                sqlListSection.querySelector('p:nth-of-type(2)').innerHTML = data['sql-list'].text2;
+                sqlListSection.querySelector('h2:nth-of-type(3)').textContent = data['sql-list'].title3;
+                sqlListSection.querySelector('p:nth-of-type(3)').innerHTML = data['sql-list'].text3;
+                sqlListSection.querySelector('h2:nth-of-type(4)').textContent = data['sql-list'].title4;
+                sqlListSection.querySelector('p:nth-of-type(4)').innerHTML = data['sql-list'].text4;
+                sqlListSection.querySelector('h2:nth-of-type(5)').textContent = data['sql-list'].title5;
+                sqlListSection.querySelector('p:nth-of-type(5)').innerHTML = data['sql-list'].text5;
+                sqlListSection.querySelector('h2:nth-of-type(6)').textContent = data['sql-list'].title6;
+                sqlListSection.querySelector('p:nth-of-type(6)').innerHTML = data['sql-list'].text6;
+                sqlListSection.querySelector('h2:nth-of-type(7)').textContent = data['sql-list'].title7;
+                sqlListSection.querySelector('p:nth-of-type(7)').innerHTML = data['sql-list'].text7;
+                sqlListSection.querySelector('h2:nth-of-type(8)').textContent = data['sql-list'].title8;
+                sqlListSection.querySelector('p:nth-of-type(8)').innerHTML = data['sql-list'].text8;
+
+
+
+
+            } catch (error) {
+                console.error("Error loading footer or content:", error);
+            }
+        }
+
+        // Navigation function to switch between sections
         function navigateTo(sectionId) {
             const sections = document.querySelectorAll('main > section');
             const navLinks = document.querySelectorAll('nav a');
@@ -153,80 +288,175 @@
         }
     </script>
 </head>
-<body>
+<body onload="loadFooterText()">
     <header>
-        <h1>LearnHub - SQL Tutorial</h1>
+        <a href="index.html">
+            <img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/logo.png" alt="LearnHub Logo">
+        </a>
+        <nav>
+            <a href="sql.html" onclick="navigateTo('#sql')">sql</a>
+            <a href="#pandas" onclick="navigateTo('#pandas')">Pandas</a>
+            <a href="sql.html" onclick="navigateTo('#sql')">SQL</a>
+            <a href="#html" onclick="navigateTo('#html')">HTML</a>
+            <a href="#css" onclick="navigateTo('#css')">CSS</a>
+            <a href="#javascript" onclick="navigateTo('#javascript')">JavaScript</a>
+        </nav>
     </header>
-
-    <nav>
-        <a href="index.html" onclick="navigateTo('#home')">Home</a>
-        <a href="python.html" onclick="navigateTo('#python')">Python</a>
-        <a href="sql.html" onclick="navigateTo('#sql')">SQL</a>
-        <a href="#tutorials" onclick="navigateTo('#tutorials')">Tutorials</a>
-        <a href="#about" onclick="navigateTo('#about')">About</a>
-        <a href="#contact" onclick="navigateTo('#contact')">Contact</a>
-    </nav>
 
     <div class="container">
         <aside class="sidebar">
-            <h3>SQL Tutorial</h3>
+            <h3>sql Tutorial</h3>
             <ul>
-                <li><a href="#sql-basics" onclick="navigateTo('#sql-basics')">SQL Basics</a></li>
-                <li><a href="#sql-advanced" onclick="navigateTo('#sql-advanced')">Advanced SQL</a></li>
-                <li><a href="#sql-syntax" onclick="navigateTo('#sql-syntax')">SQL Syntax</a></li>
-                <li><a href="#sql-examples" onclick="navigateTo('#sql-examples')">Examples</a></li>
-                <li><a href="#sql-resources" onclick="navigateTo('#sql-resources')">Resources</a></li>
+                <li><a href="#sql-intro" onclick="navigateTo('#sql-intro')">Ներածություն (Intro)</a></li>
+                <li><a href="#sql-install" onclick="navigateTo('#sql-install')">Ներբեռնել (Install)</a></li>
+                <li><a href="#sql-variables" onclick="navigateTo('#sql-variables')">Փոփոխականներ (Variables)</a></li>
+                <li><a href="#sql-datatype" onclick="navigateTo('#sql-datatype')">Տվյալների տեսակներ (Data Types)</a></li>
+                <li><a href="#sql-numbers" onclick="navigateTo('#sql-numbers')">Թվեր (Numbers)</a></li>
+                <li><a href="#sql-string" onclick="navigateTo('#sql-string')">Տողեր (String)</a></li>
+                <li><a href="#sql-booleans" onclick="navigateTo('#sql-booleans')">Բուլյան (Boolean)</a></li>
+                <li><a href="#sql-list" onclick="navigateTo('#sql-list')">Ցուցակ (List)</a></li>
             </ul>
         </aside>
 
         <main class="content">
-            <section id="sql-basics">
-                <h1>SQL Basics</h1>
-                <p>SQL (Structured Query Language) is a standard programming language used to manage and manipulate databases. In this section, you will learn about basic SQL commands such as SELECT, INSERT, UPDATE, and DELETE.</p>
+            <section id="sql-intro">
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
             </section>
 
-            <section id="sql-advanced" class="hidden">
-                <h1>Advanced SQL</h1>
-                <p>Learn more advanced SQL techniques, such as subqueries, joins, and indexing to optimize your database queries and structure.</p>
+            <section id="sql-install">
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
             </section>
 
-            <section id="sql-syntax" class="hidden">
-                <h1>SQL Syntax</h1>
-                <p>Here are the basic SQL syntax rules for creating and manipulating databases:</p>
-                <pre><code>
--- Example of SQL syntax for selecting data
-SELECT column_name
-FROM table_name
-WHERE condition;
-                </code></pre>
+            <section id="sql-variables">
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
             </section>
 
-            <section id="sql-examples" class="hidden">
-                <h1>SQL Examples</h1>
-                <p>Explore common SQL queries with examples on how to interact with databases:</p>
-                <pre><code>
--- Example of SQL query to select all records from a table
-SELECT * FROM customers;
-
--- Example of SQL query to insert a new record
-INSERT INTO customers (name, age) VALUES ('John Doe', 30);
-                </code></pre>
+            <section id="sql-datatype">
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
             </section>
+
+            <section id="sql-numbers">
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+            </section>
+
+            <section id="sql-string">
+                <h2></h2>
+                <p></p>
+                <hr style="width: 50%; height: 1px; background-color: black; border: none; margin-left: 0;">
+                <h2></h2>
+                <p></p>
+                <hr style="width: 50%; height: 1px; background-color: black; border: none; margin-left: 0;">
+                <h2></h2>
+                <p></p>
+                <hr style="width: 50%; height: 1px; background-color: black; border: none; margin-left: 0;">
+                <h2></h2>
+                <p></p>
+                <hr style="width: 50%; height: 1px; background-color: black; border: none; margin-left: 0;">
+                <h2></h2>
+                <p></p>
+                <hr style="width: 50%; height: 1px; background-color: black; border: none; margin-left: 0;">
+                <h2></h2>
+                <p></p>
+                <hr style="width: 50%; height: 1px; background-color: black; border: none; margin-left: 0;">
+                <h2></h2>
+                <p></p>
+                <hr style="width: 50%; height: 1px; background-color: black; border: none; margin-left: 0;">
+                <h2></h2>
+                <p></p>
+            </section>
+
+
+            <section id="sql-booleans">
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+            </section>
+
+
+            <section id="sql-list">
+                <h2></h2>
+                <p></p>
+                <hr style="width: 50%; height: 1px; background-color: black; border: none; margin-left: 0;">
+                <h2></h2>
+                <p></p>
+                <hr style="width: 50%; height: 1px; background-color: black; border: none; margin-left: 0;">
+                <h2></h2>
+                <p></p>
+                <hr style="width: 50%; height: 1px; background-color: black; border: none; margin-left: 0;">
+                <h2></h2>
+                <p></p>
+                <hr style="width: 50%; height: 1px; background-color: black; border: none; margin-left: 0;">
+                <h2></h2>
+                <p></p>
+                <hr style="width: 50%; height: 1px; background-color: black; border: none; margin-left: 0;">
+                <h2></h2>
+                <p></p>
+                <hr style="width: 50%; height: 1px; background-color: black; border: none; margin-left: 0;">
+                <h2></h2>
+                <p></p>
+                <hr style="width: 50%; height: 1px; background-color: black; border: none; margin-left: 0;">
+                <h2></h2>
+                <p></p>
+            </section>
+
+
 
             <section id="sql-resources" class="hidden">
-                <h1>SQL Resources</h1>
-                <p>Here are some great resources to learn SQL:</p>
-                <ul>
-                    <li><a href="https://www.w3schools.com/sql/" target="_blank">W3Schools SQL Tutorial</a></li>
-                    <li><a href="https://www.sqlbolt.com/" target="_blank">SQLBolt</a></li>
-                    <li><a href="https://www.learn-sql.org/" target="_blank">Learn SQL</a></li>
-                </ul>
+                <h1>sql Resources</h1>
+                <p>Here are some great resources to learn sql:</p>
+                <!-- <ul>
+                    <li><a href="https://www.sql.org/doc/" target="_blank">sql Official Documentation</a></li>
+                    <li><a href="https://realsql.com/" target="_blank">Real sql</a></li>
+                    <li><a href="https://www.learnsql.org/" target="_blank">Learn sql</a></li>
+                </ul> -->
             </section>
         </main>
     </div>
 
-    <footer class="footer">
-        <p>&copy; 2025 LearnHub. All rights reserved.</p>
-    </footer>
+    <div class="footer">
+        <p id="footer-text"></p>
+    </div>
 </body>
 </html>

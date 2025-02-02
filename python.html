@@ -146,7 +146,7 @@
         // Function to dynamically load footer text and Python basics content from data.json
         async function loadFooterText() {
             try {
-                const response = await fetch('data.json'); // Fetch the JSON file
+                const response = await fetch('data/python.json'); // Fetch the JSON file
                 const data = await response.json(); // Parse the JSON data
 
                 // Update footer text
