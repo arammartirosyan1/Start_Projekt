@@ -20,12 +20,34 @@
     "text2": "Pandas-ը տեղադրվելուց հետո ներմուծեք այն ձեր հավելվածներում՝ ավելացնելով ներմուծման հիմնաբառը՝ <span style=\"color:red;\"><b>Import Pandas</b></span><br>"
     },
 
-  "pandas-variables": {
-    "title1": "",
-    "text1": "",
+  "pandas-series": {
+    "title": "Pandas Series",
+    "title1": "Ի՞նչ է Սերիան:",
+    "text1": "Պանդաների շարքը նման է աղյուսակի սյան:<br>Դա ցանկացած տեսակի տվյալներ պահող միաչափ զանգված է։<br>Օրինակ՝<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>import pandas as pd<br><br>a = [1, 7, 2]<br>myvar = pd.Series(a)<br><br>print(myvar)</div",
+    "title2": "Ստեղծել պիտակներ",
+    "text2": "Ինդեքսի արգումենտով դուք կարող եք անվանել ձեր սեփական պիտակները:<br>Օրինակ՝<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>import pandas as pd<br><br>a = [1, 7, 2]<br>myvar = pd.Series(a, index = ['x', 'y', 'z'])<br><br>print(myvar)</div>",
+    "title3": "Key/Value օբյեկտները որպես սերիա",
+    "text3": "Սերիա ստեղծելիս կարող եք նաև օգտագործել բանալի/արժեք օբյեկտ, օրինակ՝ բառարան:<br> Ստեղծեք պարզ Pandas շարք բառարանից.<br><br>Օրինակ`<br>import pandas as pd<br><br>calories = {\"day1\": 420, \"day2\": 380, \"day3\": 390}<br><br>myvar = pd.Series(calories)<br><br>print(myvar)<br>"
+
+  },
+    
+  "pandas-dataframe": {
+    "title": "Pandas DataFrames",
+    "title1": "Ի՞նչ է DataFrame-ը:",
+    "text1": "Pandas DataFrame-ը երկչափ տվյալների կառուցվածք է, այն կազմված է սյուներից և տողերից։<br><br>Ստացեք ձեր սեփական Python Dataframe-ը։<br>Օրինակ՝<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>import pandas as pd<br><br>calories = {\"day1\": 420, \"day2\": 380, \"day3\": 390}<br>myvar = pd.Series(calories, index = [\"day1\", \"day2\"])<br><br>print(myvar)print(myvar)</div>",
     "title2": "",
-    "text2": ""
+    "text2": "",
+    "title3": "",
+    "text3": "",
+    "title4": "",
+    "text4": ""
      },
+
+
+
+
+
+
     "pandas-variables1": {
       "title1": "",
       "text1": "",
