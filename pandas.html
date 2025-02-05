@@ -154,6 +154,7 @@
 
                 // Update pandas home content
                 const pandasHomeSection = document.querySelector('#pandas-intro');
+                pandasHomeSection.querySelector('h1:nth-of-type(1)').textContent = data['pandas-intro'].title;
                 pandasHomeSection.querySelector('h2:nth-of-type(1)').textContent = data['pandas-intro'].title1;
                 pandasHomeSection.querySelector('p:nth-of-type(1)').innerHTML = data['pandas-intro'].text1;
                 pandasHomeSection.querySelector('h2:nth-of-type(2)').textContent = data['pandas-intro'].title2;
@@ -246,6 +247,7 @@
 
         <main class="content">
             <section id="pandas-intro">
+                <h1></h1>
                 <h2></h2>
                 <p></p>
                 <h2></h2>
