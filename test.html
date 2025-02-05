@@ -3,41 +3,268 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Background Image with Text</title>
+    <title>LearnHub - Online Tutorials</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
     <style>
-        body {
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #ffffff;
+        }
+
+        header {
             display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+            background: #ffffff;
+        }
+
+        header img {
+            width: 90px;
+            height: 90px;
+            margin-left: 10px;
+        }
+
+        nav {
+            display: flex;
+            gap: 1rem;
+            margin-right: 100px;
+        }
+
+        nav a {
+            color: black;
+            text-decoration: none;
+            padding: 0.3rem 1rem;
+            transition: background 0.3s;
+            font-family: 'Arial', sans-serif;
+            font-weight: 500;
+        }
+
+        nav a:hover, nav a.active {
+            background: #f4f4f4;
+            border-radius: 5px;
+        }
+
+        .background {
+            position: relative;
+            width: 100%;
             height: 100vh;
-            background: url('photo.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
             color: white;
-            font-family: Arial, sans-serif;
-            flex-direction: column;
-            text-align: left;
-            margin-left: 10%;
+            overflow: hidden;
         }
-        h3.text-box, h4.text-box {
-            background: rgba(0, 0, 0, 0);
-            padding: 20px;
-            border-radius: 10px;
-            width: 30%;
-            margin-top: 5%;
-        }
+
         .background-img {
             position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .background-img.active {
+            opacity: 1;
+        }
+
+        .text-box {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            z-index: 2;
+            font-family: "Times New Roman", sans-serif;
+            text-align: left;
+            
+        }
+
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 12px 18px;
+            font-size: 24px;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: 1.5s;
+            z-index: 3;
+        }
+
+        .slider-btn:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .prev { left: 20px; }
+        .next { right: 20px; }
+
+        .footer {
+            background: #d5d5d5;
+            color: 000000;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .background {
+                height: 80vh;
+            }
+            .text-box {
+                font-size: 1rem;
+                width: 80%;
+            }
         }
     </style>
+    <style>
+        .dots {
+            position: absolute;
+            bottom: -15%; /* Increase this value to lower the dots further */
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+
+    
+        .dot {
+            width: 8px;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+    
+        .dot.active {
+            background: white;
+            width: 10px;
+            height: 10px;
+        }
+    </style>
+    
+
 </head>
-<body class="background">
-    <img src="photo.jpg" alt="Background Image" class="background-img">
-    <h3 class="text-box">Armenia Coding Path<br><br>Հայաստանի կոդավորման ուղի</h3>
-    <h4 class="text-box">Մենք այստեղ ենք՝ մեր ներդրումն ունենալու այս աշխարհում: Այլապես ինչո՞ւ ենք այստեղ:
-      Միայն նպատակ ունենալն է կյանքն իմաստավորում  և  բավարարվածություն բերում:<br><p style="font-size: 13px;">Սթիվ Ջոբս</p></h4>
+<body>
+
+    <header>
+        <a href="index.html">
+            <img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/img/logo.png" alt="LearnHub Logo">
+        </a>
+        <nav>
+            <a href="python.html">Python</a>
+            <a href="pandas.html">Pandas</a>
+            <a href="sql.html">SQL</a>
+            <a href="html.html">HTML</a>
+            <a href="css.html">CSS</a>
+            <a href="javascript.html">JavaScript</a>
+        </nav>
+    </header>
+
+    <div class="background">
+        <img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/img/main_page.jpg" class="background-img active">
+        <img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/img/apple.jpg" class="background-img">
+        <img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/img/web_bage_icons.jpg" class="background-img">
+        <img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/img/microsoft.jpg" class="background-img">
+        <img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/img/spacex.jpg" class="background-img">
+
+
+        <button class="slider-btn prev" onclick="prevImage()">❮</button>
+        <button class="slider-btn next" onclick="nextImage()">❯</button>
+
+        <h2 class="text-box" id="slider-text">Armenia Coding Path<br><br>Հայաստանի կոդավորման ուղի</h2>
+
+    </div>
+    <div class="dots">
+        <span class="dot active" onclick="goToSlide(0)"></span>
+        <span class="dot" onclick="goToSlide(1)"></span>
+        <span class="dot" onclick="goToSlide(2)"></span>
+        <span class="dot" onclick="goToSlide(3)"></span>
+        <span class="dot" onclick="goToSlide(4)"></span>
+    </div>
+    
+
+    <footer class="footer">
+        <p id="footer-text">Կայքը նախատեսված է հայերեն լեզվով ծրագրավորում սովորելու համար։</p>
+    </footer>
+
+    <script>
+        const images = document.querySelectorAll(".background-img");
+        const sliderText = document.getElementById("slider-text");
+        const dots = document.querySelectorAll(".dot");
+    
+        let currentIndex = 0;
+        let autoSlideInterval;
+    
+        const textArray = [
+            "Armenia Coding Path<br><br>Հայաստանի կոդավորման ուղի",
+            "<p style='font-size: 20px;''>Մենք այստեղ ենք՝ մեր ներդրումն ունենալու այս աշխարհում:<br> Այլապես ինչո՞ւ ենք այստեղ:<br>Միայն նպատակ ունենալն է կյանքն իմաստավորում<br>  և  բավարարվածություն բերում:<br><br><p style='font-size: 13px;''>Սթիվ Ջոբս</p></p>",
+            "<p style='font-size: 20px;''>Գաղափարները պատրաստի տեսքով չեն գալիս։<br> Դրանք հստակ են դառնում միայն այն ժամանակ,<br> երբ սկսում ենք աշխատել դրանց վրա։<br> Դուք պարզապես պետք է սկսեք։<br><br><p style='font-size: 13px;''>Մարկ Ցուկերբերգ</p></p>",
+            "<p style='font-size: 20px;''>Համալսարանն ավարտելով, Դուք չեք դառնա կազմակերպության նախագահ,<br> մինչև չգտնեք արժանապատիվ աշխատանք, որը թույլ կտա հասնել այդ ամենին<br><br><p style='font-size: 13px;''>Բիլլ Գեյթս</p></p>",
+            "<p style='font-size: 20px;''>Ճիշտ պատասխան ստանալու համար հարկավոր է ճիշտ հարց տալ<br><br><p style='font-size: 13px;''>Իլոն Մասկ</p></p>",
+            
+        ];
+    
+        function updateSlider() {
+            images.forEach((img, index) => {
+                img.classList.remove("active");
+                dots[index].classList.remove("active"); // Remove active class from all dots
+                if (index === currentIndex) {
+                    img.classList.add("active");
+                    dots[index].classList.add("active"); // Set active class on the current dot
+                }
+            });
+    
+            sliderText.innerHTML = textArray[currentIndex];
+        }
+    
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            updateSlider();
+            resetAutoSlide();
+        }
+    
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            updateSlider();
+            resetAutoSlide();
+        }
+    
+        function goToSlide(index) {
+            currentIndex = index;
+            updateSlider();
+            resetAutoSlide();
+        }
+    
+        function autoSlide() {
+            autoSlideInterval = setInterval(() => {
+                nextImage();
+            }, 5000);
+        }
+    
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            autoSlide();
+        }
+    
+        window.onload = () => {
+            autoSlide();
+        };
+    </script>
+    
+
 </body>
 </html>
