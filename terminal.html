@@ -3,35 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Terminal</title>
+    <title>Python Terminal</title>
+    <script src="https://cdn.jsdelivr.net/npm/xterm@4.13.0/lib/xterm.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm@4.13.0/css/xterm.css" />
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; }
-        #terminal { width: 80%; height: 300px; border: 1px solid black; padding: 10px; overflow-y: auto; margin: auto; background: black; color: white; }
-        #input { width: 80%; margin-top: 10px; padding: 5px; font-size: 16px; }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #222;
+        }
+        #terminal {
+            height: 100vh;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
-    <h2>Web Terminal</h2>
-    <div id="terminal"></div>
-    <input type="text" id="input" placeholder="Enter Python code..." autofocus>
-    <script>
-        const terminal = document.getElementById("terminal");
-        const input = document.getElementById("input");
-        const ws = new WebSocket("ws://localhost:8001");
 
-        ws.onmessage = (event) => {
-            terminal.innerHTML += `<br><span style="color: green;">${event.data}</span>`;
-            terminal.scrollTop = terminal.scrollHeight;
-        };
+<div id="terminal"></div>
 
-        input.addEventListener("keypress", function(event) {
-            if (event.key === "Enter") {
-                const command = input.value.trim();
-                terminal.innerHTML += `<br><span style="color: yellow;">$ ${command}</span>`;
-                ws.send(command);
-                input.value = "";
-            }
+<script>
+    const terminal = new Terminal();
+    terminal.open(document.getElementById('terminal'));
+    terminal.writeln('Welcome to the Python terminal!');
+
+    let commandQueue = [];
+
+    terminal.onData(data => {
+        commandQueue.push(data);  // Store the command in the queue
+        sendCommandToBackend(data);  // Send command to backend
+    });
+
+    // Polling function to get the result
+    async function pollForResult() {
+        const response = await fetch('/execute-python', {
+            method: 'POST',
+            body: JSON.stringify({ command: commandQueue.join('') }),
+            headers: { 'Content-Type': 'application/json' }
         });
-    </script>
+        const result = await response.text();
+        terminal.write(result); // Display the result
+    }
+
+    // Send the command to backend (long-polling)
+    async function sendCommandToBackend(command) {
+        // Simple fetch request that mimics WebSocket-like functionality with polling
+        commandQueue.push(command);
+        setInterval(pollForResult, 500);  // Poll every 500ms for new results
+    }
+</script>
+
 </body>
 </html>
