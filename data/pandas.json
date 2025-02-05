@@ -3,10 +3,11 @@
     "text": "Կայքը նախատեսված է հայերեն լեզվով տարբեր ծրագրավորման լեզուներ անվճար սովորելու համար։"
   },
   "pandas-intro": {
+    "title": "Pandas Introduction",
     "title1": "Ի՞նչ է Pandas-ը",
     "text1": "Pandas-ը Python գրադարան է, որն օգտագործվում է տվյալների հավաքածուների հետ աշխատելու համար:<br>«Pandas» անվանումը հղում ունի և՛ «Panel Data», և՛ «Python Data Analysis»,<br> և ստեղծվել է Ուես ՄակՔիննիի կողմից 2008 թվականին:",
     "title2": "Ի՞նչ կարող է անել Pandas-ը:",
-    "text2": "Այն ունի տվյալների վերլուծության, մաքրման, հետազոտման և մանիպուլյացիայի գործառույթներ:<br><br>Պանդաները կարող են մաքրել կեղտոտ տվյալների հավաքածուները և դրանք դարձնել ընթեռնելի և համապատասխան:",
+    "text2": "Այն ունի տվյալների վերլուծության, մաքրման, հետազոտման և մանիպուլյացիայի գործառույթներ:<br><br>Pandas-ը կարող է մաքրել կեղտոտ տվյալների հավաքածուները և դրանք դարձնել ընթեռնելի և համապատասխան:",
     "title3": "Ինչու՞ Pandas:",
     "text3": "Pandas-ը կարող է աշխատել ցանկացած տիպի տվյալների հետ և<br>գիտի տվյալների հետ կապված բոլոր հարցերի պատասխանը`<ul><li>Ո՞րն է միջին արժեքը</li><li>Առավելագույն արժեք</li><li>Նվազագույն արժեքը?</li><li>Քանի տող ունեն տվյալնեը</li></ul><br>և շատ այլ հարցերի պատասխան, որոնք կօգնեն ձեզ տվյլաների հետ աշխատելիս։",
     "title4": "Ի՞նչ աշխատանքի կարելի է անցնել Python-ի իմացությամբ",
@@ -14,6 +15,7 @@
   },
 
   "pandas-install": {
+    "title": "Pandas Installation",
     "title1": "Pandas-ի տեղադրում (installation)",
     "text1": "Եթե ​​ունեք համակարգում արդեն տեղադրված Python և PIP, ապա Panda-ների տեղադրումը շատ հեշտ է:<br><div style='background-color:#000000; color:white; padding:5px; display:inline-block; width:50%; '>C:/Users/Your Name>pip install pandas</div>",
     "title2": "Import Pandas",
@@ -23,7 +25,7 @@
   "pandas-series": {
     "title": "Pandas Series",
     "title1": "Ի՞նչ է Սերիան:",
-    "text1": "Պանդաների շարքը նման է աղյուսակի սյան:<br>Դա ցանկացած տեսակի տվյալներ պահող միաչափ զանգված է։<br>Օրինակ՝<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>import pandas as pd<br><br>a = [1, 7, 2]<br>myvar = pd.Series(a)<br><br>print(myvar)</div",
+    "text1": "Pandas-ի շարքը նման է աղյուսակի սյան:<br>Դա ցանկացած տեսակի տվյալներ պահող միաչափ զանգված է։<br>Օրինակ՝<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>import pandas as pd<br><br>a = [1, 7, 2]<br>myvar = pd.Series(a)<br><br>print(myvar)</div",
     "title2": "Ստեղծել պիտակներ",
     "text2": "Ինդեքսի արգումենտով դուք կարող եք անվանել ձեր սեփական պիտակները:<br>Օրինակ՝<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>import pandas as pd<br><br>a = [1, 7, 2]<br>myvar = pd.Series(a, index = ['x', 'y', 'z'])<br><br>print(myvar)</div>",
     "title3": "Key/Value օբյեկտները որպես սերիա",
@@ -35,17 +37,16 @@
     "title": "Pandas DataFrames",
     "title1": "Ի՞նչ է DataFrame-ը:",
     "text1": "Pandas DataFrame-ը երկչափ տվյալների կառուցվածք է, այն կազմված է սյուներից և տողերից։<br><br>Ստացեք ձեր սեփական Python Dataframe-ը։<br>Օրինակ՝<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>import pandas as pd<br><br>calories = {\"day1\": 420, \"day2\": 380, \"day3\": 390}<br>myvar = pd.Series(calories, index = [\"day1\", \"day2\"])<br><br>print(myvar)print(myvar)</div>",
-    "title2": "",
-    "text2": "",
-    "title3": "",
-    "text3": "",
-    "title4": "",
-    "text4": ""
+    "title2": "Գտեք տող",
+    "text2": "Pandas-ը օգտագործում է <span style='background-color:#b0e59b; padding:5px;'>loc</span> հատկանիշը՝ մեկ կամ մի քանի նշված տող(ներ) վերադարձնելու համար:<br><br>Օրինակ՝ <br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>import pandas as pd<br><br>data = {\"calories\": [420, 380, 390], \"duration\": [50, 40, 45]}<br>df = pd.DataFrame(data)<br><br>print(df.loc[[0, 1]]) --></div><br><br><span style='background-color:#b0e59b; padding:5px;'>Նշում. []-նշանը օգտագործելիս վերադարցրած արդյունքը Pandas DataFrame է:</span>",
+    "title3": "Անվանված ինդեքսներ",
+    "text3": "Ինդեքսի արգումենտով դուք կարող եք անվանել ձեր սեփական ինդեքսները:<br><br>Օրինակ՝<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>import pandas as pd<br><br>data = {\"calories\": [420, 380, 390], \"duration\": [50, 40, 45]}<br>df = pd.DataFrame(data, index = [\"day1\", \"day2\", \"day3\"])<br><br>print(df)</div>",
+    "title4": "Բեռնել ֆայլերը DataFrame-ում",
+    "text4": "Եթե ​​ձեր տվյալների հավաքածուները պահվում են ֆայլում, Pandas-ը կարող են դրանք բեռնել DataFrame-ում:<br><br>Օրինակ՝<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>import pandas as pd<br><br>df = pd.read_excel('data.xlsx')<br><br>print(df)</div>"
      },
 
 
-
-
+    
 
 
     "pandas-variables1": {

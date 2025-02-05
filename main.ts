@@ -32,15 +32,15 @@ async function handler(req: Request): Promise<Response> {
         return new Response(html, {
             headers: { "Content-Type": mimeTypes[".html"] },
         });
-    } else if (pathname === "/sql.html") {
-        const html = await Deno.readTextFile(join(staticDir, "sql.html"));
+    } else if (pathname === "/pandas.html") {
+        const html = await Deno.readTextFile(join(staticDir, "pandas.html"));
         return new Response(html, {
             headers: { "Content-Type": mimeTypes[".html"] },
         });
     }
 
     // Serve the logo.png image
-    else if (pathname === "/logo.png") {
+    else if (pathname === "/img/logo.png") {
         const response = await fetch("https://github.com/arammartirosyan1/Start_Projekt/raw/main/logo.png");
         const image = await response.arrayBuffer();
         return new Response(image, {
