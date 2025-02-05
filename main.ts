@@ -2,7 +2,7 @@ import { serve } from "https://deno.land/std@0.182.0/http/server.ts";
 import { extname } from "https://deno.land/std/path/mod.ts";
 import { join } from "https://deno.land/std/path/mod.ts";
 
-const staticDir = "./";  // Assuming your `index.html` and assets are in the same directory
+const staticDir = "./";  // Assuming your `terminal.html` and assets are in the same directory
 
 const mimeTypes: { [key: string]: string } = {
     ".html": "text/html",
@@ -17,22 +17,19 @@ async function handler(req: Request): Promise<Response> {
     const url = new URL(req.url);
     const pathname = url.pathname;
 
-    if (pathname === "/" || pathname === "/index.html") {
-        const html = await Deno.readTextFile(join(staticDir, "index.html"));
+    // Serve the terminal.html file
+    if (pathname === "/terminal.html") {
+        const html = await Deno.readTextFile(join(staticDir, "terminal.html"));
         return new Response(html, {
             headers: { "Content-Type": mimeTypes[".html"] },
         });
-    } else if (pathname === "/python.html") {
-        const html = await Deno.readTextFile(join(staticDir, "python.html"));
-        return new Response(html, {
-            headers: { "Content-Type": mimeTypes[".html"] },
-        });
-    } else if (pathname === "/execute-python" && req.method === "POST") {
-        // Read incoming JSON with Python code
+    }
+
+    // Handle Python execution requests
+    else if (pathname === "/execute-python" && req.method === "POST") {
         const requestBody = await req.json();
         const command = requestBody.command;
 
-        // Execute the Python command
         try {
             const pythonOutput = await runPythonCommand(command);
             return new Response(pythonOutput, {
@@ -43,7 +40,7 @@ async function handler(req: Request): Promise<Response> {
         }
     }
 
-    // Handle static files
+    // Handle static files (e.g., CSS, JS)
     const fileExt = extname(pathname);
     if (mimeTypes[fileExt]) {
         try {
@@ -56,10 +53,10 @@ async function handler(req: Request): Promise<Response> {
         }
     }
 
+    // Default response for unknown paths
     return new Response("Not Found", { status: 404 });
 }
 
-// Function to run Python commands via Deno subprocess
 async function runPythonCommand(command: string): Promise<string> {
     const process = Deno.run({
         cmd: ["python3", "-c", command],
