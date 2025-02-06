@@ -194,7 +194,11 @@
                 pandasDataframeSection.querySelector('p:nth-of-type(3)').innerHTML = data['pandas-dataframe'].text3;
                 pandasDataframeSection.querySelector('h2:nth-of-type(4)').textContent = data['pandas-dataframe'].title4;
                 pandasDataframeSection.querySelector('p:nth-of-type(4)').innerHTML = data['pandas-dataframe'].text4;
-
+                
+                // Update pandas dataframe content
+                const pandastestSection = document.querySelector('#pandas-advanced');
+                pandastestSection.querySelector('h2:nth-of-type(1)').textContent = data['pandas-advanced'].title;
+                pandastestSection.querySelector('p:nth-of-type(1)').textContent = data['pandas-advanced'].text1;
 
             } catch (error) {
                 console.error("Error loading footer or content:", error);
@@ -241,7 +245,7 @@
                 <li><a href="#pandas-intro" onclick="navigateTo('#pandas-intro')">Ներածություն (Intro)</a></li>
                 <li><a href="#pandas-install" onclick="navigateTo('#pandas-install')">Ներբեռնել (Install)</a></li>
                 <li><a href="#pandas-series" onclick="navigateTo('#pandas-series')">series</a></li>
-                <li><a href="#pandas-dataframe" onclick="navigateTo('#pandas-dataframe')">Dataframe</a></li>
+                <li><a href="#python-advanced" onclick="navigateTo('#python-advanced')">Dataframe</a></li>
             </ul>
         </aside>
 
@@ -287,6 +291,12 @@
                 <h2></h2>
                 <p></p>
             </section>
+
+            <section id="pandas-advanced">
+                <h2></h2>
+                <p></p>
+            </section>
+
 
 
 

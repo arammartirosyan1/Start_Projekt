@@ -43,7 +43,11 @@
     "text3": "Ինդեքսի արգումենտով դուք կարող եք անվանել ձեր սեփական ինդեքսները:<br><br>Օրինակ՝<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>import pandas as pd<br><br>data = {\"calories\": [420, 380, 390], \"duration\": [50, 40, 45]}<br>df = pd.DataFrame(data, index = [\"day1\", \"day2\", \"day3\"])<br><br>print(df)</div>",
     "title4": "Բեռնել ֆայլերը DataFrame-ում",
     "text4": "Եթե ​​ձեր տվյալների հավաքածուները պահվում են ֆայլում, Pandas-ը կարող են դրանք բեռնել DataFrame-ում:<br><br>Օրինակ՝<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>import pandas as pd<br><br>df = pd.read_excel('data.xlsx')<br><br>print(df)</div>"
-     }
+     },
+     "pandas-advanced": {
+      "title1": "Python python-advanced",
+      "text1": "Կայքը նախատեսված է հայերեն լեզվով ծրագրավորում սովորելու համար։"
+    }
 }
 
 
