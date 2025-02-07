@@ -269,8 +269,10 @@
             }
         }
 
-        // Navigation function to switch between sections
-        function navigateTo(sectionId) {
+        // Navigation function to switch between sections without scrolling
+        function navigateTo(sectionId, event) {
+            if (event) event.preventDefault(); // Prevent default anchor link behavior
+
             const sections = document.querySelectorAll('main > section');
             const navLinks = document.querySelectorAll('nav a');
 
@@ -282,9 +284,10 @@
 
             // Show selected section and set active link
             document.querySelector(sectionId).classList.remove('hidden');
-            const activeLink = document.querySelector(`nav a[href="${sectionId}"]`);
+            const activeLink = document.querySelector(`a[href="${sectionId}"]`);
             if (activeLink) activeLink.classList.add('active');
         }
+
     </script>
 </head>
 <body onload="loadFooterText()">
