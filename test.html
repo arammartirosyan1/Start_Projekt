@@ -13,7 +13,7 @@
     }
 
     .container {
-        width: 80%;
+        width: 90%;
         margin: 0 auto;
         padding: 20px;
     }
@@ -31,7 +31,7 @@
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         overflow: hidden;
         width: 100%;
-        height: 100px;  /* Set card height to 100px */
+        height: 150px;  /* Set card height to 150px */
         margin-bottom: 20px;
         transition: transform 0.2s;
     }
@@ -41,19 +41,23 @@
     }
 
     .job-card img {
-        width: 100px;  /* Set image width to 100px */
-        height: 100px;  /* Set image height to 100px */
+        width: 150px;  /* Set image width to 150px */
+        height: 150px;  /* Set image height to 150px */
         object-fit: cover;
     }
 
     .job-card .job-info {
         padding: 10px;
         flex-grow: 1;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     .job-card h2 {
-        font-size: 16px;
-        margin: 0 0 5px;
+        font-size: 18px;
+        margin: 0 0 10px;
         color: #333;
     }
 
