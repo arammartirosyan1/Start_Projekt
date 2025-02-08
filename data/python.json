@@ -104,10 +104,41 @@
     "title8": "Ցուցակի տեսակավորում", 
     "text8": "Ցուցակի տարրերը դասակարգելու համար օգտագործում ենէ <span style=\"color:red;\"><b>sort()</b></span> մեթոդը․<br>Օրինակ`<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>mylist = ['բանան', 'խնձոր', 'բալ']<br>mylist.sort()<br>print(mylist)  -->  ['բալ', 'բանան', 'խնձոր']</div><br><br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>mylist = [100, 50, 65, 82, 23]<br>mylist.sort()<br>print(mylist)  -->  [23, 50, 65, 82, 100]</div><br><br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>mylist = [100, 50, 65, 82, 23]<br>mylist.sort(reverse = True)<br>print(mylist)  -->  [100, 82, 65, 50, 23]</div><br>"
   },
+
+  "python-tuple":{
+    "title1": "Tuples",
+    "text1": "Tuple-ը Python-ում ներկառուցված տվյալների 4 տեսակներից մեկն է, որն օգտագործվում է տվյալների հավաքածուներ պահելու համար, մյուս 3-ը՝ Ցուցակ, Կոմպլեկտ և Բառարան, բոլորն էլ տարբեր որակներով և կիրառմամբ:<br><br>Tuple-ները նման են ցուցակներին, բայց դրանք չեն փոփոխվում և կարող են պարունակել տարրերի միջակայք:<br><span style=\"color:red;\"><b>mytuple = ('խնձոր', 'բանան', 'բալ')</b></span><br><br>Tuple-ները նշված են փակագծերով () ից շատ չեն տարբերվում ցուցակներից [] կամ {}<br><br>",
+    "title2": "Tuple-ների միջակայք",
+    "text2": "Tuple-ները նշված են ինդեքսավորումով, սկսած 0-ից:<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>mytuple = ('խնձոր', 'բանան', 'բալ')<br>print(mytuple[1])  -->  'բանան'</div><br><br>",
+    "title3": "Tuple-ների երկարություն",
+    "text3": "Երկարության մասին տեղեկացում կարող եք ստանալ <span style=\"color:red;\"><b>len()</b></span> ֆունկցիայով:<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>mytuple = ('խնձոր', 'բանան', 'բալ')<br>print(len(mytuple))  -->  3</div><br><br>",
+    "title4": "Tuple-ների փոփոխություն",
+    "text4": "Այս կոդը չի կարող աշխատել, քանի որ Tuple-ները չեն փոփոխվում:<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>mytuple = ('խնձոր', 'բանան', 'բալ')<br>mytuple[1] = 'նարինջ'<br>print(mytuple)  -->  ՍԽԱԼ</div><br><br>",
+    "title5": "Python հավաքածուներ",
+    "text5": "<div style='background-color:#e68758; padding:5px; display:inline-block; width:50%;'>Python ծրագրավորման լեզվում հավաքագրման տվյալների չորս տեսակ կա.<ol><li>Ցուցակը(List) պատվիրված և փոփոխվող հավաքածու է: Թույլ է տալիս կրկնօրինակ անդամներ:</li><li>Tuple-ը պատվիրված և անփոփոխ հավաքածու է։ Թույլ է տալիս կրկնօրինակ անդամներ:</li><li>Set-ը հավաքածու է, որն անպատվեր է, անփոփոխ* և չինդեքսավորված: Կրկնվող անդամներ չկան:</li><li>Բառարանը(dict) հավաքածու է, որը պատվիրված է** և փոփոխական։ Կրկնվող անդամներ չկան:</li></ol></div>"
+  },
+
+  "python-set": {
+    "title1": "Sets",
+    "text1": "Set-երը օգտագործվում են մեկ փոփոխականում մի քանի տարրեր պահելու համար:<br><span style=\"color:red;\"><b>Set-ը անշարժ, անփոփոխ և անինդեքսավորված հավաքածու է:</b></span><br><br>Օրինակ՝<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>myset = {'խնձոր', 'բանան', 'բալ'}<br>print(myset)  -->  {'բանան', 'բալ', 'խնձոր'}</div><br><br>",
+    "title2": "Set տարրեր",
+    "text2": "Set-ի տարրերը դասավորված չեն, անփոփոխ են և թույլ չեն տալիս կրկնօրինակ արժեքներ:<br><br>Սահմանված տարրերը կարող են տարբեր հերթականությամբ հայտնվել ամեն անգամ, երբ դրանք օգտագործում եք, և դրանք չեն կարող հիշատակվել ինդեքսով կամ բանալիով:<br><br>Երբ հավաքածուն ստեղծվի, դուք չեք կարող փոխել դրա տարրերը, բայց կարող եք հեռացնել տարրերը և ավելացնել նոր տարրեր:<br><br>Set-երը չեն կարող ունենալ նույն արժեքով երկու տարր:",
+    "title3": "Set-ում ավելացնել արժեքներ",
+    "text3": "Մեկ տարր բազմությանը ավելացնելու համար օգտագործեք add() մեթոդը:<br>Ավելացրեք տարր set-ի մեջ՝ օգտագործելով add() մեթոդը՝<br><br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>myset = {'խնձոր', 'բանան', 'բալ'}<br>myset.add('նարինջ')<br>print(myset)  -->  {'բանան', 'բալ', 'խնձոր', 'նարինջ'}</div><br><br>",
+    "title4": "Set-ից հեռացնել տարրերը",
+    "text4" : "Set-ից որևէ տարր հեռացնելու համար օգտագործեք remove() կամ discard() մեթոդը:<br>Հեռացրեք 'բանան' օգտագործելով remove() մեթոդը՝<br><br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>myset = {'խնձոր', 'բանան', 'բալ'}<br>myset.remove('բանան')<br>print(myset)  -->  {'բալ', 'խնձոր'}</div><br><br>Եթե տարրը չկա set-ում, ապա չի կարող հեռացվել, ֆունկցիան կվերադարձնի error:<br><br>",
+    "title5": "Set-ի միացում",
+    "text5": "Python-ում երկու կամ ավելի set-եր միացնելու մի քանի եղանակ կա:<br><ul><li>Union() և update() մեթոդները միացնում են բոլոր տարրերը երկու հավաքածուներից:</li><li>Intersection() մեթոդը պահպանում է ՄԻԱՅՆ կրկնօրինակները:</li><li>Տարբերակ() մեթոդը պահպանում է առաջին հավաքածուի տարրերը, որոնք մյուս հավաքածու(ներ)ում չեն:</li><li>Symmetric_difference() մեթոդը պահում է բոլոր տարրերը, ԲԱՑԻԿ կրկնօրինակներից:</li></ul>"
+  },
+
+
+
+
     
   "python-jobs": {
     "title": "Python python-advanced",
     "text": "Կայքը նախատեսված է հայերեն լեզվով ծրագրավորում սովորելու համար։"
+    
   },
   
   

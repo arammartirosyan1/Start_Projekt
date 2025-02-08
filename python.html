@@ -295,6 +295,32 @@
                 pythonListSection.querySelector('p:nth-of-type(8)').innerHTML = data['python-list'].text8;
 
 
+                                // Update Python datatype content
+                const pythonTupleSection = document.querySelector('#python-tuple');
+                pythonTupleSection.querySelector('h2:nth-of-type(1)').textContent = data['python-tuple'].title1;
+                pythonTupleSection.querySelector('p:nth-of-type(1)').innerHTML = data['python-tuple'].text1;
+                pythonTupleSection.querySelector('h2:nth-of-type(2)').textContent = data['python-tuple'].title2;
+                pythonTupleSection.querySelector('p:nth-of-type(2)').innerHTML = data['python-tuple'].text2;
+                pythonTupleSection.querySelector('h2:nth-of-type(3)').textContent = data['python-tuple'].title3;
+                pythonTupleSection.querySelector('p:nth-of-type(3)').innerHTML = data['python-tuple'].text3;
+                pythonTupleSection.querySelector('h2:nth-of-type(4)').textContent = data['python-tuple'].title4;
+                pythonTupleSection.querySelector('p:nth-of-type(4)').innerHTML = data['python-tuple'].text4;
+                pythonTupleSection.querySelector('h2:nth-of-type(5)').textContent = data['python-tuple'].title5;
+                pythonTupleSection.querySelector('p:nth-of-type(5)').innerHTML = data['python-tuple'].text5;
+
+                const pythonSetSection = document.querySelector('#python-set');
+                pythonSetSection.querySelector('h2:nth-of-type(1)').textContent = data['python-set'].title1;
+                pythonSetSection.querySelector('p:nth-of-type(1)').innerHTML = data['python-set'].text1;
+                pythonSetSection.querySelector('h2:nth-of-type(2)').textContent = data['python-set'].title2;
+                pythonSetSection.querySelector('p:nth-of-type(2)').innerHTML = data['python-set'].text2;
+                pythonSetSection.querySelector('h2:nth-of-type(3)').textContent = data['python-set'].title3;
+                pythonSetSection.querySelector('p:nth-of-type(3)').innerHTML = data['python-set'].text3;
+                pythonSetSection.querySelector('h2:nth-of-type(4)').textContent = data['python-set'].title4;
+                pythonSetSection.querySelector('p:nth-of-type(4)').innerHTML = data['python-set'].text4;
+                pythonSetSection.querySelector('h2:nth-of-type(5)').textContent = data['python-set'].title5;
+                pythonSetSection.querySelector('p:nth-of-type(5)').innerHTML = data['python-set'].text5;
+
+
 
 
             } catch (error) {
@@ -348,6 +374,8 @@
                 <li><a href="#python-string" onclick="navigateTo('#python-string')">Տողեր (String)</a></li>
                 <li><a href="#python-booleans" onclick="navigateTo('#python-booleans')">Բուլյան (Boolean)</a></li>
                 <li><a href="#python-list" onclick="navigateTo('#python-list')">Ցուցակ (List)</a></li>
+                <li><a href="#python-tuple" onclick="navigateTo('#python-tuple')">Կորդինատներ (Tuple)</a></li>
+                <li><a href="#python-set" onclick="navigateTo('#python-set')">Հավաքածու (Set)</a></li>
             </ul>
         </aside>
 
@@ -465,6 +493,35 @@
                 <h2></h2>
                 <p></p>
             </section>
+
+            <section id="python-tuple" class="hidden">
+                <h1>Կորդինատներ</h1>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p>
+            </section>
+
+            <section id="python-tuple" class="hidden">
+                <h1>Հավաքածուներ</h1>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p>
+            </section>
+
 
 
 
