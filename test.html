@@ -1,250 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LearnHub - Python Tutorial</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            background-color: #ffffff;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terminal with Math Expressions</title>
 
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 1rem;
-            background: #ffffff;
-            color: #000000;
-        }
+  <!-- Include xterm.js stylesheet and script -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/xterm/4.14.0/xterm.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xterm/4.14.0/xterm.min.js"></script>
 
-        header img {
-            width: 90px;
-            height: 90px;
-            margin-left: 10px;
-        }
-
-        nav {
-            display: flex;
-            gap: 1rem; /* Space between navigation links */
-            margin-right: 100px;
-        }
-
-        nav a {
-            color: black;
-            text-decoration: none;
-            padding: 0.3rem 1rem;
-            transition: background 0.3s;
-            font-family: 'Arial', sans-serif;
-            font-weight: 500;
-        }
-
-        nav a:hover, nav a.active {
-            background: #f4f4f4;
-            border-radius: 5px;
-        }
-
-        .container {
-            display: flex;
-            flex-direction: row;
-            min-height: 100vh;
-        }
-
-        .sidebar {
-            flex: 1;
-            background: #f4f4f4;
-            border-right: 1px solid #ddd;
-            padding: 1rem;
-            max-width: 250px;
-        }
-
-        .sidebar h3 {
-            margin-bottom: 1rem;
-            color: #333;
-        }
-
-        .sidebar ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .sidebar ul li {
-            margin-bottom: 0.5rem;
-        }
-
-        .sidebar ul li a {
-            color: #333;
-            text-decoration: none;
-            padding: 0.5rem;
-            display: block;
-            border-radius: 3px;
-            transition: background 0.3s;
-        }
-
-        .sidebar ul li a:hover {
-            background: #ddd;
-        }
-
-        .content {
-            flex: 3;
-            padding: 1.5rem;
-        }
-
-        .content h1 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .content p {
-            line-height: 1.6;
-            margin-bottom: 1rem;
-            color: #555;
-        }
-
-        .footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem 0;
-            margin-top: auto;
-        }
-
-        .footer p {
-            margin: 0;
-        }
-
-        /* Job card styles */
-        .job-card {
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            background-color: #f9f9f9;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .job-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .job-card h3 {
-            font-size: 1.5rem;
-            margin: 0 0 0.5rem;
-        }
-
-        .job-card p {
-            color: #555;
-            font-size: 1rem;
-        }
-
-        .job-card a {
-            display: inline-block;
-            margin-top: 0.5rem;
-            color: #007BFF;
-            text-decoration: none;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-            }
-
-            .sidebar {
-                max-width: 100%;
-                border-right: none;
-            }
-
-            .content {
-                padding: 1rem;
-            }
-        }
-    </style>
-    <script>
-        // Function to load job listings dynamically
-        async function loadJobs() {
-            try {
-                // Fetch the job listings (replace with actual URL or data)
-                const response = await fetch('data/jobs.json'); // Your jobs data in a JSON file
-                const jobs = await response.json(); // Parse the JSON data
-
-                // Get the jobs section container
-                const jobsSection = document.getElementById('jobs');
-
-                // Clear any existing content in jobs section
-                jobsSection.innerHTML = '';
-
-                // Loop through each job and create a card for it
-                jobs.forEach(job => {
-                    const jobCard = document.createElement('div');
-                    jobCard.classList.add('job-card');
-
-                    jobCard.innerHTML = `
-                        <h3>${job.title}</h3>
-                        <p><strong>Company:</strong> ${job.company}</p>
-                        <p><strong>Location:</strong> ${job.location}</p>
-                        <p><strong>Type:</strong> ${job.type}</p>
-                        <a href="${job.url}" target="_blank">View Job Listing</a>
-                    `;
-
-                    // Append the job card to the jobs section
-                    jobsSection.appendChild(jobCard);
-                });
-
-            } catch (error) {
-                console.error("Error loading job listings:", error);
-            }
-        }
-
-        // Call loadJobs function when the page loads
-        window.onload = loadJobs;
-
-    </script>
+  <style>
+    /* Style the terminal container */
+    #terminal {
+      width: 100%;
+      height: 400px;
+      background-color: black;
+      color: white;
+      font-family: monospace;
+      font-size: 16px;
+      padding: 10px;
+    }
+  </style>
 </head>
-<body onload="loadFooterText()">
-    <header>
-        <a href="index.html">
-            <img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/img/logo.png" alt="LearnHub Logo">
-        </a>
-        <nav>
-            <a href="python.html">Python</a>
-            <a href="html.html">HTML</a>
-        </nav>
-    </header>
+<body>
 
-    <div class="container">
-        <aside class="sidebar">
-            <h3>Python Tutorial</h3>
-            <ul>
-                <li><a href="#python-intro" onclick="navigateTo('#python-intro')">Introduction</a></li>
-                <li><a href="#python-install" onclick="navigateTo('#python-install')">Install</a></li>
-                <li><a href="#python-variables" onclick="navigateTo('#python-variables')">Variables</a></li>
-                <li><a href="#python-datatype" onclick="navigateTo('#python-datatype')">Data Types</a></li>
-                <li><a href="#python-numbers" onclick="navigateTo('#python-numbers')">Numbers</a></li>
-                <li><a href="#python-string" onclick="navigateTo('#python-string')">Strings</a></li>
-                <li><a href="#python-booleans" onclick="navigateTo('#python-booleans')">Booleans</a></li>
-                <li><a href="#python-list" onclick="navigateTo('#python-list')">List</a></li>
-            </ul>
-        </aside>
+  <h1>Terminal with Math Expressions</h1>
 
-        <main class="content">
-            <section id="jobs">
-                <!-- Job listings will be inserted here by JavaScript -->
-            </section>
-        </main>
-    </div>
+  <!-- Terminal container -->
+  <div id="terminal"></div>
 
-    <div class="footer">
-        <p id="footer-text"></p>
-    </div>
+  <script>
+    // Initialize the terminal
+    const terminal = new Terminal({
+      rows: 20,        // Set number of rows in the terminal
+      cols: 80,        // Set number of columns in the terminal
+    });
+
+    // Open the terminal in the 'terminal' div
+    terminal.open(document.getElementById('terminal'));
+
+    // Write some initial text to the terminal
+    terminal.writeln('Welcome to your math terminal!');
+    terminal.writeln('You can type simple math expressions like "2 + 2" and get the result.');
+    terminal.writeln('Type "exit" to close the terminal.');
+
+    // Write the prompt
+    terminal.write('> ');
+
+    // Handle input from the user
+    let inputBuffer = ""; // To store input as the user types
+
+    terminal.onData(function(data) {
+      if (data === '\r') {  // Enter key pressed
+        // Evaluate the expression typed by the user
+        if (inputBuffer.trim() === 'exit') {
+          terminal.write('\r\nGoodbye!\n');
+          return;
+        }
+
+        try {
+          // Evaluate the math expression
+          const result = eval(inputBuffer);  // Using eval to evaluate expressions
+          terminal.write(`\r\nResult: ${result}\n`);
+        } catch (e) {
+          terminal.write('\r\nError: Invalid expression\n');
+        }
+
+        // After processing, reset the input buffer and show prompt
+        terminal.write('> ');
+        inputBuffer = "";  // Clear input buffer
+      } else if (data === '\u007f') {  // Handle backspace (delete)
+        inputBuffer = inputBuffer.slice(0, -1); // Remove last character
+        terminal.write('\b \b');  // Erase last character on terminal
+      } else {
+        // Append the typed character to the input buffer
+        inputBuffer += data;
+        terminal.write(data);  // Display the typed character
+      }
+    });
+
+  </script>
+
 </body>
 </html>
-
-
-
