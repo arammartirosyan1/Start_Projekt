@@ -146,44 +146,49 @@
         // Function to dynamically load footer text and Python basics content from data.json
         async function loadFooterText() {
             try {
-                const response = await fetch('data/html.json');
-                const data = await response.json();
+                const response = await fetch('data/html.json'); // Fetch the JSON file
+                const data = await response.json(); // Parse the JSON data
 
                 // Update footer text
                 document.getElementById('footer-text').innerHTML = data.footer.text;
 
-                // Update HTML introduction only when the section is visible
+                // Update Python home content
                 const htmlHomeSection = document.querySelector('#html-intro');
-                if (!htmlHomeSection.classList.contains('hidden')) {
-                    htmlHomeSection.querySelector('h2:nth-of-type(1)').textContent = data['html-intro'].title1;
-                    htmlHomeSection.querySelector('p:nth-of-type(1)').innerHTML = data['html-intro'].text1;
-                    htmlHomeSection.querySelector('h2:nth-of-type(2)').textContent = data['html-intro'].title2;
-                    htmlHomeSection.querySelector('p:nth-of-type(2)').innerHTML = data['html-intro'].text2;
-                    htmlHomeSection.querySelector('h2:nth-of-type(3)').textContent = data['html-intro'].title3;
-                    htmlHomeSection.querySelector('p:nth-of-type(3)').innerHTML = data['html-intro'].text3;
-                    htmlHomeSection.querySelector('h2:nth-of-type(4)').textContent = data['html-intro'].title4;
-                    htmlHomeSection.querySelector('p:nth-of-type(4)').innerHTML = data['html-intro'].text4;
-                }
+                htmlHomeSection.querySelector('h2:nth-of-type(1)').textContent = data['html-intro'].title1;
+                htmlHomeSection.querySelector('p:nth-of-type(1)').innerHTML = data['html-intro'].text1;
+                htmlHomeSection.querySelector('h2:nth-of-type(2)').textContent = data['html-intro'].title2;
+                htmlHomeSection.querySelector('p:nth-of-type(2)').innerHTML = data['html-intro'].text2;
+                htmlHomeSection.querySelector('h2:nth-of-type(3)').textContent = data['html-intro'].title3;
+                htmlHomeSection.querySelector('p:nth-of-type(3)').innerHTML = data['html-intro'].text3;
+                htmlHomeSection.querySelector('h2:nth-of-type(4)').textContent = data['html-intro'].title4;
+                htmlHomeSection.querySelector('p:nth-of-type(4)').innerHTML = data['html-intro'].text4;
+
+
+
+
             } catch (error) {
                 console.error("Error loading footer or content:", error);
             }
         }
 
-
         // Navigation function to switch between sections without scrolling
         function navigateTo(sectionId, event) {
-            if (event) event.preventDefault(); // Prevent default behavior
+            if (event) event.preventDefault(); // Prevent default anchor link behavior
 
             const sections = document.querySelectorAll('main > section');
-            sections.forEach(section => section.classList.add('hidden')); // Hide all
+            const navLinks = document.querySelectorAll('nav a');
 
-            // Show only the selected section
+            // Hide all sections
+            sections.forEach(section => section.classList.add('hidden'));
+
+            // Remove active class from all links
+            navLinks.forEach(link => link.classList.remove('active'));
+
+            // Show selected section and set active link
             document.querySelector(sectionId).classList.remove('hidden');
-
-            // Hide the welcome image when a button is clicked
-            document.getElementById('welcome').classList.add('hidden');
+            const activeLink = document.querySelector(`a[href="${sectionId}"]`);
+            if (activeLink) activeLink.classList.add('active');
         }
-
 
     </script>
 </head>

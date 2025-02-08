@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LearnHub - pandas Tutorial</title>
+    <title>LearnHub - Html Tutorial</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -143,84 +143,47 @@
         }
     </style>
     <script>
-        // Function to dynamically load footer text and pandas basics content from data.json
+        // Function to dynamically load footer text and Python basics content from data.json
         async function loadFooterText() {
-            try {
-                const response = await fetch('data/pandas.json'); // Fetch the JSON file
-                const data = await response.json(); // Parse the JSON data
+    try {
+        const response = await fetch('data/html.json');
+        const data = await response.json();
 
-                // Update footer text
-                document.getElementById('footer-text').innerHTML = data.footer.text;
+        // Update footer text
+        document.getElementById('footer-text').innerHTML = data.footer.text;
 
-                // Update pandas home content
-                const pandasHomeSection = document.querySelector('#pandas-intro');
-                pandasHomeSection.querySelector('h1:nth-of-type(1)').textContent = data['pandas-intro'].title;
-                pandasHomeSection.querySelector('h2:nth-of-type(1)').textContent = data['pandas-intro'].title1;
-                pandasHomeSection.querySelector('p:nth-of-type(1)').innerHTML = data['pandas-intro'].text1;
-                pandasHomeSection.querySelector('h2:nth-of-type(2)').textContent = data['pandas-intro'].title2;
-                pandasHomeSection.querySelector('p:nth-of-type(2)').innerHTML = data['pandas-intro'].text2;
-                pandasHomeSection.querySelector('h2:nth-of-type(3)').textContent = data['pandas-intro'].title3;
-                pandasHomeSection.querySelector('p:nth-of-type(3)').innerHTML = data['pandas-intro'].text3;
-                pandasHomeSection.querySelector('h2:nth-of-type(4)').textContent = data['pandas-intro'].title4;
-                pandasHomeSection.querySelector('p:nth-of-type(4)').innerHTML = data['pandas-intro'].text4;
-
-                // Update pandas install content
-                const pandasInstallSection = document.querySelector('#pandas-install');
-                pandasInstallSection.querySelector('h1:nth-of-type(1)').textContent = data['pandas-install'].title;
-                pandasInstallSection.querySelector('h2:nth-of-type(1)').textContent = data['pandas-install'].title1;
-                pandasInstallSection.querySelector('p:nth-of-type(1)').innerHTML = data['pandas-install'].text1;
-                pandasInstallSection.querySelector('h2:nth-of-type(2)').textContent = data['pandas-install'].title2;
-                pandasInstallSection.querySelector('p:nth-of-type(2)').innerHTML = data['pandas-install'].text2;
-
-
-                // Update pandas series content
-                const pandasseriesSection = document.querySelector('#pandas-series');
-                pandasseriesSection.querySelector('h1:nth-of-type(1)').textContent = data['pandas-series'].title;
-                pandasseriesSection.querySelector('h2:nth-of-type(1)').textContent = data['pandas-series'].title1;
-                pandasseriesSection.querySelector('p:nth-of-type(1)').innerHTML = data['pandas-series'].text1;
-                pandasseriesSection.querySelector('h2:nth-of-type(2)').textContent = data['pandas-series'].title2;
-                pandasseriesection.querySelector('p:nth-of-type(2)').innerHTML = data['pandas-series'].text2;
-                pandasseriesSection.querySelector('h2:nth-of-type(3)').textContent = data['pandas-series'].title3;
-                pandasseriesSection.querySelector('p:nth-of-type(3)').innerHTML = data['pandas-series'].text3;
-
-                // Update pandas dataframe content
-                const pandasDataframeSection = document.querySelector('#pandas-dataframe');
-                pandasDataframeSection.querySelector('h1:nth-of-type(1)').textContent = data['pandas-dataframe'].title;
-                pandasDataframeSection.querySelector('h2:nth-of-type(1)').textContent = data['pandas-dataframe'].title1;
-                pandasDataframeSection.querySelector('p:nth-of-type(1)').innerHTML = data['pandas-dataframe'].text1;
-                pandasDataframeSection.querySelector('h2:nth-of-type(2)').textContent = data['pandas-dataframe'].title2;
-                pandasDataframeSection.querySelector('p:nth-of-type(2)').innerHTML = data['pandas-dataframe'].text2;
-                pandasDataframeSection.querySelector('h2:nth-of-type(3)').textContent = data['pandas-dataframe'].title3;
-                pandasDataframeSection.querySelector('p:nth-of-type(3)').innerHTML = data['pandas-dataframe'].text3;
-                pandasDataframeSection.querySelector('h2:nth-of-type(4)').textContent = data['pandas-dataframe'].title4;
-                pandasDataframeSection.querySelector('p:nth-of-type(4)').innerHTML = data['pandas-dataframe'].text4;
-                
-                // Update pandas dataframe content
-                const pandastestSection = document.querySelector('#pandas-advanced');
-                pandastestSection.querySelector('h2:nth-of-type(1)').textContent = data['pandas-advanced'].title;
-                pandastestSection.querySelector('p:nth-of-type(1)').textContent = data['pandas-advanced'].text1;
-
-            } catch (error) {
-                console.error("Error loading footer or content:", error);
-            }
+        // Update HTML introduction only when the section is visible
+        const htmlHomeSection = document.querySelector('#html-intro');
+        if (!htmlHomeSection.classList.contains('hidden')) {
+            htmlHomeSection.querySelector('h2:nth-of-type(1)').textContent = data['html-intro'].title1;
+            htmlHomeSection.querySelector('p:nth-of-type(1)').innerHTML = data['html-intro'].text1;
+            htmlHomeSection.querySelector('h2:nth-of-type(2)').textContent = data['html-intro'].title2;
+            htmlHomeSection.querySelector('p:nth-of-type(2)').innerHTML = data['html-intro'].text2;
+            htmlHomeSection.querySelector('h2:nth-of-type(3)').textContent = data['html-intro'].title3;
+            htmlHomeSection.querySelector('p:nth-of-type(3)').innerHTML = data['html-intro'].text3;
+            htmlHomeSection.querySelector('h2:nth-of-type(4)').textContent = data['html-intro'].title4;
+            htmlHomeSection.querySelector('p:nth-of-type(4)').innerHTML = data['html-intro'].text4;
         }
+    } catch (error) {
+        console.error("Error loading footer or content:", error);
+    }
+}
 
-        // Navigation function to switch between sections
-        function navigateTo(sectionId) {
-            const sections = document.querySelectorAll('main > section');
-            const navLinks = document.querySelectorAll('nav a');
+        // Navigation function to switch between sections without scrolling
+        function navigateTo(sectionId, event) {
+    if (event) event.preventDefault(); // Prevent default behavior
 
-            // Hide all sections
-            sections.forEach(section => section.classList.add('hidden'));
+    const sections = document.querySelectorAll('main > section');
+    sections.forEach(section => section.classList.add('hidden')); // Hide all
 
-            // Remove active class from all links
-            navLinks.forEach(link => link.classList.remove('active'));
+    // Show only the selected section
+    document.querySelector(sectionId).classList.remove('hidden');
 
-            // Show selected section and set active link
-            document.querySelector(sectionId).classList.remove('hidden');
-            const activeLink = document.querySelector(`nav a[href="${sectionId}"]`);
-            if (activeLink) activeLink.classList.add('active');
-        }
+    // Hide the welcome image when a button is clicked
+    document.getElementById('welcome').classList.add('hidden');
+}
+
+
     </script>
 </head>
 <body onload="loadFooterText()">
@@ -230,9 +193,9 @@
         </a>
         <nav>
             <a href="python.html" onclick="navigateTo('#python')">Python</a>
-            <a href="pandas.html" onclick="navigateTo('#pandas')">Pandas</a>
+            <a href="#pandas" onclick="navigateTo('#pandas')">Pandas</a>
             <a href="sql.html" onclick="navigateTo('#sql')">SQL</a>
-            <a href="#html" onclick="navigateTo('#html')">HTML</a>
+            <a href="html.html" onclick="navigateTo('#html')">HTML</a>
             <a href="#css" onclick="navigateTo('#css')">CSS</a>
             <a href="#javascript" onclick="navigateTo('#javascript')">JavaScript</a>
         </nav>
@@ -240,18 +203,26 @@
 
     <div class="container">
         <aside class="sidebar">
-            <h3>pandas Tutorial</h3>
+            <h3>Html Tutorial</h3>
             <ul>
-                <li><a href="#pandas-intro" onclick="navigateTo('#pandas-intro')">Ներածություն (Intro)</a></li>
-                <li><a href="#pandas-install" onclick="navigateTo('#pandas-install')">Ներբեռնել (Install)</a></li>
-                <li><a href="#pandas-series" onclick="navigateTo('#pandas-series')">series</a></li>
-                <li><a href="#pandas-advanced" onclick="navigateTo('#pandas-advanced')">Dataframe</a></li>
+                <li><a href="#html-intro" onclick="navigateTo('#html-intro')">Ներածություն (Intro)</a></li>
+                <li><a href="#html-install" onclick="navigateTo('#html-install')">Ներբեռնել (Install)</a></li>
+                <li><a href="#html-variables" onclick="navigateTo('#html-variables')">Փոփոխականներ (Variables)</a></li>
+                <li><a href="#html-datatype" onclick="navigateTo('#html-datatype')">Տվյալների տեսակներ (Data Types)</a></li>
+                <li><a href="#html-numbers" onclick="navigateTo('#html-numbers')">Թվեր (Numbers)</a></li>
+                <li><a href="#html-string" onclick="navigateTo('#html-string')">Տողեր (String)</a></li>
+                <li><a href="#html-booleans" onclick="navigateTo('#html-booleans')">Բուլյան (Boolean)</a></li>
+                <li><a href="#html-list" onclick="navigateTo('#html-list')">Ցուցակ (List)</a></li>
             </ul>
         </aside>
 
         <main class="content">
-            <section id="pandas-intro">
-                <h1></h1>
+            <section id="welcome">
+                <img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/img/logo.png" alt="LearnHub Logo" width="300">
+            </section>
+        
+            <section id="html-intro" class="hidden">
+                <h1>HTML ներածություն (Introduction)</h1>
                 <h2></h2>
                 <p></p>
                 <h2></h2>
@@ -261,55 +232,13 @@
                 <h2></h2>
                 <p></p>
             </section>
-
-            <section id="pandas-install">
-                <h1></h1>
-                <h2></h2>
-                <p></p>
-                <h2></h2>
-                <p></p>
-            </section>
-
-            <section id="pandas-series">
-                <h1></h1>
-                <h2></h2>
-                <p></p>
-                <h2></h2>
-                <p></p>
-                <h2></h2>
-                <p></p>
-            </section>
-
-            <section id="pandas-dataframe">
-                <h1></h1>
-                <h2></h2>
-                <p></p>
-                <h2></h2>
-                <p></p>
-                <h2></h2>
-                <p></p>
-                <h2></h2>
-                <p></p>
-            </section>
-
-            <section id="pandas-advanced">
-                <h2></h2>
-                <p></p>
-            </section>
-
-
-
-
-            <section id="pandas-resources" class="hidden">
-                <h1>pandas Resources</h1>
-                <p>Պանդաներ</p>
-                <!-- <ul>
-                    <li><a href="https://www.pandas.org/doc/" target="_blank">pandas Official Documentation</a></li>
-                    <li><a href="https://realpandas.com/" target="_blank">Real pandas</a></li>
-                    <li><a href="https://www.learnpandas.org/" target="_blank">Learn pandas</a></li>
-                </ul> -->
+        
+            <section id="html-install" class="hidden">
+                <h1>Installation</h1>
+                <p>Content will be loaded here...</p>
             </section>
         </main>
+        
     </div>
 
     <div class="footer">
