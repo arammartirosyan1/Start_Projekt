@@ -32,8 +32,15 @@ async function handler(req: Request): Promise<Response> {
         return new Response(html, {
             headers: { "Content-Type": mimeTypes[".html"] },
         });
-    } else if (pathname === "/pandas.html") {
+    } 
+    else if (pathname === "/pandas.html") {
         const html = await Deno.readTextFile(join(staticDir, "pandas.html"));
+        return new Response(html, {
+            headers: { "Content-Type": mimeTypes[".html"] },
+        });
+    }
+    else if (pathname === "/html.html") {
+        const html = await Deno.readTextFile(join(staticDir, "html.html"));
         return new Response(html, {
             headers: { "Content-Type": mimeTypes[".html"] },
         });
