@@ -25,22 +25,19 @@
     
     .jobs-container {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         gap: 20px;
-        justify-content: center;
     }
     
     .job-card {
+        display: flex;
         background-color: #fff;
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         overflow: hidden;
         width: 100%;
-        max-width: 600px;
-        display: flex;
-        flex-direction: row; /* Layout image and text horizontally */
+        height: 150px;
         transition: transform 0.2s;
-        cursor: pointer; /* Makes the entire card clickable */
     }
     
     .job-card:hover {
@@ -48,40 +45,43 @@
     }
     
     .job-card img {
-        width: 150px; /* Image width */
-        height: 150px; /* Image height */
-        object-fit: cover; /* Maintain aspect ratio */
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
     }
     
-    .job-card .job-info {
+    .job-info {
         padding: 15px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        flex-grow: 1; /* Fill remaining space */
+        width: calc(100% - 150px); /* Makes room for the image */
     }
     
     .job-card h2 {
-        font-size: 20px;
+        font-size: 18px;
         margin: 0 0 10px;
         color: #333;
     }
     
-    .job-card .company-name {
-        font-size: 16px;
-        color: #555;
+    .job-card p {
+        margin: 5px 0;
+        color: #666;
     }
     
-    .job-card .location-deadline {
-        font-size: 14px;
+    .job-location-deadline {
         display: flex;
         justify-content: space-between;
-        color: #777;
+        align-items: center;
+        color: #666;
     }
     
     .job-card a {
         text-decoration: none;
         color: inherit;
+        display: flex;
+        width: 100%;
+        height: 100%;
     }
 </style>
 </head>
@@ -100,39 +100,40 @@
                 data.forEach(job => {
                     const jobCard = document.createElement('div');
                     jobCard.className = 'job-card';
-
+    
                     const jobImage = document.createElement('img');
                     jobImage.src = job.profile_image;
                     jobImage.alt = job.title;
+    
+                    const jobLink = document.createElement('a');
+                    jobLink.href = job.job_link;
+                    jobLink.target = '_blank';  // Opens job details in a new tab
 
                     const jobInfo = document.createElement('div');
                     jobInfo.className = 'job-info';
-
+    
                     const jobTitle = document.createElement('h2');
                     jobTitle.textContent = job.title;
-
+    
                     const jobCompany = document.createElement('p');
-                    jobCompany.className = 'company-name';
-                    jobCompany.textContent = job.company;
-
+                    jobCompany.textContent = `Company: ${job.company}`;
+    
                     const jobLocationDeadline = document.createElement('div');
-                    jobLocationDeadline.className = 'location-deadline';
+                    jobLocationDeadline.className = 'job-location-deadline';
                     jobLocationDeadline.innerHTML = `
                         <span>${job.location}</span>
                         <span>${job.deadline}</span>
                     `;
-
-                    const jobLink = document.createElement('a');
-                    jobLink.href = job.job_link;
-                    jobLink.target = '_blank';
-
+    
+                    // Append elements to the job card
                     jobInfo.appendChild(jobTitle);
                     jobInfo.appendChild(jobCompany);
                     jobInfo.appendChild(jobLocationDeadline);
-
+    
+                    // Append image and info to the job link
                     jobLink.appendChild(jobImage);
                     jobLink.appendChild(jobInfo);
-
+    
                     jobCard.appendChild(jobLink);
                     jobsContainer.appendChild(jobCard);
                 });
