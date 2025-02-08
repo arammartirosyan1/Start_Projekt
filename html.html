@@ -152,7 +152,7 @@
                 // Update footer text
                 document.getElementById('footer-text').innerHTML = data.footer.text;
 
-                // Update Python home content
+
                 const htmlHomeSection = document.querySelector('#html-intro');
                 htmlHomeSection.querySelector('h2:nth-of-type(1)').textContent = data['html-intro'].title1;
                 htmlHomeSection.querySelector('p:nth-of-type(1)').innerHTML = data['html-intro'].text1;
@@ -163,6 +163,21 @@
                 htmlHomeSection.querySelector('h2:nth-of-type(4)').textContent = data['html-intro'].title4;
                 htmlHomeSection.querySelector('p:nth-of-type(4)').innerHTML = data['html-intro'].text4;
 
+                const htmlStructureSection = document.querySelector('#html-structure');
+                htmlStructureSection.querySelector('h2:nth-of-type(1)').textContent = data['html-structure'].title1;
+                htmlStructureSection.querySelector('p:nth-of-type(1)').innerHTML = data['html-structure'].text1;
+                htmlStructureSection.querySelector('h2:nth-of-type(2)').textContent = data['html-structure'].title2;
+                htmlStructureSection.querySelector('p:nth-of-type(2)').innerHTML = data['html-structure'].text2;
+                htmlStructureSection.querySelector('h2:nth-of-type(3)').textContent = data['html-structure'].title3;
+                htmlStructureSection.querySelector('p:nth-of-type(3)').innerHTML = data['html-structure'].text3;
+                htmlStructureSection.querySelector('h2:nth-of-type(4)').textContent = data['html-structure'].title4;
+                htmlStructureSection.querySelector('p:nth-of-type(4)').innerHTML = data['html-structure'].text4;
+                htmlStructureSection.querySelector('h2:nth-of-type(5)').textContent = data['html-structure'].title5;
+                htmlStructureSection.querySelector('p:nth-of-type(5)').innerHTML = data['html-structure'].text5;
+                htmlStructureSection.querySelector('h2:nth-of-type(6)').textContent = data['html-structure'].title6;
+                htmlStructureSection.querySelector('p:nth-of-type(6)').innerHTML = data['html-structure'].text6;
+                htmlStructureSection.querySelector('h2:nth-of-type(7)').textContent = data['html-structure'].title7;
+                htmlStructureSection.querySelector('p:nth-of-type(7)').innerHTML = data['html-structure'].text7;
 
 
 
@@ -198,12 +213,12 @@
             <img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/img/logo.png" alt="LearnHub Logo">
         </a>
         <nav>
-            <a href="python.html" onclick="navigateTo('#python')">Python</a>
-            <a href="#pandas" onclick="navigateTo('#pandas')">Pandas</a>
-            <a href="sql.html" onclick="navigateTo('#sql')">SQL</a>
-            <a href="html.html" onclick="navigateTo('#html')">HTML</a>
-            <a href="#css" onclick="navigateTo('#css')">CSS</a>
-            <a href="#javascript" onclick="navigateTo('#javascript')">JavaScript</a>
+            <a href="python.html">Python</a>
+            <a href="pandas.html">Pandas</a>
+            <a href="sql.html">SQL</a>
+            <a href="html.html">HTML</a>
+            <a href="css.html">CSS</a>
+            <a href="javascript.html">JavaScript</a>
         </nav>
     </header>
 
@@ -212,13 +227,7 @@
             <h3>Html Tutorial</h3>
             <ul>
                 <li><a href="#html-intro" onclick="navigateTo('#html-intro')">Ներածություն (Intro)</a></li>
-                <li><a href="#html-install" onclick="navigateTo('#html-install')">Ներբեռնել (Install)</a></li>
-                <li><a href="#html-variables" onclick="navigateTo('#html-variables')">Փոփոխականներ (Variables)</a></li>
-                <li><a href="#html-datatype" onclick="navigateTo('#html-datatype')">Տվյալների տեսակներ (Data Types)</a></li>
-                <li><a href="#html-numbers" onclick="navigateTo('#html-numbers')">Թվեր (Numbers)</a></li>
-                <li><a href="#html-string" onclick="navigateTo('#html-string')">Տողեր (String)</a></li>
-                <li><a href="#html-booleans" onclick="navigateTo('#html-booleans')">Բուլյան (Boolean)</a></li>
-                <li><a href="#html-list" onclick="navigateTo('#html-list')">Ցուցակ (List)</a></li>
+                <li><a href="#html-structure" onclick="navigateTo('#html-structure')">Կառուցվածքը (Structure)</a></li>
             </ul>
         </aside>
 
@@ -228,7 +237,7 @@
             </section>
         
             <section id="html-intro" class="hidden">
-                <h1>HTML ներածություն (Introduction)</h1>
+                <h1>HTML Ներածություն</h1>
                 <h2></h2>
                 <p></p>
                 <h2></h2>
@@ -239,9 +248,22 @@
                 <p></p>
             </section>
         
-            <section id="html-install" class="hidden">
-                <h1>Installation</h1>
-                <p>Content will be loaded here...</p>
+            <section id="html-structure" class="hidden">
+                <h1>HTML Կառուցվածքը</h1>
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
             </section>
         </main>
         
