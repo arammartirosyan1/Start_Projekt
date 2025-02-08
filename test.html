@@ -11,130 +11,128 @@
         margin: 0;
         padding: 0;
     }
-
+    
     .container {
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
         padding: 20px;
     }
-
+    
     h1 {
         text-align: center;
         color: #333;
     }
-
-    .job-card {
+    
+    .jobs-container {
         display: flex;
+        flex-direction: column;
         align-items: center;
+    }
+    
+    .job-card {
         background-color: #fff;
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        width: 100%;
-        height: 150px;  /* Set card height to 150px */
-        margin-bottom: 20px;
-        transition: transform 0.2s;
-    }
-
-    .job-card:hover {
-        transform: scale(1.02);
-    }
-
-    .job-card img {
-        width: 150px;  /* Set image width to 150px */
-        height: 150px;  /* Set image height to 150px */
-        object-fit: cover;
-    }
-
-    .job-card .job-info {
-        padding: 10px;
-        flex-grow: 1;
-        height: 100%;
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        width: 100%;
+        max-width: 1200px;
+        margin-bottom: 20px;
     }
-
+    
+    .job-card img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+    
+    .job-info {
+        padding: 15px;
+        flex: 1;
+    }
+    
     .job-card h2 {
-        font-size: 18px;
+        font-size: 22px;
         margin: 0 0 10px;
         color: #333;
     }
-
+    
     .job-card p {
         margin: 5px 0;
         color: #666;
-        font-size: 14px;
     }
-
+    
+    .bottom-info {
+        display: flex;
+        justify-content: space-between;
+    }
+    
     .job-card a {
         text-decoration: none;
-        color: #007bff;
-        font-weight: bold;
-        font-size: 14px;
+        color: inherit;
     }
-
-    .job-card a:hover {
-        text-decoration: underline;
-    }
-
-    </style>
+</style>
 </head>
 <body>
     <div class="container">
         <h1>Job Listings</h1>
-        <div id="jobs-container"></div>
+        <div id="jobs-container" class="jobs-container"></div>
     </div>
 
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        fetch('data/jobs.json')
-            .then(response => response.json())
-            .then(data => {
-                const jobsContainer = document.getElementById('jobs-container');
-                data.forEach(job => {
-                    const jobCard = document.createElement('div');
-                    jobCard.className = 'job-card';
-    
-                    const jobImage = document.createElement('img');
-                    jobImage.src = job.profile_image;
-                    jobImage.alt = job.title;
-    
-                    const jobInfo = document.createElement('div');
-                    jobInfo.className = 'job-info';
-    
-                    const jobTitle = document.createElement('h2');
-                    jobTitle.textContent = job.title;
-    
-                    const jobCompany = document.createElement('p');
-                    jobCompany.textContent = `Company: ${job.company}`;
-    
-                    const jobLocation = document.createElement('p');
-                    jobLocation.textContent = `Location: ${job.location}`;
-    
-                    const jobDeadline = document.createElement('p');
-                    jobDeadline.textContent = `Deadline: ${job.deadline}`;
-    
-                    const jobLink = document.createElement('a');
-                    jobLink.href = job.job_link;
-                    jobLink.target = '_blank';
-                    jobLink.textContent = "View Job Details";
-    
-                    // Append everything into the job info
-                    jobInfo.appendChild(jobTitle);
-                    jobInfo.appendChild(jobCompany);
-                    jobInfo.appendChild(jobLocation);
-                    jobInfo.appendChild(jobDeadline);
-                    jobInfo.appendChild(jobLink);
-    
-                    // Append image and job info into the job card
-                    jobCard.appendChild(jobImage);
-                    jobCard.appendChild(jobInfo);
-                    jobsContainer.appendChild(jobCard);
-                });
-            })
-            .catch(error => console.error('Error loading jobs data:', error));
-    });
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('data/jobs.json')
+                .then(response => response.json())
+                .then(data => {
+                    const jobsContainer = document.getElementById('jobs-container');
+                    data.forEach(job => {
+                        const jobCard = document.createElement('div');
+                        jobCard.className = 'job-card';
+        
+                        // Job Image
+                        const jobImage = document.createElement('img');
+                        jobImage.src = job.profile_image;
+                        jobImage.alt = job.title;
+        
+                        // Job Info Section
+                        const jobInfo = document.createElement('div');
+                        jobInfo.className = 'job-info';
+        
+                        // Job Title
+                        const jobTitle = document.createElement('h2');
+                        jobTitle.textContent = job.title;
+        
+                        // Job Company
+                        const jobCompany = document.createElement('p');
+                        jobCompany.textContent = `Company: ${job.company}`;
+        
+                        // Job Location and Deadline (in a row)
+                        const bottomInfo = document.createElement('div');
+                        bottomInfo.className = 'bottom-info';
+                        const jobLocation = document.createElement('p');
+                        jobLocation.textContent = `Location: ${job.location}`;
+                        const jobDeadline = document.createElement('p');
+                        jobDeadline.textContent = `Deadline: ${job.deadline}`;
+                        bottomInfo.appendChild(jobLocation);
+                        bottomInfo.appendChild(jobDeadline);
+        
+                        // Job Link
+                        const jobLink = document.createElement('a');
+                        jobLink.href = job.job_link;
+                        jobLink.target = '_blank';
+        
+                        // Assemble Card
+                        jobInfo.appendChild(jobTitle);
+                        jobInfo.appendChild(jobCompany);
+                        jobInfo.appendChild(bottomInfo);
+                        jobLink.appendChild(jobImage);
+                        jobLink.appendChild(jobInfo);
+                        jobCard.appendChild(jobLink);
+                        jobsContainer.appendChild(jobCard);
+                    });
+                })
+                .catch(error => console.error('Error loading jobs data:', error));
+        });
     </script>
 </body>
 </html>
