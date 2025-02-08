@@ -35,8 +35,8 @@
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         overflow: hidden;
-        width: 100%; /* Full width */
-        max-width: 600px; /* Max width for each card */
+        width: 100%;
+        max-width: 600px;
         display: flex;
         flex-direction: row; /* Layout image and text horizontally */
         transition: transform 0.2s;
@@ -48,9 +48,9 @@
     }
     
     .job-card img {
-        width: 150px;
-        height: 150px;
-        object-fit: cover;
+        width: 150px; /* Image width */
+        height: 150px; /* Image height */
+        object-fit: cover; /* Maintain aspect ratio */
     }
     
     .job-card .job-info {
@@ -58,7 +58,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        flex-grow: 1;
+        flex-grow: 1; /* Fill remaining space */
     }
     
     .job-card h2 {
