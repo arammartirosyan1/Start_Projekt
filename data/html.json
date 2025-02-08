@@ -22,7 +22,7 @@
         "title3": "HTML փաստաթղթավորում",
         "text3": "Բոլոր HTML փաստաթղթերը պետք է սկսվեն փաստաթղթի տեսակի հայտարարագրով.<span style=\"color:red;\"><b><!DOCTYPE html></b></span>:<br>HTML փաստաթուղթն ինքնին սկսվում է <span style=\"color:red;\"><b><html></b></span>-ով և ավարտվում <span style=\"color:red;\"><b></html></b></span>-ով:<br>HTML փաստաթղթի տեսանելի մասը գտնվում է <span style=\"color:red;\"><b><body></b></span>-ի և <span style=\"color:red;\"><b></body></b></span>-ի միջև:",
         "title4": "HTML վերնագրեր",
-        "text4": "HTML վերնագրերը սահմանվում են <h1>-ից <h6> թեգերով:<br><h1> սահմանում է ամենակարևոր վերնագիրը: <h6> սահմանում է ամենաքիչ կարևոր վերնագիրը.<br><br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'><ul><li><h1>Սա վերնագիր 1-ն է</h1></li><li><h2>Սա վերնագիր 2-ն է</h2></li><li><h3>Սա վերնագիր 3-ն է</h3></li></ul></div>",
+        "text4": "HTML վերնագրերը սահմանվում են <h1>-ից <h6> թեգերով:<br><h1> սահմանում է ամենակարևոր վերնագիրը: <h6> սահմանում է ամենաքիչ կարևոր վերնագիրը.<br><br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>&lt;h1&gt;This is heading 1&lt;/h1&gt;<br>&lt;h2&gt;This is heading 2&lt;/h2&gt;<br>&lt;h3&gt;This is heading 3&lt;/h3&gt;</div>",
         "title5": "HTML պարբերություններ",
         "text5": "HTML պարբերությունները սահմանվում են <p> թեգով.<br><br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'><p>Սա պարբերություն է:</p></div>",
         "title6": "HTML հղումներ",
