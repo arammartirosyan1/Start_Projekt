@@ -4,68 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Listings</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        body {
-            background-color: #f8f9fa;
-        }
-        .job-card {
-            border-radius: 12px;
-            overflow: hidden;
-            background: #fff;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-        }
-        .job-card img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-        }
-        .job-card .card-body {
-            padding: 15px;
-        }
-        .job-card h5 {
-            font-size: 1.25rem;
-            margin-bottom: 10px;
-        }
-        .job-card a {
-            text-decoration: none;
-            color: #007bff;
-            font-weight: bold;
-        }
-    </style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+    
+    .jobs-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+    
+    .job-card {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        width: 300px;
+        transition: transform 0.2s;
+    }
+    
+    .job-card:hover {
+        transform: scale(1.05);
+    }
+    
+    .job-card img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+    
+    .job-card .job-info {
+        padding: 15px;
+    }
+    
+    .job-card h2 {
+        font-size: 18px;
+        margin: 0 0 10px;
+        color: #333;
+    }
+    
+    .job-card p {
+        margin: 5px 0;
+        color: #666;
+    }
+    
+    .job-card a {
+        text-decoration: none;
+        color: inherit;
+    }
+</style>
 </head>
 <body>
+    <div class="container">
+        <h1>Job Listings</h1>
+        <div id="jobs-container" class="jobs-container"></div>
+    </div>
 
-<div class="container py-4">
-    <h2 class="mb-4 text-center">Job Listings</h2>
-    <div id="job-listings" class="row"></div>
-</div>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
+    <script>document.addEventListener('DOMContentLoaded', function() {
         fetch('data/jobs.json')
             .then(response => response.json())
             .then(data => {
-                const jobContainer = document.getElementById("job-listings");
-                data.jobs.forEach(job => {
-                    const jobCard = `
-                        <div class="col-md-4">
-                            <div class="card job-card">
-                                <img src="${job.image}" alt="${job.title}">
-                                <div class="card-body">
-                                    <h5>${job.title}</h5>
-                                    <p>${job.company} - ${job.location}</p>
-                                    <a href="${job.url}" target="_blank">View Job</a>
-                                </div>
-                            </div>
-                        </div>`;
-                    jobContainer.innerHTML += jobCard;
+                const jobsContainer = document.getElementById('jobs-container');
+                data.forEach(job => {
+                    const jobCard = document.createElement('div');
+                    jobCard.className = 'job-card';
+    
+                    const jobImage = document.createElement('img');
+                    jobImage.src = job.profile_image;
+                    jobImage.alt = job.title;
+    
+                    const jobInfo = document.createElement('div');
+                    jobInfo.className = 'job-info';
+    
+                    const jobTitle = document.createElement('h2');
+                    jobTitle.textContent = job.title;
+    
+                    const jobCompany = document.createElement('p');
+                    jobCompany.textContent = `Company: ${job.company}`;
+    
+                    const jobLocation = document.createElement('p');
+                    jobLocation.textContent = `Location: ${job.location}`;
+    
+                    const jobDeadline = document.createElement('p');
+                    jobDeadline.textContent = `Deadline: ${job.deadline}`;
+    
+                    const jobLink = document.createElement('a');
+                    jobLink.href = job.job_link;
+                    jobLink.target = '_blank';
+    
+                    jobLink.appendChild(jobImage);
+                    jobLink.appendChild(jobInfo);
+                    jobInfo.appendChild(jobTitle);
+                    jobInfo.appendChild(jobCompany);
+                    jobInfo.appendChild(jobLocation);
+                    jobInfo.appendChild(jobDeadline);
+    
+                    jobCard.appendChild(jobLink);
+                    jobsContainer.appendChild(jobCard);
                 });
             })
-            .catch(error => console.error("Error loading job listings:", error));
-    });
-</script>
-
+            .catch(error => console.error('Error loading jobs data:', error));
+    });</script>
 </body>
 </html>
