@@ -81,86 +81,6 @@
             "job_link": "https://staff.am/am/jobs/analytics/data-analyst-502"
         },
         {
-            "title": "Middle Python Developer ",
-            "company": "OMD LLC",
-            "location": "Երևան",
-            "deadline": "2025-02-14",
-            "profile_image": "https://cdn.staff.am/staff.am/upload/3/2/8/7/328718ec.jpg",
-            "job_link": "https://staff.am/am/jobs/software-development/middle-python-developer-20"
-        },
-        {
-            "title": "Data Engineer with Python",
-            "company": "DataArt Armenia",
-            "location": "Երևան",
-            "deadline": "2025-03-02",
-            "profile_image": "https://cdn.staff.am/staff.am/upload/a/f/f/4/aff4b4eb.png",
-            "job_link": "https://staff.am/am/jobs/software-development/data-engineer-with-python-2"
-        },
-        {
-            "title": "Senior Python Engineer - AI Technology",
-            "company": "WorldQuant",
-            "location": "Երևան",
-            "deadline": "2025-02-28",
-            "profile_image": "https://cdn.staff.am/staff.am/upload/1/5/4/a/154a236e.png",
-            "job_link": "https://staff.am/am/jobs/software-development/senior-python-engineer-ai-technology-2"
-        },
-        {
-            "title": "Junior to Mid Php/Python Developer",
-            "company": "STDev",
-            "location": "Երևան",
-            "deadline": "2025-02-20",
-            "profile_image": "https://cdn.staff.am/staff.am/upload/5/9/e/2/59e2b0df.png",
-            "job_link": "https://staff.am/am/jobs/software-development/junior-to-mid-phppython-developer-2"
-        },
-        {
-            "title": "Automation QA Engineer",
-            "company": "InConcept Labs",
-            "location": "Երևան",
-            "deadline": "2025-02-23",
-            "profile_image": "https://cdn.staff.am/staff.am/upload/4/a/5/4/4a541375.png",
-            "job_link": "https://staff.am/am/jobs/quality-assurance/automation-qa-engineer-125"
-        },
-        {
-            "title": "Lead/Senior Data Engineer",
-            "company": "Quantori",
-            "location": "Երևան",
-            "deadline": "2025-02-12",
-            "profile_image": "https://cdn.staff.am/staff.am/upload/a/3/7/2/a372de2e.png",
-            "job_link": "https://staff.am/am/jobs/data-science/leadsenior-data-engineer-15"
-        },
-        {
-            "title": "Software Engineer with the DevOps skills",
-            "company": "SoftConstruct",
-            "location": "Երևան",
-            "deadline": "2025-02-14",
-            "profile_image": "https://cdn.staff.am/staff.am/upload/1/0/6/5/1065d734.jpg",
-            "job_link": "https://staff.am/am/jobs/software-development/software-engineer-with-the-devops-skills-6"
-        },
-        {
-            "title": "Application engineering Contractor",
-            "company": "ԷՅ ԷՄ ԴԻ Արմենիա",
-            "location": "Երևան",
-            "deadline": "2025-02-28",
-            "profile_image": "https://cdn.staff.am/staff.am/upload/f/e/9/b/fe9b22ef.jpg",
-            "job_link": "https://staff.am/am/jobs/software-development/application-engineering-contractor-6"
-        },
-        {
-            "title": "Senior Angular Developer (Part-time/Freelance)",
-            "company": "Skillian",
-            "location": "Երևան",
-            "deadline": "2025-02-24",
-            "profile_image": "https://cdn.staff.am/staff.am/upload/0/7/d/3/07d36270.png",
-            "job_link": "https://staff.am/am/jobs/software-development/senior-angular-developer-part-timefreelance-2"
-        },
-        {
-            "title": "Data Analyst",
-            "company": "ԱՐՔԹԻՔՍ ՍՈԼՅՈՒՇՆ ՍՊԸ ",
-            "location": "Երևան",
-            "deadline": "2025-03-06",
-            "profile_image": "https://cdn.staff.am/staff.am/upload/4/8/e/b/48ebfa1e.png",
-            "job_link": "https://staff.am/am/jobs/analytics/data-analyst-502"
-        },
-        {
             "title": "Software Engineer/8646",
             "company": "Synopsys Armenia ",
             "location": "Երևան",
@@ -191,6 +111,46 @@
             "deadline": "2025-03-01",
             "profile_image": "https://cdn.staff.am/staff.am/upload/0/0/1/2/00122739.png",
             "job_link": "https://staff.am/am/jobs/software-development/senior-full-stack-engineer-29"
+        },
+        {
+            "title": "Odoo Developer",
+            "company": "CertiPro",
+            "location": "Երևան",
+            "deadline": "2025-02-15",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/0/8/f/5/08f51162.png",
+            "job_link": "https://staff.am/am/jobs/software-development/odoo-developer-2"
+        },
+        {
+            "title": "Junior/Middle QA Engineer",
+            "company": "Alison",
+            "location": "Երևան",
+            "deadline": "2025-02-22",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/0/b/1/b/0b1b1e75.png",
+            "job_link": "https://staff.am/am/jobs/quality-assurance/juniormiddle-qa-engineer-20"
+        },
+        {
+            "title": "Hardware Developer",
+            "company": "InnLine",
+            "location": "Երևան",
+            "deadline": "2025-02-21",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/e/d/f/1/edf1b5c9.png",
+            "job_link": "https://staff.am/am/jobs/engineering/hardware-developer-2"
+        },
+        {
+            "title": "Monitoring Engineer",
+            "company": "OMD LLC",
+            "location": "Երևան",
+            "deadline": "2025-03-05",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/3/2/8/7/328718ec.jpg",
+            "job_link": "https://staff.am/am/jobs/software-development/monitoring-engineer-12"
+        },
+        {
+            "title": "ՏՏ աուդիտի գծով փորձագետ",
+            "company": "ՎՏԲ-Հայաստան Բանկ",
+            "location": "Երևան",
+            "deadline": "2025-03-09",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/4/4/8/1/4481d638.png",
+            "job_link": "https://staff.am/am/jobs/audit/tt-aowditi-gtsov-pordzaget-2"
         }
     ],
     "html": [
@@ -201,94 +161,6 @@
             "deadline": "2025-02-19",
             "profile_image": "https://cdn.staff.am/staff.am/upload/9/0/a/f/90afa9b9.jpg",
             "job_link": "https://staff.am/am/jobs/software-development/javascript-team-lead-12"
-        },
-        {
-            "title": "QA Engineer",
-            "company": "SmartApp",
-            "location": "Минск",
-            "deadline": "2025-03-06",
-            "profile_image": null,
-            "job_link": "https://staff.am/am/jobs/quality-assurance/qa-engineer-1597"
-        },
-        {
-            "title": "Back-End Senior Developer PHP / Laravel  (On-site)",
-            "company": "Logix Software LLC",
-            "location": "Երևան",
-            "deadline": "2025-03-01",
-            "profile_image": "https://cdn.staff.am/staff.am/upload/8/4/a/c/84ac0909.png",
-            "job_link": "https://staff.am/am/jobs/software-development/back-end-senior-developer-php-laravel-on-site-5"
-        },
-        {
-            "title": "Junior SharePoint Online Administrator/Developer",
-            "company": "Doxx",
-            "location": "Երևան",
-            "deadline": "2025-02-26",
-            "profile_image": "https://cdn.staff.am/staff.am/upload/c/4/a/9/c4a971e0.png",
-            "job_link": "https://staff.am/am/jobs/software-development/junior-sharepoint-online-administratordeveloper-2"
-        },
-        {
-            "title": "PHP Laravel &amp; Vue.js Developer| Full Stack Expert",
-            "company": "EPODEX IT",
-            "location": "Երևան",
-            "deadline": "2025-02-14",
-            "profile_image": "https://cdn.staff.am/staff.am/upload/2/1/4/3/2143ab20.png",
-            "job_link": "https://staff.am/am/jobs/software-development/php-laravel-vuejs-developer-full-stack-expert-2"
-        },
-        {
-            "title": "Senior Automation Engineer",
-            "company": "GHJ",
-            "location": "Երևան",
-            "deadline": "2025-02-19",
-            "profile_image": "https://cdn.staff.am/staff.am/upload/8/8/5/8/88588733.png",
-            "job_link": "https://staff.am/am/jobs/software-development/senior-automation-engineer-5"
-        },
-        {
-            "title": "PHP/WordPress Technical Support Specialist",
-            "company": "TT soft",
-            "location": "Երևան",
-            "deadline": "2025-02-19",
-            "profile_image": "https://cdn.staff.am/staff.am/upload/4/6/5/b/465b8e40.png",
-            "job_link": "https://staff.am/am/jobs/software-development/phpwordpress-technical-support-specialist-2"
-        },
-        {
-            "title": "Junior Support Developer",
-            "company": "DevSoft AM",
-            "location": "Հայաստան (Բոլոր քաղաքները)",
-            "deadline": "2025-02-23",
-            "profile_image": "https://cdn.staff.am/staff.am/upload/6/6/6/e/666ea085.png",
-            "job_link": "https://staff.am/am/jobs/software-development/junior-support-developer-7"
-        },
-        {
-            "title": "UI/UX Markup Specialist",
-            "company": "SKILLEX",
-            "location": "Երևան",
-            "deadline": "2025-02-28",
-            "profile_image": "https://cdn.staff.am/staff.am/upload/2/5/7/b/257badd3.jpg",
-            "job_link": "https://staff.am/am/jobs/software-development/uiux-markup-specialist-2"
-        },
-        {
-            "title": "PHP Developer",
-            "company": "ՍՏՈՒԴԻՈ ՈՒԱՆ",
-            "location": "Երևան",
-            "deadline": "2025-02-12",
-            "profile_image": "https://cdn.staff.am/staff.am/upload/1/8/9/9/1899c037.png",
-            "job_link": "https://staff.am/am/jobs/software-development/php-developer-830"
-        },
-        {
-            "title": "JavaScript Team Lead ",
-            "company": "Haysell",
-            "location": "Երևան",
-            "deadline": "2025-02-19",
-            "profile_image": "https://cdn.staff.am/staff.am/upload/9/0/a/f/90afa9b9.jpg",
-            "job_link": "https://staff.am/am/jobs/software-development/javascript-team-lead-12"
-        },
-        {
-            "title": "QA Engineer",
-            "company": "SmartApp",
-            "location": "Минск",
-            "deadline": "2025-03-06",
-            "profile_image": null,
-            "job_link": "https://staff.am/am/jobs/quality-assurance/qa-engineer-1597"
         },
         {
             "title": "Back-End Senior Developer PHP / Laravel  (On-site)",
@@ -385,6 +257,46 @@
             "deadline": "2025-02-16",
             "profile_image": "https://cdn.staff.am/staff.am/upload/b/e/4/8/be483cc9.png",
             "job_link": "https://staff.am/am/jobs/software-development/php-developer-834"
+        },
+        {
+            "title": "Junior, Middle Front-end, and Back-end Developers ",
+            "company": "Arnology LLC",
+            "location": "Երևան",
+            "deadline": "2025-03-01",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/3/4/4/b/344bcabd.png",
+            "job_link": "https://staff.am/am/jobs/software-development/junior-middle-front-end-and-back-end-developers-15"
+        },
+        {
+            "title": "Գրաֆիկ և UI/UX դիզայներ",
+            "company": "«ԳԼՈԲԱԼ ԹՐԵՅԴ ՉԵՅՆ» ՍՊԸ",
+            "location": "Երևան",
+            "deadline": "2025-02-08",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/0/2/6/9/0269a0a7.png",
+            "job_link": "https://staff.am/am/jobs/web-design/grafik-ew-uiux-dizayner-3"
+        },
+        {
+            "title": "Fullstack .NET Developer",
+            "company": "DevSoft AM",
+            "location": "Հայաստան (Բոլոր քաղաքները)",
+            "deadline": "2025-02-21",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/6/6/6/e/666ea085.png",
+            "job_link": "https://staff.am/am/jobs/software-development/fullstack-net-developer-5"
+        },
+        {
+            "title": "ReactJS Developer",
+            "company": "Fnet",
+            "location": "Երևան",
+            "deadline": "2025-02-24",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/f/2/d/1/f2d14d30.jpg",
+            "job_link": "https://staff.am/am/jobs/software-development/reactjs-developer-470"
+        },
+        {
+            "title": "Senior Product Designer",
+            "company": "10Web",
+            "location": "Երևան",
+            "deadline": "2025-02-13",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/a/f/f/b/affb02bf.png",
+            "job_link": "https://staff.am/am/jobs/web-design/senior-product-designer-143"
         }
     ]
 }

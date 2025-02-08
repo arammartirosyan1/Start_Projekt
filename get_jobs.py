@@ -25,13 +25,16 @@ url = "https://staff.am/_next/data/kZvPsz7z173Ncr6cM3T5b/am/jobs.json"
 
 ls_jobs_type = ["python", "html"]
 
-# Check if file exists, if so, load existing data
+# File path
 file_path = "data/jobs.json"
+
+# If file exists, delete it
 if os.path.exists(file_path):
-    with open(file_path, "r", encoding="utf-8") as json_file:
-        existing_data = json.load(json_file)
-else:
-    existing_data = {}
+    os.remove(file_path)
+    print(f"🗑️ Deleted existing file: {file_path}")
+
+# Create an empty dictionary to store job data
+existing_data = {}
 
 for jobs_type in ls_jobs_type:
 
@@ -51,7 +54,7 @@ for jobs_type in ls_jobs_type:
 
         # Prepare job data for JSON
         job_list = []
-        for job in jobs[:15]:  # Get only the first 15 jobs
+        for job in jobs[:20]:  # Get only the first 20 jobs
             try:
                 job_entry = {
                     "title": job["title"]["am"],
@@ -61,22 +64,23 @@ for jobs_type in ls_jobs_type:
                     "profile_image": job["companiesStruct"]["profile_image"],
                     "job_link": f"https://staff.am/am/jobs/{job.get('category', {}).get('code', 'unknown')}/{job.get('slug', {}).get('am', 'unknown')}"
                 }
-                job_list.append(job_entry)
+                if job_entry["profile_image"] is not None:
+                    job_list.append(job_entry)
             except Exception as e:
-                print(f"Error processing job: {e}")
+                print(f"⚠️ Error processing job: {e}")
 
-        # Append to existing data
-        if jobs_type in existing_data:
-            existing_data[jobs_type].extend(job_list)  # Append new jobs
-        else:
-            existing_data[jobs_type] = job_list  # Create new key with the list
+        # Store job data
+        existing_data[jobs_type] = job_list
 
         print(f"✅ Successfully added {len(job_list)} {jobs_type} jobs")
 
     else:
         print(f"❌ Error: {response.status_code}")
 
-# Save the updated data back to the same JSON file
+# Ensure directory exists
+os.makedirs(os.path.dirname(file_path), exist_ok=True)
+
+# Save the updated data to a new JSON file
 with open(file_path, "w", encoding="utf-8") as json_file:
     json.dump(existing_data, json_file, ensure_ascii=False, indent=4)
 
