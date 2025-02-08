@@ -15,7 +15,7 @@
 
 
     "html-structure": {
-        "title1": "HTML կառուցվածքը",
+        "title1": "HTML Structure",
         "text1": "<div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;head&gt;<br>&lt;title&gt;Page Title&lt;/title&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br><br>&lt;h1&gt;My First Heading&lt;/h1&gt;<br>&lt;p&gt;My first paragraph.&lt;/p&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;</div><b><br>Օրինակի բացատրություն.</b><br><ul><li><span style='color:red;'><b>&lt;!DOCTYPE html&gt;</b></span> հռչակագիրը սահմանում է, որ այս փաստաթուղթը HTML5 փաստաթուղթ է</li><br><li><span style='color:red;'><b>&lt;html&gt;</b></span> տարրը HTML էջի արմատային տարրն է</li><br><li><span style='color:red;'><b>&lt;head&gt;</b></span> տարրը պարունակում է մետա տեղեկատվություն HTML էջի մասին</li><br><li><span style='color:red;'><b>&lt;title&gt;</b></span> տարրը նշում է վերնագիր HTML էջի համար (որը ցուցադրվում է դիտարկիչի վերնագրի տողում կամ էջի ներդիրում)</li><br><li><span style='color:red;'><b>&lt;body&gt;</b></span> տարրը սահմանում է փաստաթղթի մարմինը և հանդիսանում է բոլոր տեսանելի բովանդակության կոնտեյներ, ինչպիսիք են վերնագրերը, պարբերությունները, պատկերները, հիպերհղումները, աղյուսակները, ցուցակները և այլն:</li><br><li><span style='color:red;'><b>&lt;h1&gt;</b></span> տարրը սահմանում է մեծ վերնագիր</li><br><li><span style='color:red;'><b>&lt;p&gt;</b></span> տարրը սահմանում է պարբերություն</li><br></ul>",
         "title2": "Ի՞նչ է HTML տարրը:",
         "text2": "HTML տարրը սահմանվում է սկզբնական պիտակով, որոշ բովանդակությամբ և ավարտի պիտակով.<br><br><tagname> Բովանդակությունը գնում է այստեղ... </tagname><br>HTML տարրը ամեն ինչ է՝ սկզբի թեգից մինչև վերջ.<br><span style=\"color:red;\"><b>&lt;h1&gt;</b></span>Իմ առաջին վերնագիրը<span style=\"color:red;\"><b>&lt;/h1&gt;</b></span><br><span style=\"color:red;\"><b>&lt;p&gt;</b></span>Իմ առաջին պարբերությունը<span style=\"color:red;\"><b>&lt;/p&gt;</b></span>",
@@ -32,7 +32,7 @@
     },
 
     "html-attribute": {
-        "title1": "HTML ատրիբուտներ",
+        "title1": "HTML Attributes",
         "text1": "HTML ատրիբուտները լրացուցիչ տեղեկություններ են տալիս HTML տարրերի մասին:<br><ul><li>Բոլոր HTML տարրերը կարող են ունենալ ատրիբուտներ</li><li>Հատկանիշները լրացուցիչ տեղեկություններ են տալիս տարրերի մասին</li><li>Հատկանիշները միշտ նշվում են սկզբնական թեգում</li><li>Հատկանիշները սովորաբար գալիս են անուն/արժեք զույգերով, ինչպիսիք են՝ name ==արժեքը</li></ul>",
         "title2": "Href հատկանիշը",
         "text2": "&lt;a&gt; թեգը սահմանում է հիպերհղում: href հատկանիշը սահմանում է այն էջի URL-ը, ուր գնում է հղումը՝<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>&lt;a href='https://html.com/'&gt;Html.com;/a&gt;</div>",
@@ -46,7 +46,7 @@
 
     
     "html-heading": {
-        "title1": "HTML վերնագրեր",
+        "title1": "HTML Headings",
         "text1": "HTML վերնագրերը վերնագրեր կամ ենթագրեր են, որոնք ցանկանում եք ցուցադրել վեբ էջում:<br>Օրինակ՝<br><br><h1>Վերնագիր 1</h1><br><h2>Վերնագիր 2</h2><br><h3>Վերնագիր 3</h3><br><h4>Վերնագիր 4</h4><br><h5>Վերնագիր 5</h5><br><h6>Վերնագիր 6</h6></div>",
         "title2": "HTML վերնագրերի չափերը",
         "text2": "HTML վերնագրերը սահմանվում են &lt;h1&gt;-ից &lt;h6&gt; թեգերով:<br>&lt;h1&gt; սահմանում է ամենակարևոր վերնագիրը: &lt;h6&gt; սահմանում է ամենաքիչ կարևոր վերնագիրը.<br><br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>&lt;h1&gt;Սա վերնագիր 1-ն է&lt;/h1&gt;<br>&lt;h2&gt;Սա վերնագիր 2-ն է&lt;/h2&gt;<br>&lt;h3&gt;Սա վերնագիր 3-ն է&lt;/h3&gt;</div><br><br><span style=\"color:red;\"><b>Նշում. Բրաուզերներն ավտոմատ կերպով ավելացնում են որոշ սպիտակ տարածություն (լուսանցք) վերնագրից առաջ և հետո:</b></span>",
@@ -57,14 +57,25 @@
     },
 
     "html-paragraph": {
-        "title1": "HTML պարբերություններ",
+        "title1": "HTML Paragraphs",
         "text1": "Պարբերությունը միշտ սկսվում է նոր տողից և սովորաբար տեքստի բլոկ է:<br><br><b>HTML <p> տարրը սահմանում է պարբերություն:</b><br><br>Պարբերությունը միշտ սկսվում է նոր տողից, և բրաուզերներն ավտոմատ կերպով ավելացնում են որոշ սպիտակ տարածություն (լուսանցք) պարբերությունից առաջ և հետո:<br>Օրինակ՝ <br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>&lt;p&gt;Սա պարբերություն է:&lt;/p&gt;<br>&lt;p&gt;Սա մեկ այլ պարբերություն է:&lt;/p&gt;</div",
         "title2": "HTML ցուցադրում",
         "text2": "Դուք չեք կարող վստահ լինել, թե ինչպես կցուցադրվի HTML-ը:<br>Մեծ կամ փոքր էկրանները և չափափոխված պատուհանները տարբեր արդյունքներ կստեղծեն:<br>HTML-ով դուք չեք կարող փոխել էկրանը՝ ավելացնելով լրացուցիչ բացատներ կամ լրացուցիչ տողեր ձեր HTML կոդը:<br>Զննարկիչը ավտոմատ կերպով կհեռացնի լրացուցիչ բացատները և տողերը, երբ էջը ցուցադրվի.",
         "title3": "HTML հորիզոնական կանոններ",
         "text3": "&lt;hr&gt; թեգը սահմանում է թեմատիկ ընդմիջում HTML էջի մեջ և առավել հաճախ ցուցադրվում է որպես հորիզոնական կանոն։<br><br>&lt;hr&gt; տարրն օգտագործվում է HTML էջի բովանդակությունը առանձնացնելու (կամ փոփոխություն սահմանելու համար).",
         "title4": "HTML նոր տող",
-        "text4": "HTML &lt;br&gt; տարրը սահմանում է տողերի ընդմիջում:<br><br>Օգտագործեք &lt;br&gt;, եթե ցանկանում եք տողերի ընդմիջում (նոր տող) առանց նոր պարբերություն սկսելու.<br><br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>&lt;p&gt;Սա&lt;br&gt;պարբերություն է&lt;br&gt;տողերի ընդմիջումներով:&lt;/p&gt;</div"
+        "text4": "HTML &lt;br&gt; տարրը սահմանում է տողերի ընդմիջում:<br><br>Օգտագործեք &lt;br&gt;, եթե ցանկանում եք տողերի ընդմիջում (նոր տող) առանց նոր պարբերություն սկսելու.<br><br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>&lt;p&gt;Սա&lt;br&gt;պարբերություն է&lt;br&gt;տողերի ընդմիջումներով:&lt;/p&gt;</div>"
+    },
+
+    "html-style": {
+        "title1": "HTML Styles",
+        "text1": "HTML ոճ հատկանիշն օգտագործվում է տարրին ոճեր ավելացնելու համար, ինչպիսիք են գույնը, տառատեսակը, չափը և այլն:<br><br>Օրինակ՝<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>&lt;p style='color:red;'&gt;Ես կարմիրն եմ&lt;/p&gt;<br>&lt;p style='color:blue;'&gt;Ես կապույտ եմ&lt;/p&gt;<br>&lt;p style='font-size:30px;'&gt;Ես մեծ եմ&lt;/p&gt;<br></div>",
+        "title2": "HTML ոճի հատկանիշ",
+        "text2": "HTML տարրի ոճը սահմանելը կարող է կատարվել style հատկանիշով:<br><br> HTML ոճի հատկանիշն ունի հետևյալ շարահյուսությունը.<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>&lt;p style='color:red;'&gt;Այս տողի գույը կարմիր է։&lt;/p&gt;</div>",
+        "title3": "Ֆոնի գույնը",
+        "text3": "CSS ֆոնային գույնի հատկությունը սահմանում է HTML տարրի ֆոնի գույնը:<br>Սահմանեք էջի ֆոնի գույնը կապույտ.<br><br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>&lt;body style='background-color:powderblue;'&gt;<br>&lt;h1&gt;Սա վերնագիր է&lt;/h1&gt;<br>&lt;p&gt;Սա պարբերություն է:&lt;/p&gt;<br><br>&lt;/body&gt;</div>",
+        "title4": "Տեքստի գույն",
+        "text4": "CSS գույնի հատկությունը սահմանում է HTML տարրի տեքստի գույնը.<br><br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>&lt;h1 style='color:blue;'&gt;Սա վերնագիր է&lt;/h1&gt;<br>&lt;p style='color:red;'&gt;Սա պարբերություն է:&lt;/p&gt;</div>"
     }
 
 

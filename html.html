@@ -244,6 +244,16 @@
                 htmlParagraphSection.querySelector('h2:nth-of-type(4)').textContent = data['html-paragraph'].title4;
                 htmlParagraphSection.querySelector('p:nth-of-type(4)').innerHTML = data['html-paragraph'].text4;
 
+                const htmlStyleSection = document.querySelector('#html-style');
+                htmlStyleSection.querySelector('h2:nth-of-type(1)').textContent = data['html-style'].title1;
+                htmlStyleSection.querySelector('p:nth-of-type(1)').innerHTML = data['html-style'].text1;
+                htmlStyleSection.querySelector('h2:nth-of-type(2)').textContent = data['html-style'].title2;
+                htmlStyleSection.querySelector('p:nth-of-type(2)').innerHTML = data['html-style'].text2;
+                htmlStyleSection.querySelector('h2:nth-of-type(3)').textContent = data['html-style'].title3;
+                htmlStyleSection.querySelector('p:nth-of-type(3)').innerHTML = data['html-style'].text3;
+                htmlStyleSection.querySelector('h2:nth-of-type(4)').textContent = data['html-style'].title4;
+                htmlStyleSection.querySelector('p:nth-of-type(4)').innerHTML = data['html-style'].text4;
+
             } catch (error) {
                 console.error("Error loading footer or content:", error);
             }
@@ -291,6 +301,8 @@
                 <li><a href="#html-attribute" onclick="navigateTo('#html-attribute')">HTML հատկանիշներ</a></li>
                 <li><a href="#html-heading" onclick="navigateTo('#html-heading')">HTML վերնագրեր</a></li>
                 <li><a href="#html-paragraph" onclick="navigateTo('#html-paragraph')">HTML պարբերություններ</a></li>
+                <li><a href="#html-style" onclick="navigateTo('#html-style')">HTML Ոճեր</a></li>
+
             </ul>
         </aside>
 
@@ -363,6 +375,20 @@
 
             <section id="html-paragraph" class="hidden">
                 <h1>HTML պարբերություններ</h1><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p>
+            </section>
+
+            <section id="html-style" class="hidden">
+                <h1>HTML Ոճեր</h1><br>
                 <h2></h2>
                 <p></p><br>
                 <h2></h2>
