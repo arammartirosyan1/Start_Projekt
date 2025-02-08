@@ -23,60 +23,62 @@
         color: #333;
     }
     
-    .jobs-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-    }
-    
     .job-card {
         background-color: #fff;
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         overflow: hidden;
-        width: 300px;
+        width: 100%;
+        margin-bottom: 20px;
         transition: transform 0.2s;
     }
     
     .job-card:hover {
-        transform: scale(1.05);
+        transform: scale(1.02);
     }
     
     .job-card img {
         width: 100%;
-        height: 150px;
+        height: 400px; /* Adjusted for larger image display */
         object-fit: cover;
     }
     
     .job-card .job-info {
-        padding: 15px;
+        padding: 20px;
     }
     
     .job-card h2 {
-        font-size: 18px;
-        margin: 0 0 10px;
+        font-size: 24px;
+        margin: 0 0 15px;
         color: #333;
     }
     
     .job-card p {
-        margin: 5px 0;
+        margin: 10px 0;
         color: #666;
+        font-size: 18px;
     }
     
     .job-card a {
         text-decoration: none;
-        color: inherit;
+        color: #007bff;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .job-card a:hover {
+        text-decoration: underline;
     }
 </style>
 </head>
 <body>
     <div class="container">
         <h1>Job Listings</h1>
-        <div id="jobs-container" class="jobs-container"></div>
+        <div id="jobs-container"></div>
     </div>
 
-    <script>document.addEventListener('DOMContentLoaded', function() {
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
         fetch('data/jobs.json')
             .then(response => response.json())
             .then(data => {
@@ -107,19 +109,22 @@
                     const jobLink = document.createElement('a');
                     jobLink.href = job.job_link;
                     jobLink.target = '_blank';
+                    jobLink.textContent = "View Job Details";
     
-                    jobLink.appendChild(jobImage);
-                    jobLink.appendChild(jobInfo);
+                    // Append everything into the job card
                     jobInfo.appendChild(jobTitle);
                     jobInfo.appendChild(jobCompany);
                     jobInfo.appendChild(jobLocation);
                     jobInfo.appendChild(jobDeadline);
+                    jobInfo.appendChild(jobLink);
     
-                    jobCard.appendChild(jobLink);
+                    jobCard.appendChild(jobImage);
+                    jobCard.appendChild(jobInfo);
                     jobsContainer.appendChild(jobCard);
                 });
             })
             .catch(error => console.error('Error loading jobs data:', error));
-    });</script>
+    });
+    </script>
 </body>
 </html>
