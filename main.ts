@@ -26,7 +26,6 @@ async function handler(req: Request): Promise<Response> {
         });
     }
 
-    // Serve other HTML files (like python.html, sql.html, etc.)
     else if (pathname === "/python.html") {
         const html = await Deno.readTextFile(join(staticDir, "python.html"));
         return new Response(html, {
@@ -41,6 +40,12 @@ async function handler(req: Request): Promise<Response> {
     }
     else if (pathname === "/html.html") {
         const html = await Deno.readTextFile(join(staticDir, "html.html"));
+        return new Response(html, {
+            headers: { "Content-Type": mimeTypes[".html"] },
+        });
+    }
+    else if (pathname === "/js.html") {
+        const html = await Deno.readTextFile(join(staticDir, "js.html"));
         return new Response(html, {
             headers: { "Content-Type": mimeTypes[".html"] },
         });

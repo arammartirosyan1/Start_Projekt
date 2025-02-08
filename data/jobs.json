@@ -298,5 +298,159 @@
             "profile_image": "https://cdn.staff.am/staff.am/upload/a/f/f/b/affb02bf.png",
             "job_link": "https://staff.am/am/jobs/web-design/senior-product-designer-143"
         }
+    ],
+    "javascript": [
+        {
+            "title": "JavaScript Team Lead ",
+            "company": "Haysell",
+            "location": "Երևան",
+            "deadline": "2025-02-19",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/9/0/a/f/90afa9b9.jpg",
+            "job_link": "https://staff.am/am/jobs/software-development/javascript-team-lead-12"
+        },
+        {
+            "title": "Senior React Developer ",
+            "company": "Engineerinc",
+            "location": "Երևան",
+            "deadline": "2025-02-23",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/4/9/5/f/495fd9e9.jpg",
+            "job_link": "https://staff.am/am/jobs/software-development/senior-react-developer-111"
+        },
+        {
+            "title": "Junior Support Developer",
+            "company": "DevSoft AM",
+            "location": "Հայաստան (Բոլոր քաղաքները)",
+            "deadline": "2025-02-23",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/6/6/6/e/666ea085.png",
+            "job_link": "https://staff.am/am/jobs/software-development/junior-support-developer-7"
+        },
+        {
+            "title": "Senior Angular Developer (Part-time/Freelance)",
+            "company": "Skillian",
+            "location": "Երևան",
+            "deadline": "2025-02-24",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/0/7/d/3/07d36270.png",
+            "job_link": "https://staff.am/am/jobs/software-development/senior-angular-developer-part-timefreelance-2"
+        },
+        {
+            "title": "Frontend Vue.js Developer",
+            "company": "L-IT Armenia",
+            "location": "Երևան",
+            "deadline": "2025-02-13",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/b/7/a/d/b7adf0ce.png",
+            "job_link": "https://staff.am/am/jobs/software-development/frontend-vuejs-developer-2"
+        },
+        {
+            "title": "PHP/WordPress Technical Support Specialist",
+            "company": "TT soft",
+            "location": "Երևան",
+            "deadline": "2025-02-19",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/4/6/5/b/465b8e40.png",
+            "job_link": "https://staff.am/am/jobs/software-development/phpwordpress-technical-support-specialist-2"
+        },
+        {
+            "title": "Back-End Senior Developer PHP / Laravel  (On-site)",
+            "company": "Logix Software LLC",
+            "location": "Երևան",
+            "deadline": "2025-03-01",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/8/4/a/c/84ac0909.png",
+            "job_link": "https://staff.am/am/jobs/software-development/back-end-senior-developer-php-laravel-on-site-5"
+        },
+        {
+            "title": "42 Yerevan - Technical Administrator",
+            "company": "Simonian Educational Foundation",
+            "location": "Երևան",
+            "deadline": "2025-03-09",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/8/0/7/d/807d635d.png",
+            "job_link": "https://staff.am/am/jobs/software-development/42-yerevan-technical-administrator-2"
+        },
+        {
+            "title": "ReactJS Developer",
+            "company": "Fnet",
+            "location": "Երևան",
+            "deadline": "2025-02-24",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/f/2/d/1/f2d14d30.jpg",
+            "job_link": "https://staff.am/am/jobs/software-development/reactjs-developer-470"
+        },
+        {
+            "title": "Fullstack .NET Developer",
+            "company": "DevSoft AM",
+            "location": "Հայաստան (Բոլոր քաղաքները)",
+            "deadline": "2025-02-21",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/6/6/6/e/666ea085.png",
+            "job_link": "https://staff.am/am/jobs/software-development/fullstack-net-developer-5"
+        },
+        {
+            "title": "Manual Tester (Fully remote)",
+            "company": "DevsData LLC",
+            "location": "Երևան",
+            "deadline": "2025-02-13",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/5/0/3/0/50301f69.jpg",
+            "job_link": "https://staff.am/am/jobs/quality-assurance/manual-tester-fully-remote-2"
+        },
+        {
+            "title": "AWS Cloud Engineer",
+            "company": "DevsData LLC",
+            "location": "Հայաստան (Բոլոր քաղաքները)",
+            "deadline": "2025-03-09",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/5/0/3/0/50301f69.jpg",
+            "job_link": "https://staff.am/am/jobs/other-it/aws-cloud-engineer-2"
+        },
+        {
+            "title": "Full Stack Engineer",
+            "company": "List Group",
+            "location": "Երևան",
+            "deadline": "2025-02-26",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/f/f/e/8/ffe81d7e.jpg",
+            "job_link": "https://staff.am/am/jobs/software-development/full-stack-engineer-49"
+        },
+        {
+            "title": "PHP Laravel &amp; Vue.js Developer| Full Stack Expert",
+            "company": "EPODEX IT",
+            "location": "Երևան",
+            "deadline": "2025-02-14",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/2/1/4/3/2143ab20.png",
+            "job_link": "https://staff.am/am/jobs/software-development/php-laravel-vuejs-developer-full-stack-expert-2"
+        },
+        {
+            "title": "Senior Automation Engineer",
+            "company": "GHJ",
+            "location": "Երևան",
+            "deadline": "2025-02-19",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/8/8/5/8/88588733.png",
+            "job_link": "https://staff.am/am/jobs/software-development/senior-automation-engineer-5"
+        },
+        {
+            "title": "Quality Assurance Engineer",
+            "company": "Fnet",
+            "location": "Երևան",
+            "deadline": "2025-02-24",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/f/2/d/1/f2d14d30.jpg",
+            "job_link": "https://staff.am/am/jobs/quality-assurance/quality-assurance-engineer-233"
+        },
+        {
+            "title": "Ավագ ծրագրավորող",
+            "company": "Eclipse Global Hub",
+            "location": "Երևան",
+            "deadline": "2025-02-16",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/1/0/e/7/10e7e22c.jpg",
+            "job_link": "https://staff.am/am/jobs/software-development/avag-tsragravorogh-16"
+        },
+        {
+            "title": "Junior to Mid Php/Python Developer",
+            "company": "STDev",
+            "location": "Երևան",
+            "deadline": "2025-02-20",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/5/9/e/2/59e2b0df.png",
+            "job_link": "https://staff.am/am/jobs/software-development/junior-to-mid-phppython-developer-2"
+        },
+        {
+            "title": "Mobile App Developer (React Native)",
+            "company": "Golden SB Tech",
+            "location": "Երևան",
+            "deadline": "2025-02-28",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/5/5/7/6/55765f82.jpeg",
+            "job_link": "https://staff.am/am/jobs/software-development/mobile-app-developer-react-native-2"
+        }
     ]
 }
