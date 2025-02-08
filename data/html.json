@@ -1,0 +1,38 @@
+{
+    "html-intro": {
+        "title1": "Ինչ է HTML-ը:",
+        "text1": "HTML-ը վեբ էջերի նշագրման ստանդարտ լեզու է:<br><br>HTML-ով կարող եք ստեղծել ձեր սեփական կայքը:<br><br>HTML-ը հեշտ է սովորել, դուք կվայելեք այն:",
+        "title2": "Ինչ կարող է անել HTML-ը:",
+        "text2": "<ul><li>HTML-ը նշանակում է Hyper Text Markup Language</li><li>HTML-ը վեբ էջեր ստեղծելու ստանդարտ լեզու է</li><li>HTML-ը նկարագրում է վեբ էջի կառուցվածքը</li><li>HTML-ը բաղկացած է մի շարք տարրերից</li><li>HTML տարրերը զննարկիչին ասում են, թե ինչպես ցուցադրել բովանդակությունը</li></ul>",
+        "title3": "Ինչու՞ HTML",
+        "text3": "<ul><li>Դա համացանցի հիմքն է</li><li>Սկսնակների համար շատ հեշտ շարահյուսություն ունի</li><li>Անհրաժեշտ է վեբ մշակման համար</li><li>Բարձր պահանջարկ աշխատաշուկայում</li><li>Ոչ մի հատուկ ծրագիր չի պահանջվում</li><li>Հնարավորություն դեպի առաջադեմ վեբ տեխնոլոգիաներ</li></ul>",
+        "title4": "Ի՞նչ աշխատանքի կարելի է անցնել HTML-ի իմացությամբ",
+        "text4": "<ul><li>HTML էջերի ստեղծում</li><li>Բովանդակության կառավարում և թվային մարքեթինգ</li><li>Կայքի սպասարկում</li><li>Freelancing</li><li>Աշխատանք վեբ դիզայնում</li></ul>"
+    },
+    
+    "html-install": {
+        "title": "HTML ներածություն (Introduction)",
+        "title1": "Ինչ է HTML-ը:",
+        "text1": "<ul><li>HTML-ը նշանակում է Hyper Text Markup Language</li><li>HTML-ը վեբ էջեր ստեղծելու ստանդարտ լեզու է</li><li>HTML-ը նկարագրում է վեբ էջի կառուցվածքը</li><li>HTML-ը բաղկացած է մի շարք տարրերից</li><li>HTML տարրերը զննարկիչին ասում են, թե ինչպես ցուցադրել բովանդակությունը</li></ul>",
+        "title2": "HTML կառուցվածքը",
+        "text2": "<div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'><!DOCTYPE html><br><html><br><head><br><title>Page Title</title><br></head><br><body><br><br><h1>My First Heading</h1><br><p>My first paragraph.</p><br><br></body><br></html></div><b>Օրինակի բացատրություն.</b><br><ul><li><span style=\"color:red;\"><b><!DOCTYPE html> </b></span>հռչակագիրը սահմանում է, որ այս փաստաթուղթը HTML5 փաստաթուղթ է</li><br><li><span style=\"color:red;\"><b><html> </b></span>տարրը HTML էջի արմատային տարրն է</li><br><li><span style=\"color:red;\"><b><head></b></span>տարրը պարունակում է մետա տեղեկատվություն HTML էջի մասին</li><br><li><span style=\"color:red;\"><b><title></b></span>տարրը նշում է վերնագիր HTML էջի համար (որը ցուցադրվում է դիտարկիչի վերնագրի տողում կամ էջի ներդիրում)</li><br><li><span style=\"color:red;\"><b><body></b></span>տարրը սահմանում է փաստաթղթի մարմինը և հանդիսանում է բոլոր տեսանելի բովանդակության կոնտեյներ, ինչպիսիք են վերնագրերը, պարբերությունները, պատկերները, հիպերհղումները, աղյուսակները, ցուցակները և այլն:</li><br><li><span style=\"color:red;\"><b><h1></b></span>տարրը սահմանում է մեծ վերնագիր</li><br><li><span style=\"color:red;\"><b><p></b></span>տարրը սահմանում է պարբերություն</li><br></ul>",
+        "title3": "Ի՞նչ է HTML տարրը:",
+        "text3": "HTML տարրը սահմանվում է սկզբնական պիտակով, որոշ բովանդակությամբ և ավարտի պիտակով.<br><br><tagname> Բովանդակությունը գնում է այստեղ... </tagname><br>HTML տարրը ամեն ինչ է՝ սկզբի թեգից մինչև վերջ.<br><span style=\"color:red;\"><b><h1></b></span>Իմ առաջին վերնագիրը<span style=\"color:red;\"><b></h1></b></span><br><span style=\"color:red;\"><b><p></b></span>Իմ առաջին պարբերությունը<span style=\"color:red;\"><b></p></b></span>",
+        "title4": "",
+        "text4": ""
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
