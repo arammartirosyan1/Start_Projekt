@@ -11,65 +11,70 @@
         margin: 0;
         padding: 0;
     }
-    
+
     .container {
         width: 80%;
         margin: 0 auto;
         padding: 20px;
     }
-    
+
     h1 {
         text-align: center;
         color: #333;
     }
-    
+
     .job-card {
+        display: flex;
+        align-items: center;
         background-color: #fff;
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         overflow: hidden;
         width: 100%;
+        height: 100px;  /* Set card height to 100px */
         margin-bottom: 20px;
         transition: transform 0.2s;
     }
-    
+
     .job-card:hover {
         transform: scale(1.02);
     }
-    
+
     .job-card img {
-        width: 100%;
-        height: 400px; /* Adjusted for larger image display */
+        width: 100px;  /* Set image width to 100px */
+        height: 100px;  /* Set image height to 100px */
         object-fit: cover;
     }
-    
+
     .job-card .job-info {
-        padding: 20px;
+        padding: 10px;
+        flex-grow: 1;
     }
-    
+
     .job-card h2 {
-        font-size: 24px;
-        margin: 0 0 15px;
+        font-size: 16px;
+        margin: 0 0 5px;
         color: #333;
     }
-    
+
     .job-card p {
-        margin: 10px 0;
+        margin: 5px 0;
         color: #666;
-        font-size: 18px;
+        font-size: 14px;
     }
-    
+
     .job-card a {
         text-decoration: none;
         color: #007bff;
         font-weight: bold;
-        font-size: 18px;
+        font-size: 14px;
     }
 
     .job-card a:hover {
         text-decoration: underline;
     }
-</style>
+
+    </style>
 </head>
 <body>
     <div class="container">
@@ -111,13 +116,14 @@
                     jobLink.target = '_blank';
                     jobLink.textContent = "View Job Details";
     
-                    // Append everything into the job card
+                    // Append everything into the job info
                     jobInfo.appendChild(jobTitle);
                     jobInfo.appendChild(jobCompany);
                     jobInfo.appendChild(jobLocation);
                     jobInfo.appendChild(jobDeadline);
                     jobInfo.appendChild(jobLink);
     
+                    // Append image and job info into the job card
                     jobCard.appendChild(jobImage);
                     jobCard.appendChild(jobInfo);
                     jobsContainer.appendChild(jobCard);
