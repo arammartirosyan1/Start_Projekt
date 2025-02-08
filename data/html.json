@@ -22,11 +22,11 @@
         "title3": "HTML փաստաթղթավորում",
         "text3": "Բոլոր HTML փաստաթղթերը պետք է սկսվեն փաստաթղթի տեսակի հայտարարագրով.<span style=\"color:red;\"><b><!DOCTYPE html></b></span>:<br>HTML փաստաթուղթն ինքնին սկսվում է <span style=\"color:red;\"><b><html></b></span>-ով և ավարտվում <span style=\"color:red;\"><b></html></b></span>-ով:<br>HTML փաստաթղթի տեսանելի մասը գտնվում է <span style=\"color:red;\"><b><body></b></span>-ի և <span style=\"color:red;\"><b></body></b></span>-ի միջև:",
         "title4": "HTML վերնագրեր",
-        "text4": "HTML վերնագրերը սահմանվում են <h1>-ից <h6> թեգերով:<br><h1> սահմանում է ամենակարևոր վերնագիրը: <h6> սահմանում է ամենաքիչ կարևոր վերնագիրը.<br><br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>&lt;h1&gt;Սա վերնագիր 1-ն է&lt;/h1&gt;<br>&lt;h2&gt;Սա վերնագիր 2-ն է&lt;/h2&gt;<br>&lt;h3&gt;Սա վերնագիր 3-ն է&lt;/h3&gt;</div>",
+        "text4": "HTML վերնագրերը սահմանվում են &lt;h1&gt;-ից &lt;h6&gt; թեգերով:<br>&lt;h1&gt; սահմանում է ամենակարևոր վերնագիրը: &lt;h6&gt; սահմանում է ամենաքիչ կարևոր վերնագիրը.<br><br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>&lt;h1&gt;Սա վերնագիր 1-ն է&lt;/h1&gt;<br>&lt;h2&gt;Սա վերնագիր 2-ն է&lt;/h2&gt;<br>&lt;h3&gt;Սա վերնագիր 3-ն է&lt;/h3&gt;</div>",
         "title5": "HTML պարբերություններ",
-        "text5": "HTML պարբերությունները սահմանվում են <p> թեգով.<br><br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>&lt;p&gt;Սա պարբերություն է:&lt;/p&gt;</div>",
+        "text5": "HTML պարբերությունները սահմանվում են &lt;p&gt;թեգով.<br><br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>&lt;p&gt;Սա պարբերություն է:&lt;/p&gt;</div><br>",
         "title6": "HTML հղումներ",
-        "text6": "HTML հղումները սահմանվում են <a> թեգով.<br><br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>&lt;a href='https://arammartiro-start-proje-11-90cb03bm4hp0.deno.dev/index.html'&gt;Սա հղում է&lt;/a&gt;</div>",
+        "text6": "HTML հղումները սահմանվում են <a> թեգով.<br><br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>&lt;a href='https://arammartiro-start-proje-11-90cb03bm4hp0.deno.dev/index.html'&gt;Սա հղում է&lt;/a&gt;</div><br>",
         "title7": "HTML պատկերներ",
         "text7": "HTML պատկերները սահմանվում են <img> թեգով:<br><br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>&lt;img src='https://html.com/wp-content/uploads/html-com-logo.png' alt='HTML.com Logo' width='250' height='53'&gt;</div>"
     }
