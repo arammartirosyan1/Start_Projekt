@@ -29,7 +29,33 @@
         "text6": "HTML հղումները սահմանվում են <a> թեգով.<br><br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>&lt;a href='https://arammartiro-start-proje-11-90cb03bm4hp0.deno.dev/index.html'&gt;Սա հղում է&lt;/a&gt;</div>",
         "title7": "HTML պատկերներ",
         "text7": "HTML պատկերները սահմանվում են <img> թեգով:<br><br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>&lt;img src='https://html.com/wp-content/uploads/html-com-logo.png' alt='HTML.com Logo' width='250' height='53'&gt;</div>"
+    },
+
+    "html-attribute": {
+        "title1": "HTML ատրիբուտներ",
+        "text1": "HTML ատրիբուտները լրացուցիչ տեղեկություններ են տալիս HTML տարրերի մասին:<br><ul><li>Բոլոր HTML տարրերը կարող են ունենալ ատրիբուտներ</li><li>Հատկանիշները լրացուցիչ տեղեկություններ են տալիս տարրերի մասին</li><li>Հատկանիշները միշտ նշվում են սկզբնական թեգում</li><li>Հատկանիշները սովորաբար գալիս են անուն/արժեք զույգերով, ինչպիսիք են՝ name ==արժեքը</li></ul>",
+        "title2": "Href հատկանիշը",
+        "text2": "&lt;a&gt; թեգը սահմանում է հիպերհղում: href հատկանիշը սահմանում է այն էջի URL-ը, ուր գնում է հղումը՝<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>&lt;a href='https://html.com/'&gt;Html.com;/a&gt;</div>",
+        "title3": "Src հատկանիշը",
+        "text3": "&lt;img&gt; թեգը օգտագործվում է պատկերը HTML էջում տեղադրելու համար։ Src հատկանիշը սահմանում է ցուցադրվող պատկերի ուղին.<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>&lt;img src='https://html.com/wp-content/uploads/html-com-logo.png'&gt;</div>",
+        "title4": "Լայնության և բարձրության բնութագրիչներ",
+        "text4": "&lt;img&gt; թեգը պետք է պարունակի նաև լայնություն և բարձրություն ատրիբուտները, որոնք նշում են պատկերի լայնությունը և բարձրությունը (պիքսելներով).<div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>&lt;img src='https://html.com/wp-content/uploads/html-com-logo.png width='500' height='600''&gt;</div>",
+        "title5": "Ոճի հատկանիշ",
+        "text5": "Style հատկանիշը օգտագործվում է տարրին ոճեր ավելացնելու համար, ինչպիսիք են գույնը, տառատեսակը, չափը և այլն:<div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>&lt;p style='color:red;'&gt;Այս տողի գույը կարմիր է։&lt;/p&gt;</div"
     }
+    
+   
+    
+
+
+
+
+
+
+
+
+
+
 
 }
 
