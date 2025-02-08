@@ -104,11 +104,19 @@
     "title8": "Ցուցակի տեսակավորում", 
     "text8": "Ցուցակի տարրերը դասակարգելու համար օգտագործում ենէ <span style=\"color:red;\"><b>sort()</b></span> մեթոդը․<br>Օրինակ`<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>mylist = ['բանան', 'խնձոր', 'բալ']<br>mylist.sort()<br>print(mylist)  -->  ['բալ', 'բանան', 'խնձոր']</div><br><br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>mylist = [100, 50, 65, 82, 23]<br>mylist.sort()<br>print(mylist)  -->  [23, 50, 65, 82, 100]</div><br><br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>mylist = [100, 50, 65, 82, 23]<br>mylist.sort(reverse = True)<br>print(mylist)  -->  [100, 82, 65, 50, 23]</div><br>"
   },
+    
+  "python-jobs": {
+    "title": "Python python-advanced",
+    "text": "Կայքը նախատեսված է հայերեն լեզվով ծրագրավորում սովորելու համար։"
+  },
   
   
   "python-advanced": {
-    "title": "Python python-advanced",
-    "text": "Կայքը նախատեսված է հայերեն լեզվով ծրագրավորում սովորելու համար։"
+    "title1": "",
+    "body1": "",
+    "link1": "",
+    "img1": ""
+
   }
 }
 
