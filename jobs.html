@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listings</title>
+    <style>
+        /* Styling as per your previous request */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .jobs-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .job-card {
+            display: flex;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 100%;
+            height: 150px;
+            transition: transform 0.2s;
+        }
+
+        .job-card:hover {
+            transform: scale(1.05);
+        }
+
+        .job-card img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .job-info {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: calc(100% - 150px);
+        }
+
+        .job-card h2 {
+            font-size: 18px;
+            margin: 0 0 10px;
+            color: #333;
+        }
+
+        .job-card p {
+            margin: 5px 0;
+            color: #666;
+        }
+
+        .job-location-deadline {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #666;
+        }
+
+        .job-card a {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Job Listings</h1>
+        <div id="jobs-container" class="jobs-container"></div>
+    </div>
+
+    <script>
+        // Function to get query parameter
+        function getQueryParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Function to fetch job data and render it based on the job type (Python or HTML)
+        function renderJobs() {
+            const jobType = getQueryParameter('type');
+            const jobsContainer = document.getElementById('jobs-container');
+            
+            if (!jobType) {
+                jobsContainer.innerHTML = '<p>No job type selected.</p>';
+                return;
+            }
+
+            // Fetch data from the external jobs.json file
+            fetch('data/jobs.json')
+                .then(response => response.json())
+                .then(data => {
+                    const jobs = data[jobType]; // Get the relevant job data (Python or HTML)
+                    if (!jobs) {
+                        jobsContainer.innerHTML = '<p>No jobs found for this type.</p>';
+                        return;
+                    }
+
+                    // Clear the container before rendering new jobs
+                    jobsContainer.innerHTML = '';
+
+                    jobs.forEach(job => {
+                        const jobCard = document.createElement('div');
+                        jobCard.className = 'job-card';
+
+                        const jobImage = document.createElement('img');
+                        jobImage.src = job.profile_image || 'https://via.placeholder.com/150';
+                        jobImage.alt = job.title;
+
+                        const jobLink = document.createElement('a');
+                        jobLink.href = job.job_link;
+                        jobLink.target = '_blank';
+
+                        const jobInfo = document.createElement('div');
+                        jobInfo.className = 'job-info';
+
+                        const jobTitle = document.createElement('h2');
+                        jobTitle.textContent = job.title;
+
+                        const jobCompany = document.createElement('p');
+                        jobCompany.textContent = `Company: ${job.company}`;
+
+                        const jobLocationDeadline = document.createElement('div');
+                        jobLocationDeadline.className = 'job-location-deadline';
+                        jobLocationDeadline.innerHTML = `
+                            <span>${job.location}</span>
+                            <span>${job.deadline}</span>
+                        `;
+
+                        // Append elements to the job card
+                        jobInfo.appendChild(jobTitle);
+                        jobInfo.appendChild(jobCompany);
+                        jobInfo.appendChild(jobLocationDeadline);
+
+                        // Append image and info to the job link
+                        jobLink.appendChild(jobImage);
+                        jobLink.appendChild(jobInfo);
+
+                        jobCard.appendChild(jobLink);
+                        jobsContainer.appendChild(jobCard);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching job data:', error);
+                    jobsContainer.innerHTML = '<p>Error loading jobs data.</p>';
+                });
+        }
+
+        // Call renderJobs function on page load
+        renderJobs();
+    </script>
+</body>
+</html>
