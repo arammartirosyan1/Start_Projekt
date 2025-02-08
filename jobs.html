@@ -3,174 +3,249 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job Listings</title>
+    <title>LearnHub - Python Tutorial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        /* Styling as per your previous request */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            background-color: #ffffff;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+            background: #ffffff;
+            color: #000000;
+        }
+
+        header img {
+            width: 90px;
+            height: 90px;
+            margin-left: 10px;
+        }
+
+        nav {
+            display: flex;
+            gap: 1rem; /* Space between navigation links */
+            margin-right: 100px;
+        }
+
+        nav a {
+            color: black;
+            text-decoration: none;
+            padding: 0.3rem 1rem;
+            transition: background 0.3s;
+            font-family: 'Arial', sans-serif;
+            font-weight: 500;
+        }
+
+        nav a:hover, nav a.active {
+            background: #f4f4f4;
+            border-radius: 5px;
         }
 
         .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
+            display: flex;
+            flex-direction: row;
+            min-height: 100vh;
         }
 
-        h1 {
-            text-align: center;
+        .sidebar {
+            flex: 1;
+            background: #f4f4f4;
+            border-right: 1px solid #ddd;
+            padding: 1rem;
+            max-width: 250px;
+        }
+
+        .sidebar h3 {
+            margin-bottom: 1rem;
             color: #333;
         }
 
-        .jobs-container {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
         }
 
+        .sidebar ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .sidebar ul li a {
+            color: #333;
+            text-decoration: none;
+            padding: 0.5rem;
+            display: block;
+            border-radius: 3px;
+            transition: background 0.3s;
+        }
+
+        .sidebar ul li a:hover {
+            background: #ddd;
+        }
+
+        .content {
+            flex: 3;
+            padding: 1.5rem;
+        }
+
+        .content h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .content p {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: auto;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        /* Job card styles */
         .job-card {
-            display: flex;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            width: 100%;
-            height: 150px;
-            transition: transform 0.2s;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background-color: #f9f9f9;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .job-card:hover {
-            transform: scale(1.05);
+            transform: translateY(-5px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
         }
 
-        .job-card img {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-        }
-
-        .job-info {
-            padding: 15px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            width: calc(100% - 150px);
-        }
-
-        .job-card h2 {
-            font-size: 18px;
-            margin: 0 0 10px;
-            color: #333;
+        .job-card h3 {
+            font-size: 1.5rem;
+            margin: 0 0 0.5rem;
         }
 
         .job-card p {
-            margin: 5px 0;
-            color: #666;
-        }
-
-        .job-location-deadline {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: #666;
+            color: #555;
+            font-size: 1rem;
         }
 
         .job-card a {
+            display: inline-block;
+            margin-top: 0.5rem;
+            color: #007BFF;
             text-decoration: none;
-            color: inherit;
-            display: flex;
-            width: 100%;
-            height: 100%;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Job Listings</h1>
-        <div id="jobs-container" class="jobs-container"></div>
-    </div>
-
-    <script>
-        // Function to get query parameter
-        function getQueryParameter(name) {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(name);
         }
 
-        // Function to fetch job data and render it based on the job type (Python or HTML)
-        function renderJobs() {
-            const jobType = getQueryParameter('type');
-            const jobsContainer = document.getElementById('jobs-container');
-            
-            if (!jobType) {
-                jobsContainer.innerHTML = '<p>No job type selected.</p>';
-                return;
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
             }
 
-            // Fetch data from the external jobs.json file
-            fetch('data/jobs.json')
-                .then(response => response.json())
-                .then(data => {
-                    const jobs = data[jobType]; // Get the relevant job data (Python or HTML)
-                    if (!jobs) {
-                        jobsContainer.innerHTML = '<p>No jobs found for this type.</p>';
-                        return;
-                    }
+            .sidebar {
+                max-width: 100%;
+                border-right: none;
+            }
 
-                    // Clear the container before rendering new jobs
-                    jobsContainer.innerHTML = '';
+            .content {
+                padding: 1rem;
+            }
+        }
+    </style>
+    <script>
+        // Function to load job listings dynamically
+        async function loadJobs() {
+            try {
+                // Fetch the job listings (replace with actual URL or data)
+                const response = await fetch('data/jobs.json'); // Your jobs data in a JSON file
+                const jobs = await response.json(); // Parse the JSON data
 
-                    jobs.forEach(job => {
-                        const jobCard = document.createElement('div');
-                        jobCard.className = 'job-card';
+                // Get the jobs section container
+                const jobsSection = document.getElementById('jobs');
 
-                        const jobImage = document.createElement('img');
-                        jobImage.src = job.profile_image || 'https://via.placeholder.com/150';
-                        jobImage.alt = job.title;
+                // Clear any existing content in jobs section
+                jobsSection.innerHTML = '';
 
-                        const jobLink = document.createElement('a');
-                        jobLink.href = job.job_link;
-                        jobLink.target = '_blank';
+                // Loop through each job and create a card for it
+                jobs.forEach(job => {
+                    const jobCard = document.createElement('div');
+                    jobCard.classList.add('job-card');
 
-                        const jobInfo = document.createElement('div');
-                        jobInfo.className = 'job-info';
+                    jobCard.innerHTML = `
+                        <h3>${job.title}</h3>
+                        <p><strong>Company:</strong> ${job.company}</p>
+                        <p><strong>Location:</strong> ${job.location}</p>
+                        <p><strong>Type:</strong> ${job.type}</p>
+                        <a href="${job.url}" target="_blank">View Job Listing</a>
+                    `;
 
-                        const jobTitle = document.createElement('h2');
-                        jobTitle.textContent = job.title;
-
-                        const jobCompany = document.createElement('p');
-                        jobCompany.textContent = `Company: ${job.company}`;
-
-                        const jobLocationDeadline = document.createElement('div');
-                        jobLocationDeadline.className = 'job-location-deadline';
-                        jobLocationDeadline.innerHTML = `
-                            <span>${job.location}</span>
-                            <span>${job.deadline}</span>
-                        `;
-
-                        // Append elements to the job card
-                        jobInfo.appendChild(jobTitle);
-                        jobInfo.appendChild(jobCompany);
-                        jobInfo.appendChild(jobLocationDeadline);
-
-                        // Append image and info to the job link
-                        jobLink.appendChild(jobImage);
-                        jobLink.appendChild(jobInfo);
-
-                        jobCard.appendChild(jobLink);
-                        jobsContainer.appendChild(jobCard);
-                    });
-                })
-                .catch(error => {
-                    console.error('Error fetching job data:', error);
-                    jobsContainer.innerHTML = '<p>Error loading jobs data.</p>';
+                    // Append the job card to the jobs section
+                    jobsSection.appendChild(jobCard);
                 });
+
+            } catch (error) {
+                console.error("Error loading job listings:", error);
+            }
         }
 
-        // Call renderJobs function on page load
-        renderJobs();
+        // Call loadJobs function when the page loads
+        window.onload = loadJobs;
+
     </script>
+</head>
+<body onload="loadFooterText()">
+    <header>
+        <a href="index.html">
+            <img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/img/logo.png" alt="LearnHub Logo">
+        </a>
+        <nav>
+            <a href="python.html" onclick="navigateTo('#python')">Python</a>
+            <a href="#pandas" onclick="navigateTo('#pandas')">Pandas</a>
+            <a href="sql.html" onclick="navigateTo('#sql')">SQL</a>
+            <a href="#html" onclick="navigateTo('#html')">HTML</a>
+            <a href="#css" onclick="navigateTo('#css')">CSS</a>
+            <a href="#javascript" onclick="navigateTo('#javascript')">JavaScript</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Python Tutorial</h3>
+            <ul>
+                <li><a href="#python-intro" onclick="navigateTo('#python-intro')">Introduction</a></li>
+                <li><a href="#python-install" onclick="navigateTo('#python-install')">Install</a></li>
+                <li><a href="#python-variables" onclick="navigateTo('#python-variables')">Variables</a></li>
+                <li><a href="#python-datatype" onclick="navigateTo('#python-datatype')">Data Types</a></li>
+                <li><a href="#python-numbers" onclick="navigateTo('#python-numbers')">Numbers</a></li>
+                <li><a href="#python-string" onclick="navigateTo('#python-string')">Strings</a></li>
+                <li><a href="#python-booleans" onclick="navigateTo('#python-booleans')">Booleans</a></li>
+                <li><a href="#python-list" onclick="navigateTo('#python-list')">List</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <section id="jobs">
+                <!-- Job listings will be inserted here by JavaScript -->
+            </section>
+        </main>
+    </div>
+
+    <div class="footer">
+        <p id="footer-text"></p>
+    </div>
 </body>
 </html>
