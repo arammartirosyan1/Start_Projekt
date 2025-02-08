@@ -224,6 +224,25 @@
                 htmlAttributeSection.querySelector('h2:nth-of-type(5)').textContent = data['html-attribute'].title5;
                 htmlAttributeSection.querySelector('p:nth-of-type(5)').innerHTML = data['html-attribute'].text5;
 
+                const htmlHeadingSection = document.querySelector('#html-heading');
+                htmlHeadingSection.querySelector('h2:nth-of-type(1)').textContent = data['html-heading'].title1;
+                htmlHeadingSection.querySelector('p:nth-of-type(1)').innerHTML = data['html-heading'].text1;
+                htmlHeadingSection.querySelector('h2:nth-of-type(2)').textContent = data['html-heading'].title2;
+                htmlHeadingSection.querySelector('p:nth-of-type(2)').innerHTML = data['html-heading'].text2;
+                htmlHeadingSection.querySelector('h2:nth-of-type(3)').textContent = data['html-heading'].title3;
+                htmlHeadingSection.querySelector('p:nth-of-type(3)').innerHTML = data['html-heading'].text3;
+                htmlHeadingSection.querySelector('h2:nth-of-type(4)').textContent = data['html-heading'].title4;
+                htmlHeadingSection.querySelector('p:nth-of-type(4)').innerHTML = data['html-heading'].text4;
+
+                const htmlParagraphSection = document.querySelector('#html-paragraph');
+                htmlParagraphSection.querySelector('h2:nth-of-type(1)').textContent = data['html-paragraph'].title1;
+                htmlParagraphSection.querySelector('p:nth-of-type(1)').innerHTML = data['html-paragraph'].text1;
+                htmlParagraphSection.querySelector('h2:nth-of-type(2)').textContent = data['html-paragraph'].title2;
+                htmlParagraphSection.querySelector('p:nth-of-type(2)').innerHTML = data['html-paragraph'].text2;
+                htmlParagraphSection.querySelector('h2:nth-of-type(3)').textContent = data['html-paragraph'].title3;
+                htmlParagraphSection.querySelector('p:nth-of-type(3)').innerHTML = data['html-paragraph'].text3;
+                htmlParagraphSection.querySelector('h2:nth-of-type(4)').textContent = data['html-paragraph'].title4;
+                htmlParagraphSection.querySelector('p:nth-of-type(4)').innerHTML = data['html-paragraph'].text4;
 
             } catch (error) {
                 console.error("Error loading footer or content:", error);
@@ -267,9 +286,11 @@
             <h3>Html թեմաներ</h3>
             <ul>
                 <li><a href="jobs.html?type=html" onclick="navigateTo('jobs.html?type=html')">Html Աշխատանք</a></li>
-                <li><a href="#html-intro" onclick="navigateTo('#html-intro')">Ներածություն (Intro)</a></li>
-                <li><a href="#html-structure" onclick="navigateTo('#html-structure')">Կառուցվածքը (Structure)</a></li>
+                <li><a href="#html-intro" onclick="navigateTo('#html-intro')">HTML Ներածություն</a></li>
+                <li><a href="#html-structure" onclick="navigateTo('#html-structure')">ԿHTML առուցվածքը</a></li>
                 <li><a href="#html-attribute" onclick="navigateTo('#html-attribute')">HTML հատկանիշներ</a></li>
+                <li><a href="#html-heading" onclick="navigateTo('#html-heading')">HTML վերնագրեր</a></li>
+                <li><a href="#html-paragraph" onclick="navigateTo('#html-paragraph')">HTML պարբերություններ</a></li>
             </ul>
         </aside>
 
@@ -325,6 +346,37 @@
                 <h2></h2>
                 <p></p>
             </section>
+
+            <section id="html-heading" class="hidden">
+                <h1>HTML վերնագրեր</h1><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p>
+            </section>
+
+            <section id="html-paragraph" class="hidden">
+                <h1>HTML պարբերություններ</h1><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p>
+            </section>
+
+
+
         </main>
         
     </div>
