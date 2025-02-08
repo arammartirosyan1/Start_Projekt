@@ -146,49 +146,44 @@
         // Function to dynamically load footer text and Python basics content from data.json
         async function loadFooterText() {
             try {
-                const response = await fetch('data/html.json'); // Fetch the JSON file
-                const data = await response.json(); // Parse the JSON data
+                const response = await fetch('data/html.json');
+                const data = await response.json();
 
                 // Update footer text
                 document.getElementById('footer-text').innerHTML = data.footer.text;
 
-                // Update Python home content
+                // Update HTML introduction only when the section is visible
                 const htmlHomeSection = document.querySelector('#html-intro');
-                htmlHomeSection.querySelector('h2:nth-of-type(1)').textContent = data['html-intro'].title1;
-                htmlHomeSection.querySelector('p:nth-of-type(1)').innerHTML = data['html-intro'].text1;
-                htmlHomeSection.querySelector('h2:nth-of-type(2)').textContent = data['html-intro'].title2;
-                htmlHomeSection.querySelector('p:nth-of-type(2)').innerHTML = data['html-intro'].text2;
-                htmlHomeSection.querySelector('h2:nth-of-type(3)').textContent = data['html-intro'].title3;
-                htmlHomeSection.querySelector('p:nth-of-type(3)').innerHTML = data['html-intro'].text3;
-                htmlHomeSection.querySelector('h2:nth-of-type(4)').textContent = data['html-intro'].title4;
-                htmlHomeSection.querySelector('p:nth-of-type(4)').innerHTML = data['html-intro'].text4;
-
-
-
-
+                if (!htmlHomeSection.classList.contains('hidden')) {
+                    htmlHomeSection.querySelector('h2:nth-of-type(1)').textContent = data['html-intro'].title1;
+                    htmlHomeSection.querySelector('p:nth-of-type(1)').innerHTML = data['html-intro'].text1;
+                    htmlHomeSection.querySelector('h2:nth-of-type(2)').textContent = data['html-intro'].title2;
+                    htmlHomeSection.querySelector('p:nth-of-type(2)').innerHTML = data['html-intro'].text2;
+                    htmlHomeSection.querySelector('h2:nth-of-type(3)').textContent = data['html-intro'].title3;
+                    htmlHomeSection.querySelector('p:nth-of-type(3)').innerHTML = data['html-intro'].text3;
+                    htmlHomeSection.querySelector('h2:nth-of-type(4)').textContent = data['html-intro'].title4;
+                    htmlHomeSection.querySelector('p:nth-of-type(4)').innerHTML = data['html-intro'].text4;
+                }
             } catch (error) {
                 console.error("Error loading footer or content:", error);
             }
         }
 
+
         // Navigation function to switch between sections without scrolling
         function navigateTo(sectionId, event) {
-            if (event) event.preventDefault(); // Prevent default anchor link behavior
+            if (event) event.preventDefault(); // Prevent default behavior
 
             const sections = document.querySelectorAll('main > section');
-            const navLinks = document.querySelectorAll('nav a');
+            sections.forEach(section => section.classList.add('hidden')); // Hide all
 
-            // Hide all sections
-            sections.forEach(section => section.classList.add('hidden'));
-
-            // Remove active class from all links
-            navLinks.forEach(link => link.classList.remove('active'));
-
-            // Show selected section and set active link
+            // Show only the selected section
             document.querySelector(sectionId).classList.remove('hidden');
-            const activeLink = document.querySelector(`a[href="${sectionId}"]`);
-            if (activeLink) activeLink.classList.add('active');
+
+            // Hide the welcome image when a button is clicked
+            document.getElementById('welcome').classList.add('hidden');
         }
+
 
     </script>
 </head>
@@ -223,7 +218,11 @@
         </aside>
 
         <main class="content">
-            <section id="html-intro">
+            <section id="welcome">
+                <img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/img/logo.png" alt="LearnHub Logo" width="300">
+            </section>
+        
+            <section id="html-intro" class="hidden">
                 <h1>HTML ներածություն (Introduction)</h1>
                 <h2></h2>
                 <p></p>
@@ -234,21 +233,13 @@
                 <h2></h2>
                 <p></p>
             </section>
-
-
-
-
-
-            <section id="html-resources" class="hidden">
-                <h1>Html Resources</h1>
-                <p>Here are some great resources to learn Html:</p>
-                <!-- <ul>
-                    <li><a href="https://www.python.org/doc/" target="_blank">Python Official Documentation</a></li>
-                    <li><a href="https://realpython.com/" target="_blank">Real Python</a></li>
-                    <li><a href="https://www.learnpython.org/" target="_blank">Learn Python</a></li>
-                </ul> -->
+        
+            <section id="html-install" class="hidden">
+                <h1>Installation</h1>
+                <p>Content will be loaded here...</p>
             </section>
         </main>
+        
     </div>
 
     <div class="footer">
