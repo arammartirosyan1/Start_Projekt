@@ -292,10 +292,9 @@
 </head>
 <body onload="loadFooterText()">
     <header>
-        <a href="jobs.html?type=python">Աշխատանք</a>
-
-        <img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/img/logo.png" style="margin-top: 100px;" alt="LearnHub Logo">
-        
+        <a href="index.html">
+            <img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/img/logo.png" alt="LearnHub Logo">
+        </a>
         <nav>
             <a href="python.html">Python</a>
             <a href="html.html">HTML</a>
@@ -304,8 +303,9 @@
 
     <div class="container">
         <aside class="sidebar">
-            <h3>Python Tutorial</h3>
+            <h3>Python թեմաներ</h3>
             <ul>
+                <li><a href="jobs.html?type=python" onclick="navigateTo('jobs.html?type=python')">Python Աշխատանք</a></li>
                 <li><a href="#python-intro" onclick="navigateTo('#python-intro')">Ներածություն (Intro)</a></li>
                 <li><a href="#python-install" onclick="navigateTo('#python-install')">Ներբեռնել (Install)</a></li>
                 <li><a href="#python-variables" onclick="navigateTo('#python-variables')">Փոփոխականներ (Variables)</a></li>
@@ -319,7 +319,8 @@
 
         <main class="content">
             <section id="welcome">
-                <img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/img/apple.jpg" alt="LearnHub Logo" width="100%">
+                <a href="jobs.html?type=python">Python Աշխատանք</a>
+                <img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/img/apple.jpg" alt="LearnHub Logo" style="margin-top: 100px;" width="100%">
             </section>
             <section id="python-intro" class="hidden">
                 <h2></h2>
