@@ -113,26 +113,6 @@
             display: none;
         }
 
-        #welcome {
-            display: flex;
-            align-items: center; /* Align text and image vertically */
-            justify-content: space-between; /* Space between text and image */
-            margin-right: 10%;
-        
-        }
-        
-        .subtitle {
-            width: 45%;
-            margin-left: 10%; 
-            font-size: 20px;
-            margin-top: 5%;
-        }
-    
-        #welcome img {
-            width: 35%;
-            height: auto;
-        }
-
         /* Footer Styles */
         .footer {
             background: #333;
@@ -340,6 +320,19 @@
                 pythonSetSection.querySelector('h2:nth-of-type(5)').textContent = data['python-set'].title5;
                 pythonSetSection.querySelector('p:nth-of-type(5)').innerHTML = data['python-set'].text5;
 
+                const pythonDictionarySection = document.querySelector('#python-dictionary');
+                pythonDictionarySection.querySelector('h2:nth-of-type(1)').textContent = data['python-dictionary'].title1;
+                pythonDictionarySection.querySelector('p:nth-of-type(1)').innerHTML = data['python-dictionary'].text1;
+                pythonDictionarySection.querySelector('h2:nth-of-type(2)').textContent = data['python-dictionary'].title2;
+                pythonDictionarySection.querySelector('p:nth-of-type(2)').innerHTML = data['python-dictionary'].text2;
+                pythonDictionarySection.querySelector('h2:nth-of-type(3)').textContent = data['python-dictionary'].title3;
+                pythonDictionarySection.querySelector('p:nth-of-type(3)').innerHTML = data['python-dictionary'].text3;
+                pythonDictionarySection.querySelector('h2:nth-of-type(4)').textContent = data['python-dictionary'].title4;
+                pythonDictionarySection.querySelector('p:nth-of-type(4)').innerHTML = data['python-dictionary'].text4;
+                pythonDictionarySection.querySelector('h2:nth-of-type(5)').textContent = data['python-dictionary'].title5;
+                pythonDictionarySection.querySelector('p:nth-of-type(5)').innerHTML = data['python-dictionary'].text5;
+                pythonDictionarySection.querySelector('h2:nth-of-type(6)').textContent = data['python-dictionary'].title6;
+                pythonDictionarySection.querySelector('p:nth-of-type(6)').innerHTML = data['python-dictionary'].text6;
 
 
 
@@ -396,23 +389,25 @@
                 <li><a href="#python-list" onclick="navigateTo('#python-list')">Ցուցակ (List)</a></li>
                 <li><a href="#python-tuple" onclick="navigateTo('#python-tuple')">Կորդինատներ (Tuple)</a></li>
                 <li><a href="#python-set" onclick="navigateTo('#python-set')">Հավաքածու (Set)</a></li>
+                <li><a href="#python-dictionary" onclick="navigateTo('#python-dictionary')">Բառարան (Dictionary)</a></li>
+
             </ul>
         </aside>
 
         <main class="content">
+
+            <section id="welcome" style="flex-direction: column; align-items: flex-start;">
                 <a href="jobs.html?type=python">
-                    <button class="button-35" role="button">Python Աշխատանք</button>
-                  </a>
-
-            <div id="welcome">
-                <div class="subtitle">
-                    <p>Python ծրագրավորման ստեղծել 1991 թվականին Guido van Rossum-ի կողմից: Այն պարունակում է նախապես ծրագրավորված կոդերի հավաքածուներ կամ գրադարաններ, որոնք կարող եք օգտագործել ձեր ծրագրերում: Արդյունքում բարդ ծրագրերը կարող են ավելի արագ գրվել։ Իր հզոր հնարավորություններով Python-ը օգտագործվել է հայտնի ընկերությունների կողմից, ինչպիսիք են <b>Google</b>-ը, <b>Facebook</b>-ը, <b>Netflix</b>-ը, <b>Instagram</b>-ը և <b>Youtube</b>-ը:</p>
+                    <button class="button-35" role="button" style="margin-bottom: 20px;">Python Աշխատանք</button>
+                </a>
+                <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+                    <p style="width: 50%; margin-left: 5%;">
+                        Python ծրագրավորման լեզուն ստեղվծել է 1991 թվականին Guido van Rossum-ի կողմից: Այն պարունակում է նախապես ծրագրավորված կոդերի հավաքածուներ կամ գրադարաններ, որոնք կարող եք օգտագործել ձեր ծրագրերում: Արդյունքում բարդ ծրագրերը կարող են ավելի արագ գրվել։ Իր հզոր հնարավորություններով Python-ը օգտագործվել է հայտնի ընկերությունների կողմից, ինչպիսիք են <b>Google</b>-ը, <b>Facebook</b>-ը, <b>Netflix</b>-ը, <b>Instagram</b>-ը և <b>Youtube</b>-ը:
+                    </p>
+                    <img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/img/python.jpg" alt="LearnHub Logo" width="35%" style="margin-right: 5%;">
                 </div>
+            </section>
             
-                <img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/img/python.jpg" 
-                     alt="LearnHub Logo">
-            </div>
-
 
 
 
@@ -538,8 +533,24 @@
                 <p></p>
             </section>
 
-            <section id="python-tuple" class="hidden">
+            <section id="python-set" class="hidden">
                 <h1>Հավաքածուներ</h1>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p>
+            </section>
+
+            <section id="python-dictionary" class="hidden">
+                <h1>Բառարաններ</h1>
+                <h2></h2>
+                <p></p><br>
                 <h2></h2>
                 <p></p><br>
                 <h2></h2>

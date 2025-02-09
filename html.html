@@ -122,25 +122,7 @@
             margin-top: auto;
         }
         
-        #welcome {
-            display: flex;
-            align-items: center; /* Align text and image vertically */
-            justify-content: space-between; /* Space between text and image */
-            margin-right: 10%;
-        
-        }
-        
-        .subtitle {
-            width: 45%;
-            margin-left: 10%; 
-            font-size: 20px;
-            margin-top: 5%;
-        }
-    
-        #welcome img {
-            width: 30%;
-            height: auto;
-        }
+
 
         .footer p {
             margin: 0;
@@ -318,7 +300,7 @@
             <ul>
                 <li><a href="jobs.html?type=html" onclick="navigateTo('jobs.html?type=html')">Html Աշխատանք</a></li>
                 <li><a href="#html-intro" onclick="navigateTo('#html-intro')">HTML Ներածություն</a></li>
-                <li><a href="#html-structure" onclick="navigateTo('#html-structure')">ԿHTML առուցվածքը</a></li>
+                <li><a href="#html-structure" onclick="navigateTo('#html-structure')">HTML առուցվածքը</a></li>
                 <li><a href="#html-attribute" onclick="navigateTo('#html-attribute')">HTML հատկանիշներ</a></li>
                 <li><a href="#html-heading" onclick="navigateTo('#html-heading')">HTML վերնագրեր</a></li>
                 <li><a href="#html-paragraph" onclick="navigateTo('#html-paragraph')">HTML պարբերություններ</a></li>
@@ -328,18 +310,22 @@
         </aside>
 
         <main class="content">
-            <a href="jobs.html?type=html">
-                <button class="button-35" role="button">Html Աշխատանք</button>
-              </a>
+   
 
-            <div id="welcome">
-                <div class="subtitle">
-                    <p>HTML-ը ստողծվել է 1993 թվականին Բերներս-Լին համակարգչային գիտնականի կողմից, ով աշխատել է Միջուկային հետազոտությունների եվրոպական կազմակերպությունում (CERN): Համակարգը շուտով սկսեց տարածվել՝ ստեղծելով մի ամբողջ ցանց, որը կոչվում է <b>WWW</b>: Ահա թե ինչու Բերներս-Լիի անունը հաճախ ավելանում է համացանցը հորինած գիտնականների ցուցակում:</p>
+
+            <section id="welcome" style="flex-direction: column; align-items: flex-start;">
+                <a href="jobs.html?type=html">
+                    <button class="button-35" role="button" style="margin-bottom: 20px;">HTML Աշխատանք</button>
+                </a>
+                <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+                    <p style="width: 50%; margin-left: 5%;">
+                        HTML-ը ստողծվել է 1993 թվականին Բերներս-Լին համակարգչային գիտնականի կողմից, ով աշխատել է Միջուկային հետազոտությունների եվրոպական կազմակերպությունում (CERN): Համակարգը շուտով սկսեց տարածվել՝ ստեղծելով մի ամբողջ ցանց, որը կոչվում է <b>WWW</b>: Ահա թե ինչու Բերներս-Լիի անունը հաճախ ավելանում է համացանցը հորինած գիտնականների ցուցակում:
+                    </p>
+                    <img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/img/html.jpg" alt="LearnHub Logo" width="35%" style="margin-right: 5%;">
                 </div>
-            
-                <img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/img/html.jpg" 
-                     alt="LearnHub Logo">
-            </div>
+            </section>
+
+
 
 
         

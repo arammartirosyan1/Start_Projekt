@@ -131,25 +131,27 @@
     "text5": "Python-ում երկու կամ ավելի set-եր միացնելու մի քանի եղանակ կա:<br><ul><li>Union() և update() մեթոդները միացնում են բոլոր տարրերը երկու հավաքածուներից:</li><li>Intersection() մեթոդը պահպանում է ՄԻԱՅՆ կրկնօրինակները:</li><li>Տարբերակ() մեթոդը պահպանում է առաջին հավաքածուի տարրերը, որոնք մյուս հավաքածու(ներ)ում չեն:</li><li>Symmetric_difference() մեթոդը պահում է բոլոր տարրերը, ԲԱՑԻԿ կրկնօրինակներից:</li></ul>"
   },
 
-
-
-
-    
-  "python-jobs": {
-    "title": "Python python-advanced",
-    "text": "Կայքը նախատեսված է հայերեն լեզվով ծրագրավորում սովորելու համար։"
-    
+"python-dictionary": {
+    "title1": "Dictionaries",
+    "text1": "Բառարաններն օգտագործվում են տվյալների արժեքները key:value զույգերով պահելու համար:<br><span style=\"color:red;\"><b>Բառարանը չի կարող ունենալ կրկնօրինակ key-եր:</b></span><br><br>Բառարանը սահմանվում է {} փակագծերով:<br><br>Օրինակ՝<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>mydict = {<br>&nbsp;&nbsp;&nbsp;&nbsp;'անուն': 'Արմեն',<br>&nbsp;&nbsp;&nbsp;&nbsp;'տարիք': 36,<br>&nbsp;&nbsp;&nbsp;&nbsp;'աշխատավայր': 'Շինարար'<br>}<br>print(mydict)  -->  {'անուն': 'Արմեն', 'տարիք': 36, 'աշխատավայր': 'Շինարար'}</div><br><br>",
+    "title2": "Բառարանի տարրեր",
+    "text2": "Բառարանի տարրերը ներկայացված են բանալին:արժեք զույգերով և կարող են հղում կատարել՝ օգտագործելով բանալի անունը:<br><br>Օրինակ՝<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>mydict = {<br>&nbsp;&nbsp;&nbsp;&nbsp;'անուն': 'Արմեն',<br>&nbsp;&nbsp;&nbsp;&nbsp;'տարիք': 36,<br>&nbsp;&nbsp;&nbsp;&nbsp;'աշխատավայր': 'Շինարար'<br>}<br>print(mydict['անուն'])  -->  Արմեն</div><br><br>Կա նաև մի մեթոդ, որը կոչվում է <span style=\"color:red;\"><b>get()</b></span>, որը ձեզ կտա նույն արդյունքը.<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>mydict = {<br>&nbsp;&nbsp;&nbsp;&nbsp;'անուն': 'Արմեն',<br>&nbsp;&nbsp;&nbsp;&nbsp;'տարիք': 36,<br>&nbsp;&nbsp;&nbsp;&nbsp;'աշխատավայր': 'Շինարար'<br>}<br>print(mydict.get('անուն'))  -->  Արմեն</div><br><br>",
+    "title3": "փոփոխել բառարանի տարրերը",
+    "text3": "Դուք կարող եք փոխել որոշակի ապրանքի արժեքը՝ հղում կատարելով նրա հիմնական անվանմանը.<br><br>Փոխեք «տարին» մինչև 2018թ.<br><div><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>mydict = {<br>&nbsp;&nbsp;&nbsp;&nbsp;'անուն': 'Արմեն',<br>&nbsp;&nbsp;&nbsp;&nbsp;'տարիք': 36,<br>&nbsp;&nbsp;&nbsp;&nbsp;'աշխատավայր': 'Շինարար'<br>}<br>mydict['տարիք'] = 2018<br>print(mydict)  -->  {'անուն': 'Արմեն', 'տարիք': 2018, 'աշխատավայր': 'Շինարար'}</div>",
+    "title4": "Ավելացնել բառարանի տարրերը",
+    "text4": "Բառարանին տարր ավելացնելը կատարվում է նոր ինդեքսի բանալի օգտագործելով և դրան արժեք վերագրելով.<br><br><div><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>mydict = {<br>&nbsp;&nbsp;&nbsp;&nbsp;'անուն': 'Արմեն',<br>&nbsp;&nbsp;&nbsp;&nbsp;'տարիք': 36,<br>&nbsp;&nbsp;&nbsp;&nbsp;'աշխատավայր': 'Շինարար'<br>}<br>mydict['սեփական հասցե'] = 'Երևան'<br>print(mydict)  -->  {'անուն': 'Արմեն', 'տարիք': 36, 'աշխատավայր': 'Շինարար', 'սեփական հասցե': 'Երևան'}</div>",
+    "title5": "Հեռացնել բառարանի տարրերը",
+    "text5": "Բառերը բառարանից հեռացնելու մի քանի եղանակների հաճախ օգտագործվում է <span style=\"color:red;\"><b>pop()</b></span> մեթոդը<br>Pop() մեթոդը հեռացնում է նշված բանալի անունով տարրը.<br><br><div><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>mydict = {<br>&nbsp;&nbsp;&nbsp;&nbsp;'անուն': 'Արմեն',<br>&nbsp;&nbsp;&nbsp;&nbsp;'տարիք': 36,<br>&nbsp;&nbsp;&nbsp;&nbsp;'աշխատավայր': 'Շինարար'<br>}<br>mydict.pop('տարիք')<br>print(mydict)  -->  {'անուն': 'Արմեն', 'աշխատավայր': 'Շինարար'}</div>",
+    "title6": "Ցիկլ բառարանի միջոցով",
+    "text6": "Դուք կարող եք շրջել բառարանի միջոցով՝ օգտագործելով for հանգույցը:<br>Անցեք և՛ ստեղների, և՛ արժեքների միջով՝ օգտագործելով <span style=\"color:red;\"><b>items()</b></span> մեթոդը՝<br><div><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>mydict = {<br>&nbsp;&nbsp;&nbsp;&nbsp;'անուն': 'Արմեն',<br>&nbsp;&nbsp;&nbsp;&nbsp;'տարիք': 36,<br>&nbsp;&nbsp;&nbsp;&nbsp;'աշխատավայր': 'Շինարար'<br>}<br>for x, y in mydict.items():<br>&nbsp;&nbsp;&nbsp;&nbsp;print(x, y)  -->  անուն Արմեն<br>&nbsp;&nbsp;&nbsp;&nbsp;տարիք 36<br>&nbsp;&nbsp;&nbsp;&nbsp;աշխատավայր Շինարար</div>"
   },
-  
-  
-  "python-advanced": {
-    "title1": "",
-    "body1": "",
-    "link1": "",
-    "img1": ""
+
+
+    "python-advanced": {
+      "title1": "Python python-advanced",
+      "text1": "Կայքը նախատեսված է հայերեն լեզվով ծրագրավորում սովորելու համար։"
+    }
 
   }
-}
-
 
 

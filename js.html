@@ -109,26 +109,6 @@
             color: #555;
         }
 
-        #welcome {
-            display: flex;
-            align-items: center; /* Align text and image vertically */
-            justify-content: space-between; /* Space between text and image */
-            margin-right: 10%;
-        
-        }
-        
-        .subtitle {
-            width: 45%;
-            margin-left: 10%; 
-            font-size: 20px;
-            margin-top: 5%;
-        }
-    
-        #welcome img {
-            width: 30%;
-            height: auto;
-        }
-
 
         .hidden {
             display: none;
@@ -268,19 +248,28 @@
         </aside>
 
         <main class="content">
-            <a href="jobs.html?type=javascript">
-                <button class="button-35" role="button">JavaScript Աշխատանք</button>
-              </a>
-              
-            <div id="welcome">
-                <div class="subtitle">
-                    <p>JavaScript ծրագրավորման լեզուն ծնվել է 1995 թվականին և ստեղծվել է 10 օրում ծրագրավորող Բրենդան Էյխի կողմից։ Նա ստեղծել է Javascript՝ հիմնվելով այնպիսի լեզուների վրա, ինչպիսիք են՝ Java, Perl, Scheme, HyperTalk, Self և AWK:</p>
+
+
+
+            <section id="welcome" style="flex-direction: column; align-items: flex-start;">
+                <a href="jobs.html?javascript=html">
+                    <button class="button-35" role="button" style="margin-bottom: 20px;">JavaScript Աշխատանք</button>
+                </a>
+                <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+                    <p style="width: 50%; margin-left: 5%;">
+                        JavaScript ծրագրավորման լեզուն ծնվել է 1995 թվականին և ստեղծվել է 10 օրում ծրագրավորող Բրենդան Էյխի կողմից։ Նա ստեղծել է Javascript՝ հիմնվելով այնպիսի լեզուների վրա, ինչպիսիք են՝ Java, Perl, Scheme, HyperTalk, Self և AWK:
+                    </p>
+                    <img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/img/js.jpg" alt="LearnHub Logo" width="35%" style="margin-right: 5%;">
                 </div>
-            
-                <img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/img/js.jpg" 
-                     alt="LearnHub Logo">
-            </div>
-            
+            </section>
+
+
+
+
+
+
+
+
 
             <section id="js-intro" class="hidden">
                 <h1>JavaScript Ներածություն</h1>
