@@ -165,6 +165,7 @@
             <a href="python.html">Python</a>
             <a href="html.html">HTML</a>
             <a href="js.html">JavaScript</a>
+            <a href="pandas.html">Pandas</a>
         </nav>
     </header>
 
@@ -222,13 +223,13 @@
                         jobTitle.textContent = job.title;
 
                         const jobCompany = document.createElement('p');
-                        jobCompany.textContent = `Company: ${job.company}`;
+                        jobCompany.innerHTML = `Ընկերություն: <strong>${job.company}</strong>`;
 
                         const jobLocationDeadline = document.createElement('div');
                         jobLocationDeadline.className = 'job-location-deadline';
-                        jobLocationDeadline.innerHTML = ` 
-                            <span>${job.location}</span>
-                            <span>${job.deadline}</span>
+                        jobLocationDeadline.innerHTML = `
+                            <span>Քաղաք: ${job.location}</span>
+                            <span>Վերջնաժամկետ: ${job.deadline}</span>
                         `;
 
                         // Append elements to the job card
