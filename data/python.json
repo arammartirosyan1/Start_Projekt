@@ -13,7 +13,7 @@
  "text4": "<ul><li>Վեբ ծրագրավորող (Web Developer)</li><li>Տվյալների վերլուծաբան (Data Analyst)</li><li>Մեքենայական ուսուցման ինժեներ (Machine Learning Engineer)</li><li>Տվյալագիտության մասնագետ (Data Scientist)</li><li>Ավտոմատացման ինժեներ (Automation Engineer)</li></ul>"
  },
   "python-install": {
-    "title1": "Python-ի տեղադրում (installation)",
+    "title1": "Python installation",
     "text1": "Շատ համակարգիչներում արդեն տեղադրված կլինի python-ը: <br>Ստուգելու համար, թե արդյոք ունեք python-ը տեղադրված համակարգչի վրա, տերմինալում մուտքագրեք հետևյալ հրամանը <br><b>python --version</b><br>",
     "title2": "",
     "text2": "Եթե ​​գտնում եք, որ ձեր համակարգչում Python-ը տեղադրված չէ, ապա այն կարող եք անվճար ներբեռնել հետևյալ կայքից՝<b> https://www.python.org/</b><br><br>",
@@ -23,7 +23,7 @@
     "text4": "Python-ում փոքր կոդեր փորձարկելու համար ավելի արագ և հեշտ է կոդը չգրել ֆայլում այլ Python տերմինալի միջոցով կարող եք աշխատացնել կոդը,<br>Windows, Mac կամ Linux հրամանի տողում մուտքագրեք հետևյալը.<br>C:/Users/Your Name>python կամ C:/Users/Your Name>py <br>պայմանավորված python-ի տարբերակից<br>Գրեք հետևյալ կոդը<br><b> >>> print('Hello, World!') </b>"
   },
   "python-variables": {
-    "title1": "Python-ի փոփոխականներ (variables)",
+    "title1": "Python variables",
     "text1": "Փոփոխականները կոնտեյներներ են տվյալների արժեքները պահելու համար:<br><br>Python-ը փոփոխական ստեղծելու հրաման չունի,<br>փոփոխականը ստեղծվում է այն պահին, երբ դուք առաջին անգամ դրան արժեք եք հատկացնում:<br><br>Օրինակ՝ <br> <b>x = 5 <br>y = 'Արմեն' <br>print(x) <br>print(y)<br></b>",
     "title2": "Փոփոխական տեսակներ",
     "text2": "Եթե ​​ցանկանում եք նշել փոփոխականի տվյալների տեսակը, դա արվում է տվյալ ձևով <br><b>x = str(3)<br>y = int(3)<br>z = float(3)</b><br><br> Դուք կարող եք կատարել հակառակ գործողությունը՝ ստանալ փոփոխականի տվյալների տեսակը <b>type()</b> ֆունկցիայի միջոցով:<br><b>x = 5 <br>y = 'Արմեն' <br>print(type(x)) <br>print(type(y))<br></b>",
@@ -33,7 +33,7 @@
     "text4": "Python-ը թույլ է տալիս արժեքներ վերագրել մի քանի փոփոխականների մեկ տողում.<br>Օրինակ՝ <br> x, y, z = 'Նարինջ', 'Բանան', 'Խնձոր'<br><br>Եվ դուք կարող եք նույն արժեքը վերագրել մի շարք փոփոխականների մեկ տողում.<br> x = y = z = 'Նարինջ'"
   },
   "python-datatype": {
-    "title1": "Python տվյալների տեսակները (data type)",
+    "title1": "Python data type",
     "text1": "Ծրագրավորման մեջ տվյալների տեսակը կարևոր հասկացություն է:<br><br>Փոփոխականները կարող են լինել տարբեր տեսակի, ամեն տեսակ առանձնահատուկ է իր ֆունկցիոնալությամբ:<br><br>",
     "title2": "Python-ն ունի տվյալների հետևյալ տեսակները՝<br><br>",
     "text2": "Տեքստի տեսակ - <span style=\"color:red;\"><b>str</b></span><br><br>Թվային տեսակներ - <span style=\"color:red;\"><b>int, float, complex</b></span><br><br>Հերթականության տեսակներ - <span style=\"color:red;\"><b>list, tuple, range</b></span><br><br>Քարտեզագրման տեսակ - <span style=\"color:red;\"><b>dict</b></span><br><br>Կոմպլեկտի տեսակներ - <span style=\"color:red;\"><b>set, frozenset</b></span><br><br>Բուլյան տեսակ - <span style=\"color:red;\"><b>bool</b></span><br><br>Երկուական տեսակներ - <span style=\"color:red;\"><b>bytes, bytearray, memoryview</b></span><br><br>Ոչ Տեսակ - <span style=\"color:red;\"><b>NoneType</b></span>",
@@ -44,7 +44,7 @@
   },
 
   "python-numbers": {
-    "title1": "Python թվեր (number)",
+    "title1": "Python numbers",
     "text1": "Python-ում թվերը լինում են 3 տեսակ՝<ul><li>int</li><li>float</li><li>complex</li></ul><br>Թվային տեսակների փոփոխականները ստեղծվում են, երբ դրանց արժեք եք վերագրում.<br>Օրինակ`<br><b>x = 1    # int<br>y = 2.8  # float<br>z = 1j   # complex</b><br>",
     "title2": "Int",
     "text2": "Int-ը ամբողջ թիվ է առանց տասնորդական մասի, կարող է լինել կամ դրական կամ բացասական, չունի երկարության սահմանափակում։<br>Օրինակ`<br><b>x = 1<br>y = 35656222554887711<br>z = -3255522</b>",
@@ -57,7 +57,7 @@
   },
 
   "python-string": {
-    "title1": "Python տող (string)",
+    "title1": "Python string",
     "text1": "Python տողերը շրջապատված են կամ մեկ չակերտներով, կամ կրկնակի չակերտներով:<br><span style='background-color:#b0e59b; padding:5px;'>'բարև'-ը նույնն է, ինչ \"բարև\"</span>:<br><br>Դուք կարող եք չակերտներ օգտագործել տողի ներսում, քանի դեռ դրանք չեն համընկնում տողի շրջապատող չակերտների հետ.<br>Օրինակ՝<br\"Բարև, իմ անունը 'Արմեն' է\"։",
     "title2": "Բազմատող տեքստեր",
     "text2": "Դուք կարող եք բազմատող տեքստ վերագրել փոփոխականին՝ օգտագործելով երեք չակերտ.<br>x = ' ' 'Համակարգիչն ամենահիանալի գործիքն է, որ ես երբևէ հանդիպել եմ: Այն մեր գիտակցության հեծանիվ է:' ' ' ",
@@ -76,7 +76,7 @@
   },
 
   "python-booleans": {
-    "title1": "Բուլյան արժեքներ",
+    "title1": "Python booleans",
     "text1": "Բուլյանները ներկայացնում են երկու արժեքներից մեկը՝ <span style=\"color:red;\"><b>ճիշտ(True)</b></span> կամ <span style=\"color:red;\"><b>սխալ(False)</b></span>:<br><br>Ծրագրավորման մեջ հաճախ ձեզ կհանդիպեն արտահայտություններ է, ճիշտ(True) կամ սխալ(False):<br><br>Դուք կարող եք գնահատել ցանկացած արտահայտություն Python-ում և ստանալ երկու պատասխաններից մեկը՝ True կամ False:<br>",
     "title2": "Բուլյանների համեմատություն",
     "text2": "Երբ դուք համեմատում եք երկու արժեք, արտահայտությունը գնահատվում է, և Python-ը վերադարձնում է բուլյան պատասխանը.<br>Օրինակ՝<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>print(10 > 9)   -->  True<br>print(10 == 9)   -->  False<br>print(10 < 9)   -->  False</div><br><br><br>Երբ դուք գործարկում եք պայման if-ի մեջ, Python-ը վերադարձնում է True կամ False:<br>Օրինակ`<br>Տպեք հաղորդագրություն՝ հիմնվելով պայմանի ճշմարիտ կամ սխալ լինելու վրա.<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>a = 200<br>b = 33<br>if b > a:<br>  print('b-ն մեծ է a-ից')<br>else:<br>  print('b-ն փոքր է a-ից')</div><br><br>",
@@ -87,7 +87,7 @@
   },
 
   "python-list": {
-    "title1": "Ցուցակ/զանգված (List)",
+    "title1": "List",
     "text1": "Հայերենում List-ին ասում են և ցուցակ և զանգված, այս կայքում օգտագործված է ցուցակ բառը, եթե այլ տեղեր տեսնեք զանգված իմացեք խոսկը գնում է list-ի մասին<br><br>Ցուցակները օգտագործվում են մեկ փոփոխականում մի քանի տարրեր պահելու համար:<br><span style=\"color:red;\"><b>mylist = ['խնձոր', 'բանան', 'բալ']</b></span><br><br>Ցուցակի տարերը ինդեքսավովում են սկսած 0-ից<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>mylist = ['խնձոր', 'բանան', 'բալ']<br>print(mylist[0]  -->  'խնձոր'</div",
     "title2": "Ցուցակի երկարություն",
     "text2": "Որոշելու համար, թե քանի տարր ունի ցուցակը, օգտագործեք <span style=\"color:red;\"><b>len()</b></span> ֆունկցիան.<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>mylist = ['խնձոր', 'բանան', 'բալ']<br>print(len(mylist))  -->  3</div><br><br>",

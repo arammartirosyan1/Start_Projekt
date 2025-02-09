@@ -3,7 +3,6 @@
     "text": "Կայքը նախատեսված է հայերեն լեզվով տարբեր ծրագրավորման լեզուներ անվճար սովորելու համար։"
   },
   "pandas-intro": {
-    "title": "Pandas Introduction",
     "title1": "Ի՞նչ է Pandas-ը",
     "text1": "Pandas-ը Python գրադարան է, որն օգտագործվում է տվյալների հավաքածուների հետ աշխատելու համար:<br>«Pandas» անվանումը հղում ունի և՛ «Panel Data», և՛ «Python Data Analysis»,<br> և ստեղծվել է Ուես ՄակՔիննիի կողմից 2008 թվականին:",
     "title2": "Ի՞նչ կարող է անել Pandas-ը:",
@@ -15,16 +14,14 @@
   },
 
   "pandas-install": {
-    "title": "Pandas Installation",
-    "title1": "Pandas-ի տեղադրում (installation)",
+    "title1": "Installation",
     "text1": "Եթե ​​ունեք համակարգում արդեն տեղադրված Python և PIP, ապա Panda-ների տեղադրումը շատ հեշտ է:<br><div style='background-color:#000000; color:white; padding:5px; display:inline-block; width:50%; '>C:/Users/Your Name>pip install pandas</div>",
     "title2": "Import Pandas",
     "text2": "Pandas-ը տեղադրվելուց հետո ներմուծեք այն ձեր հավելվածներում՝ ավելացնելով ներմուծման հիմնաբառը՝ <span style=\"color:red;\"><b>Import Pandas</b></span><br>"
     },
 
   "pandas-series": {
-    "title": "Pandas Series",
-    "title1": "Ի՞նչ է Սերիան:",
+    "title1": "Series",
     "text1": "Pandas-ի շարքը նման է աղյուսակի սյան:<br>Դա ցանկացած տեսակի տվյալներ պահող միաչափ զանգված է։<br>Օրինակ՝<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>import pandas as pd<br><br>a = [1, 7, 2]<br>myvar = pd.Series(a)<br><br>print(myvar)</div",
     "title2": "Ստեղծել պիտակներ",
     "text2": "Ինդեքսի արգումենտով դուք կարող եք անվանել ձեր սեփական պիտակները:<br>Օրինակ՝<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>import pandas as pd<br><br>a = [1, 7, 2]<br>myvar = pd.Series(a, index = ['x', 'y', 'z'])<br><br>print(myvar)</div>",
@@ -34,8 +31,7 @@
   },
     
   "pandas-dataframe": {
-    "title": "Pandas DataFrames",
-    "title1": "Ի՞նչ է DataFrame-ը:",
+    "title1": "DataFrame",
     "text1": "Pandas DataFrame-ը երկչափ տվյալների կառուցվածք է, այն կազմված է սյուներից և տողերից։<br><br>Ստացեք ձեր սեփական Python Dataframe-ը։<br>Օրինակ՝<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>import pandas as pd<br><br>calories = {\"day1\": 420, \"day2\": 380, \"day3\": 390}<br>myvar = pd.Series(calories, index = [\"day1\", \"day2\"])<br><br>print(myvar)print(myvar)</div>",
     "title2": "Գտեք տող",
     "text2": "Pandas-ը օգտագործում է <span style='background-color:#b0e59b; padding:5px;'>loc</span> հատկանիշը՝ մեկ կամ մի քանի նշված տող(ներ) վերադարձնելու համար:<br><br>Օրինակ՝ <br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>import pandas as pd<br><br>data = {\"calories\": [420, 380, 390], \"duration\": [50, 40, 45]}<br>df = pd.DataFrame(data)<br><br>print(df.loc[[0, 1]]) --></div><br><br><span style='background-color:#b0e59b; padding:5px;'>Նշում. []-նշանը օգտագործելիս վերադարցրած արդյունքը Pandas DataFrame է:</span>",

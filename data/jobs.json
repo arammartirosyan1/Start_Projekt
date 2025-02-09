@@ -267,14 +267,6 @@
             "job_link": "https://staff.am/am/jobs/software-development/junior-middle-front-end-and-back-end-developers-15"
         },
         {
-            "title": "Գրաֆիկ և UI/UX դիզայներ",
-            "company": "«ԳԼՈԲԱԼ ԹՐԵՅԴ ՉԵՅՆ» ՍՊԸ",
-            "location": "Երևան",
-            "deadline": "2025-02-08",
-            "profile_image": "https://cdn.staff.am/staff.am/upload/0/2/6/9/0269a0a7.png",
-            "job_link": "https://staff.am/am/jobs/web-design/grafik-ew-uiux-dizayner-3"
-        },
-        {
             "title": "Fullstack .NET Developer",
             "company": "DevSoft AM",
             "location": "Հայաստան (Բոլոր քաղաքները)",
@@ -297,6 +289,14 @@
             "deadline": "2025-02-13",
             "profile_image": "https://cdn.staff.am/staff.am/upload/a/f/f/b/affb02bf.png",
             "job_link": "https://staff.am/am/jobs/web-design/senior-product-designer-143"
+        },
+        {
+            "title": "Automation QA Engineer",
+            "company": "InConcept Labs",
+            "location": "Երևան",
+            "deadline": "2025-02-23",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/4/a/5/4/4a541375.png",
+            "job_link": "https://staff.am/am/jobs/quality-assurance/automation-qa-engineer-125"
         }
     ],
     "javascript": [
@@ -451,6 +451,40 @@
             "deadline": "2025-02-28",
             "profile_image": "https://cdn.staff.am/staff.am/upload/5/5/7/6/55765f82.jpeg",
             "job_link": "https://staff.am/am/jobs/software-development/mobile-app-developer-react-native-2"
+        }
+    ],
+    "pandas": [
+        {
+            "title": "Junior Data Analyst",
+            "company": "Սիմենս Ինդասթրի Սոֆթվեր ՓԲԸ",
+            "location": "Երևան",
+            "deadline": "2025-02-28",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/1/9/d/c/19dcc436.jpg",
+            "job_link": "https://staff.am/am/jobs/analytics/junior-data-analyst-15"
+        },
+        {
+            "title": "",
+            "company": "Acba Bank OJSC ",
+            "location": "Երևան",
+            "deadline": "2025-02-15",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/c/3/2/5/c325db85.jpg",
+            "job_link": "https://staff.am/am/jobs/software-development/"
+        },
+        {
+            "title": "Lead/Senior Data Engineer",
+            "company": "Quantori",
+            "location": "Երևան",
+            "deadline": "2025-02-12",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/a/3/7/2/a372de2e.png",
+            "job_link": "https://staff.am/am/jobs/data-science/leadsenior-data-engineer-15"
+        },
+        {
+            "title": "Senior Python Engineer - AI Technology",
+            "company": "WorldQuant",
+            "location": "Երևան",
+            "deadline": "2025-02-28",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/1/5/4/a/154a236e.png",
+            "job_link": "https://staff.am/am/jobs/software-development/senior-python-engineer-ai-technology-2"
         }
     ]
 }
