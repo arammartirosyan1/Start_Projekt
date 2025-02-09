@@ -109,6 +109,27 @@
             color: #555;
         }
 
+        #welcome {
+            display: flex;
+            align-items: center; /* Align text and image vertically */
+            justify-content: space-between; /* Space between text and image */
+            margin-right: 10%;
+        
+        }
+        
+        .subtitle {
+            width: 45%;
+            margin-left: 10%; 
+            font-size: 20px;
+            margin-top: 5%;
+        }
+    
+        #welcome img {
+            width: 30%;
+            height: auto;
+        }
+
+
         .hidden {
             display: none;
         }
@@ -250,9 +271,16 @@
             <a href="jobs.html?type=javascript">
                 <button class="button-35" role="button">JavaScript Աշխատանք</button>
               </a>
-            <section id="welcome">
-                <img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/img/js.jpg" alt="LearnHub Logo" style=" margin-left: 60%;" width="30%" height="30%">
-            </section>
+              
+            <div id="welcome">
+                <div class="subtitle">
+                    <p>JavaScript ծրագրավորման լեզուն ծնվել է 1995 թվականին և ստեղծվել է 10 օրում ծրագրավորող Բրենդան Էյխի կողմից։ Նա ստեղծել է Javascript՝ հիմնվելով այնպիսի լեզուների վրա, ինչպիսիք են՝ Java, Perl, Scheme, HyperTalk, Self և AWK:</p>
+                </div>
+            
+                <img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/img/js.jpg" 
+                     alt="LearnHub Logo">
+            </div>
+            
 
             <section id="js-intro" class="hidden">
                 <h1>JavaScript Ներածություն</h1>

@@ -113,6 +113,26 @@
             display: none;
         }
 
+        #welcome {
+            display: flex;
+            align-items: center; /* Align text and image vertically */
+            justify-content: space-between; /* Space between text and image */
+            margin-right: 10%;
+        
+        }
+        
+        .subtitle {
+            width: 45%;
+            margin-left: 10%; 
+            font-size: 20px;
+            margin-top: 5%;
+        }
+    
+        #welcome img {
+            width: 35%;
+            height: auto;
+        }
+
         /* Footer Styles */
         .footer {
             background: #333;
@@ -380,12 +400,22 @@
         </aside>
 
         <main class="content">
-            <section id="welcome">
                 <a href="jobs.html?type=python">
                     <button class="button-35" role="button">Python Աշխատանք</button>
                   </a>
-                <img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/img/python.jpg" alt="LearnHub Logo" style="margin-top: 100px;"  width="90%" height="65%">
-            </section>
+
+            <div id="welcome">
+                <div class="subtitle">
+                    <p>Python ծրագրավորման ստեղծել 1991 թվականին Guido van Rossum-ի կողմից: Այն պարունակում է նախապես ծրագրավորված կոդերի հավաքածուներ կամ գրադարաններ, որոնք կարող եք օգտագործել ձեր ծրագրերում: Արդյունքում բարդ ծրագրերը կարող են ավելի արագ գրվել։ Իր հզոր հնարավորություններով Python-ը օգտագործվել է հայտնի ընկերությունների կողմից, ինչպիսիք են <b>Google</b>-ը, <b>Facebook</b>-ը, <b>Netflix</b>-ը, <b>Instagram</b>-ը և <b>Youtube</b>-ը:</p>
+                </div>
+            
+                <img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/img/python.jpg" 
+                     alt="LearnHub Logo">
+            </div>
+
+
+
+
             <section id="python-intro" class="hidden">
                 <h2></h2>
                 <p></p>
