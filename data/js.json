@@ -11,9 +11,33 @@
         "text3": "<ul><li>JavaScript-ը վեբ մշակման հիմնական լեզուն է:</li><li>JavaScript-ն ունի գրադարանների, շրջանակների և գործիքների ընդարձակ էկոհամակարգ:</li><li>JavaScript-ն աջակցվում է բոլոր ժամանակակից բրաուզերների կողմից:</li><li>JavaScript-ը հեշտ է սովորել:</li></ul>",
         "title4": "Ի՞նչ աշխատանքի կարելի է անցնել JavaScript-ի իմացությամբ",
         "text4": "<ul><li>Վեբ ծրագրավորող</li><li>Բջջային հավելվածների մշակող</li><li>JavaScript ծրագրավորող</li><li>Խաղի մշակող</li><li>Ավտոմատացման ինժեներ</li></ul>"
+    },
+
+    "js-install": {
+        "title1": "JavaScript installation",
+        "text1": "JavaScript-ը տեղադրելու համար ձեզ հարկավոր չէ որևէ բան առանձին տեղադրել, քանի որ JavaScript-ն աշխատում է բնօրինակ վեբ բրաուզերներում, ինչպիսիք են Chrome-ը, Firefox-ը, Edge-ը և Safari-ն:<br><br>Այնուամենայնիվ, եթե ցանկանում եք JavaScript-ը գործարկել բրաուզերից դուրս (օրինակ՝ backend-ի մշակման համար), պետք է տեղադրել Node.js-ը:",
+        "title2": "Node.js- ներբեռնում",
+        "text2": "Գնացեք Node.js պաշտոնական կայք<br>Ներբեռնեք LTS (Long Term Support) տարբերակը կայունության համար:<br>Տեղադրեք Node.js-ը<br>Գործարկեք տեղադրիչը և հետևեք տեղադրման քայլերին:<br><br<span style=\"color:red;\"><b>Եթե ​​ցանկանում եք JavaScript-ի գործարկման ժամանակ, բացի Node.js-ից, կարող եք օգտագործել Deno-ն (https://deno.land/):Տեղեկացրեք ինձ, եթե օգնության կարիք ունեք հատուկ JavaScript միջավայր ստեղծելու համար:</b></span><br><br><a href='https://arammartiro-start-proje-11.deno.dev/deno.html'>Deno-ի մասին ավելին</a>"
+    }, 
+
+    "js-writing-style" : {
+        "title1": "Write JavaScript",
+        "text1":  "<b>&lt;script&gt; </b><br> HTML-ում JavaScript կոդը տեղադրվում է &lt;script&gt; և &lt;/script&gt; թեգերի միջև<br>:<div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>&lt;script&gt;<br>document.getElementById('demo').innerHTML = 'Իմ առաջին JavaScript';<br>&lt;/script&gt;</div>",
+        "title2": "JavaScript-ի գործառույթներ և իրադարձություններ",
+        "text2": "JavaScript ֆունկցիան JavaScript կոդի բլոկ է, որը կարող է իրականացվել, երբ «կանչվում է»:<br><br>Օրինակ, ֆունկցիան կարող է կանչվել, երբ տեղի է ունենում իրադարձություն, օրինակ, երբ օգտատերը սեղմում է կոճակը:<br><br>Գործառույթների և իրադարձությունների մասին շատ ավելին կիմանաք հետագա գլուխներում:",
+        "title3": "JavaScript &lt;head&gt կամ &lt;body&gt;-ում",
+        "text3" : "Դուք կարող եք տեղադրել ցանկացած թվով սկրիպտներ HTML փաստաթղթում:<br>Սկրիպտները կարող են տեղադրվել &lt;body&gt;-ում կամ HTML էջի &lt;head&gt բաժնում կամ երկուսում:<br><br>Այս օրինակում JavaScript ֆունկցիան տեղադրված է HTML էջի &lt;head&gt բաժնում:<br>Ֆունկցիան կանչվում է (կանչվում), երբ կոճակը սեղմվում է.<br><br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;script&gt; function myFunction() { document.getElementById('demo').innerHTML = 'Paragraph changed.'; } &lt;/script&gt; &lt;/head&gt; &lt;body&gt; &lt;h2&gt;Demo JavaScript in Head&lt;/h2&gt; &lt;p id='demo'&gt;A Paragraph&lt;/p&gt; &lt;button type='button' onclick='myFunction()'&gt;Try it&lt;/button&gt; &lt;/body&gt; &lt;/html&gt;</div>"
+    },
+    
+    "js_output" : {
+        "title1": "JavaScript Output",
+        "text1": "JavaScript-ը կարող է «ցուցադրել» տվյալները տարբեր ձևերով.<ul><li>Գրել HTML տարրի մեջ՝ օգտագործելով<span style=\"color:red;\">innerHTML</span>:</li><li>Գրել HTML ելքի մեջ՝ օգտագործելով<span style=\"color:red;\">document.write()</span>:</li><li>Գրել նախազգուշացման վանդակում՝ օգտագործելով<span style=\"color:red;\">window.alert()</span>:</li><li>Բրաուզերի վահանակի մեջ գրելը` օգտագործելով<span style=\"color:red;\">console.log()</span>:</li></ul>",
+        "title2": "Օգտագործելով ներքին HTML",
+        "text2": "HTML տարր մուտք գործելու համար JavaScript-ը կարող է օգտագործել document.getElementById(id) մեթոդը:<br><br>ID հատկանիշը սահմանում է HTML տարրը: Ներքին HTML հատկությունը սահմանում է HTML բովանդակությունը.<br><br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;body&gt; &lt;h1&gt;My First Web Page&lt;/h1&gt; &lt;p&gt;My First Paragraph&lt;/p&gt; &lt;p id='demo'&gt;&lt;/p&gt;  &lt;script&gt; document.getElementById('demo').innerHTML = 5 + 6; &lt;/script&gt;  &lt;/body&gt; &lt;/html&gt;</div>"
     }
 
-
+    
+    
 
 
 }

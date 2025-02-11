@@ -146,6 +146,21 @@
     "text6": "Դուք կարող եք շրջել բառարանի միջոցով՝ օգտագործելով for հանգույցը:<br>Անցեք և՛ ստեղների, և՛ արժեքների միջով՝ օգտագործելով <span style=\"color:red;\"><b>items()</b></span> մեթոդը՝<br><div><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>mydict = {<br>&nbsp;&nbsp;&nbsp;&nbsp;'անուն': 'Արմեն',<br>&nbsp;&nbsp;&nbsp;&nbsp;'տարիք': 36,<br>&nbsp;&nbsp;&nbsp;&nbsp;'աշխատավայր': 'Շինարար'<br>}<br>for x, y in mydict.items():<br>&nbsp;&nbsp;&nbsp;&nbsp;print(x, y)  -->  անուն Արմեն<br>&nbsp;&nbsp;&nbsp;&nbsp;տարիք 36<br>&nbsp;&nbsp;&nbsp;&nbsp;աշխատավայր Շինարար</div>"
   },
 
+  "python-if-else": {
+    "title1": "If-Else",
+    "text1": "Python-ի պայմանները և If-ի հայտարարությունները<br>Python-ն աջակցում է մաթեմատիկայի սովորական տրամաբանական պայմաններին.<br><br><ul><li>Հավասար է՝ a == b</li><li>Հավասար չէ՝ a != b</li><li>Փոքր՝ ա < բ</li><li>Փոքր կամ հավասար՝ a <= b</li><li>Մեծ՝ a > b</li><li>Մեծ կամ հավասար՝ a >= b</li></ul><br><br>Այս պայմանները կարող են օգտագործվել մի քանի ձևով, առավել հաճախ «if» հայտարարություններում և հանգույցներում:<br><br><div><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>a = 33<br>b = 200<br>if b > a:<br>&nbsp;&nbsp;&nbsp;&nbsp;print('b մեծ է a-ից')</div>",
+    "title2": "Elif",
+    "text2": "Elif բանալի բառը Python-ի ձևն է, որ ասում է «եթե նախորդ պայմանները ճիշտ չէին, ապա փորձիր այս պայմանը»:<br><br>Օրինակ<br>a = 33<br>b = 33<br>եթե b > a:<br>&nbsp;&nbsp;&nbsp;&nbsp;print('b մեծ է, քան a')<br>elif a == b:<br>&nbsp;&nbsp;&nbsp;&nbsp;print('a և b հավասար են')<br><br>",
+    "title3": "Else",
+    "text3": "Else բանալի բառը Python-ի ձևն է, որ ասում է «եթե ոչ մի պայման ճիշտ չէ, ապա այս կոդը աշխատեցնել»:<br><br>Օրինակ<br>a = 200<br>b = 33<br>եթե b > a:<br>&nbsp;&nbsp;&nbsp;&nbsp;print('b մեծ է, քան a')<br>elif a == b:<br>&nbsp;&nbsp;&nbsp;&nbsp;print('a և b հավասար են')<br>այլ դեպքում:<br>&nbsp;&nbsp;&nbsp;&nbsp;print('a-ն մեծ է, քան b')<br><br>",
+    "title4": "ԵՎ (and)",
+    "text4": "And բառը օգտագործվում է երկու պայմանների միջև ամբողջական կամ միմյանցից ավել պայմանների համար:<br><br>Օրինակ<br>a = 200<br>b = 33<br>c = 500<br>եթե c > a and c > b:<br>&nbsp;&nbsp;&nbsp;&nbsp;print('c-ն մեծ է a-ից և b-ից')<br><br>",
+    "title5": "Կամ (or)",
+    "text5": "Or բառը օգտագործվում է երկու պայմանների միջև ամբողջական կամ միմյանցից ավել պայմանների համար:<br><br>Օրինակ<br>a = 200<br>b = 33<br>c = 500<br>եթե a > b or a > c:<br>&nbsp;&nbsp;&nbsp;&nbsp;print('գծական պայման')<br><br>",
+    "title6": "Ոչ (not)",
+    "text6": "Not բառը օգտագործվում է պայմանի արժեքը շփված արժեքի համար:<br><br>Օրինակ<br>a = 200<br>b = 33<br>եթե not b > a:<br>&nbsp;&nbsp;&nbsp;&nbsp;print('b-ն մեծ չէ a-ից')<br><br>"
+  },
+  
 
     "python-advanced": {
       "title1": "Python python-advanced",

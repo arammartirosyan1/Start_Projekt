@@ -197,6 +197,13 @@
                 jsHomeSection.querySelector('h2:nth-of-type(4)').textContent = data['js-intro'].title4;
                 jsHomeSection.querySelector('p:nth-of-type(4)').innerHTML = data['js-intro'].text4;
 
+                // Update js home content
+                const jsInstallSection = document.querySelector('#js-install');
+                jsInstallSection.querySelector('h2:nth-of-type(1)').textContent = data['js-install'].title1;
+                jsInstallSection.querySelector('p:nth-of-type(1)').innerHTML = data['js-install'].text1;
+                jsInstallSection.querySelector('h2:nth-of-type(2)').textContent = data['js-install'].title2;
+                jsInstallSection.querySelector('p:nth-of-type(2)').innerHTML = data['js-install'].text2;
+
 
 
 
@@ -244,7 +251,8 @@
             <h3>JavaScript թեմաներ</h3>
             <ul>
                 <li><a href="jobs.html?type=javascript" onclick="navigateTo('jobs.html?type=javascript')">JavaScript Աշխատանք</a></li>
-                <li><a href="#js-intro" onclick="navigateTo('#js-intro')">Ներածություն</a></li>
+                <li><a href="#js-intro" onclick="navigateTo('#js-intro')">Ներածություն (Intro)</a></li>
+                <li><a href="#js-install" onclick="navigateTo('#js-install')">Ներբեռնել (Install)</a></li>
             </ul>
         </aside>
 
@@ -253,7 +261,7 @@
 
 
             <section id="welcome" style="flex-direction: column; align-items: flex-start;">
-                <a href="jobs.html?javascript=html">
+                <a href="jobs.html?type=javascript">
                     <button class="button-35" role="button" style="margin-bottom: 20px;">JavaScript Աշխատանք</button>
                 </a>
                 <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
@@ -267,19 +275,23 @@
 
 
 
-
-
-
-
-
             <section id="js-intro" class="hidden">
                 <h1>JavaScript Ներածություն</h1>
                 <h2></h2>
-                <p></p>
+                <p></p><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p><br>
                 <h2></h2>
                 <p></p>
+            </section>
+
+
+            <section id="js-install" class="hidden">
+                <h1>JavaScript Ներբեռնում</h1>
                 <h2></h2>
-                <p></p>
+                <p></p><br>
                 <h2></h2>
                 <p></p>
             </section>
