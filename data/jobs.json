@@ -9,6 +9,14 @@
             "job_link": "https://staff.am/am/jobs/software-development/middle-python-developer-20"
         },
         {
+            "title": "Mid-Level Python Engineer",
+            "company": "Puzl, Inc",
+            "location": "Երևան",
+            "deadline": "2025-03-12",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/0/0/7/d/007d844b.png",
+            "job_link": "https://staff.am/am/jobs/software-development/mid-level-python-engineer-2"
+        },
+        {
             "title": "Data Engineer with Python",
             "company": "DataArt Armenia",
             "location": "Երևան",
@@ -57,6 +65,14 @@
             "job_link": "https://staff.am/am/jobs/software-development/software-engineer-with-the-devops-skills-6"
         },
         {
+            "title": "Data Analyst",
+            "company": "ԱՐՔԹԻՔՍ ՍՈԼՅՈՒՇՆ ՍՊԸ ",
+            "location": "Երևան",
+            "deadline": "2025-03-06",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/4/8/e/b/48ebfa1e.png",
+            "job_link": "https://staff.am/am/jobs/analytics/data-analyst-502"
+        },
+        {
             "title": "Application engineering Contractor",
             "company": "ԷՅ ԷՄ ԴԻ Արմենիա",
             "location": "Երևան",
@@ -73,14 +89,6 @@
             "job_link": "https://staff.am/am/jobs/software-development/senior-angular-developer-part-timefreelance-2"
         },
         {
-            "title": "Data Analyst",
-            "company": "ԱՐՔԹԻՔՍ ՍՈԼՅՈՒՇՆ ՍՊԸ ",
-            "location": "Երևան",
-            "deadline": "2025-03-06",
-            "profile_image": "https://cdn.staff.am/staff.am/upload/4/8/e/b/48ebfa1e.png",
-            "job_link": "https://staff.am/am/jobs/analytics/data-analyst-502"
-        },
-        {
             "title": "Software Engineer/8646",
             "company": "Synopsys Armenia ",
             "location": "Երևան",
@@ -89,20 +97,28 @@
             "job_link": "https://staff.am/am/jobs/software-development/software-engineer8646-2"
         },
         {
+            "title": "Technical Implementation Engineer",
+            "company": "OMD LLC",
+            "location": "Երևան",
+            "deadline": "2025-03-13",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/3/2/8/7/328718ec.jpg",
+            "job_link": "https://staff.am/am/jobs/software-development/technical-implementation-engineer-32"
+        },
+        {
+            "title": "Senior Backend Engineer",
+            "company": "10Web",
+            "location": "Երևան",
+            "deadline": "2025-03-14",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/a/f/f/b/affb02bf.png",
+            "job_link": "https://staff.am/am/jobs/software-development/senior-backend-engineer-88"
+        },
+        {
             "title": "Senior Backend Developer",
             "company": "BlueQubit",
             "location": "Երևան",
             "deadline": "2025-02-26",
             "profile_image": "https://cdn.staff.am/staff.am/upload/c/0/5/9/c0590765.png",
             "job_link": "https://staff.am/am/jobs/software-development/senior-backend-developer-133"
-        },
-        {
-            "title": "Bioinformatician / Data Scientist",
-            "company": "Quantori",
-            "location": "Երևան",
-            "deadline": "2025-02-12",
-            "profile_image": "https://cdn.staff.am/staff.am/upload/a/3/7/2/a372de2e.png",
-            "job_link": "https://staff.am/am/jobs/software-development/bioinformatician-data-scientist-18"
         },
         {
             "title": "Senior Full Stack Engineer",
@@ -121,36 +137,20 @@
             "job_link": "https://staff.am/am/jobs/software-development/odoo-developer-2"
         },
         {
-            "title": "Junior/Middle QA Engineer",
-            "company": "Alison",
+            "title": "Bioinformatician / Data Scientist",
+            "company": "Quantori",
             "location": "Երևան",
-            "deadline": "2025-02-22",
-            "profile_image": "https://cdn.staff.am/staff.am/upload/0/b/1/b/0b1b1e75.png",
-            "job_link": "https://staff.am/am/jobs/quality-assurance/juniormiddle-qa-engineer-20"
+            "deadline": "2025-02-12",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/a/3/7/2/a372de2e.png",
+            "job_link": "https://staff.am/am/jobs/software-development/bioinformatician-data-scientist-18"
         },
         {
-            "title": "Hardware Developer",
-            "company": "InnLine",
+            "title": "Quantitative Research Intern (Summer 2025) ",
+            "company": "WorldQuant",
             "location": "Երևան",
-            "deadline": "2025-02-21",
-            "profile_image": "https://cdn.staff.am/staff.am/upload/e/d/f/1/edf1b5c9.png",
-            "job_link": "https://staff.am/am/jobs/engineering/hardware-developer-2"
-        },
-        {
-            "title": "Monitoring Engineer",
-            "company": "OMD LLC",
-            "location": "Երևան",
-            "deadline": "2025-03-05",
-            "profile_image": "https://cdn.staff.am/staff.am/upload/3/2/8/7/328718ec.jpg",
-            "job_link": "https://staff.am/am/jobs/software-development/monitoring-engineer-12"
-        },
-        {
-            "title": "ՏՏ աուդիտի գծով փորձագետ",
-            "company": "ՎՏԲ-Հայաստան Բանկ",
-            "location": "Երևան",
-            "deadline": "2025-03-09",
-            "profile_image": "https://cdn.staff.am/staff.am/upload/4/4/8/1/4481d638.png",
-            "job_link": "https://staff.am/am/jobs/audit/tt-aowditi-gtsov-pordzaget-2"
+            "deadline": "2025-03-13",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/1/5/4/a/154a236e.png",
+            "job_link": "https://staff.am/am/jobs/analytics/quantitative-research-intern-summer-2025-2"
         }
     ],
     "html": [
@@ -169,6 +169,14 @@
             "deadline": "2025-03-01",
             "profile_image": "https://cdn.staff.am/staff.am/upload/8/4/a/c/84ac0909.png",
             "job_link": "https://staff.am/am/jobs/software-development/back-end-senior-developer-php-laravel-on-site-5"
+        },
+        {
+            "title": "Middle Front-End Developer",
+            "company": "Ashstone Studios",
+            "location": "Երևան",
+            "deadline": "2025-03-11",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/e/8/c/2/e8c2b395.jpg",
+            "job_link": "https://staff.am/am/jobs/software-development/middle-front-end-developer-68"
         },
         {
             "title": "Junior SharePoint Online Administrator/Developer",
@@ -195,6 +203,14 @@
             "job_link": "https://staff.am/am/jobs/software-development/senior-automation-engineer-5"
         },
         {
+            "title": "Առաջատար SQL ծրագրավորող",
+            "company": "ООО Такском",
+            "location": "Երևան",
+            "deadline": "2025-02-27",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/e/d/c/1/edc137fa.jpg",
+            "job_link": "https://staff.am/am/jobs/software-development/arhajatar-sql-tsragravorogh"
+        },
+        {
             "title": "PHP/WordPress Technical Support Specialist",
             "company": "TT soft",
             "location": "Երևան",
@@ -217,6 +233,22 @@
             "deadline": "2025-02-28",
             "profile_image": "https://cdn.staff.am/staff.am/upload/2/5/7/b/257badd3.jpg",
             "job_link": "https://staff.am/am/jobs/software-development/uiux-markup-specialist-2"
+        },
+        {
+            "title": "SMM Specialist",
+            "company": "Jermuk International Pepsi-Cola Bottler LLC",
+            "location": "Երևան",
+            "deadline": "2025-03-12",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/4/a/f/6/4af6b32c.jpg",
+            "job_link": "https://staff.am/am/jobs/marketing/smm-specialist-1704"
+        },
+        {
+            "title": "Shopify Developer (Onsite - full time)",
+            "company": "Coolina",
+            "location": "Երևան",
+            "deadline": "2025-03-13",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/3/6/8/2/36829964.png",
+            "job_link": "https://staff.am/am/jobs/software-development/shopify-developer-onsite-full-time-2"
         },
         {
             "title": "PHP Developer",
@@ -265,38 +297,6 @@
             "deadline": "2025-03-01",
             "profile_image": "https://cdn.staff.am/staff.am/upload/3/4/4/b/344bcabd.png",
             "job_link": "https://staff.am/am/jobs/software-development/junior-middle-front-end-and-back-end-developers-15"
-        },
-        {
-            "title": "Fullstack .NET Developer",
-            "company": "DevSoft AM",
-            "location": "Հայաստան (Բոլոր քաղաքները)",
-            "deadline": "2025-02-21",
-            "profile_image": "https://cdn.staff.am/staff.am/upload/6/6/6/e/666ea085.png",
-            "job_link": "https://staff.am/am/jobs/software-development/fullstack-net-developer-5"
-        },
-        {
-            "title": "ReactJS Developer",
-            "company": "Fnet",
-            "location": "Երևան",
-            "deadline": "2025-02-24",
-            "profile_image": "https://cdn.staff.am/staff.am/upload/f/2/d/1/f2d14d30.jpg",
-            "job_link": "https://staff.am/am/jobs/software-development/reactjs-developer-470"
-        },
-        {
-            "title": "Senior Product Designer",
-            "company": "10Web",
-            "location": "Երևան",
-            "deadline": "2025-02-13",
-            "profile_image": "https://cdn.staff.am/staff.am/upload/a/f/f/b/affb02bf.png",
-            "job_link": "https://staff.am/am/jobs/web-design/senior-product-designer-143"
-        },
-        {
-            "title": "Automation QA Engineer",
-            "company": "InConcept Labs",
-            "location": "Երևան",
-            "deadline": "2025-02-23",
-            "profile_image": "https://cdn.staff.am/staff.am/upload/4/a/5/4/4a541375.png",
-            "job_link": "https://staff.am/am/jobs/quality-assurance/automation-qa-engineer-125"
         }
     ],
     "javascript": [
@@ -357,20 +357,20 @@
             "job_link": "https://staff.am/am/jobs/software-development/back-end-senior-developer-php-laravel-on-site-5"
         },
         {
-            "title": "42 Yerevan - Technical Administrator",
-            "company": "Simonian Educational Foundation",
-            "location": "Երևան",
-            "deadline": "2025-03-09",
-            "profile_image": "https://cdn.staff.am/staff.am/upload/8/0/7/d/807d635d.png",
-            "job_link": "https://staff.am/am/jobs/software-development/42-yerevan-technical-administrator-2"
-        },
-        {
             "title": "ReactJS Developer",
             "company": "Fnet",
             "location": "Երևան",
             "deadline": "2025-02-24",
             "profile_image": "https://cdn.staff.am/staff.am/upload/f/2/d/1/f2d14d30.jpg",
             "job_link": "https://staff.am/am/jobs/software-development/reactjs-developer-470"
+        },
+        {
+            "title": "42 Yerevan - Technical Administrator",
+            "company": "Simonian Educational Foundation",
+            "location": "Երևան",
+            "deadline": "2025-03-09",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/8/0/7/d/807d635d.png",
+            "job_link": "https://staff.am/am/jobs/software-development/42-yerevan-technical-administrator-2"
         },
         {
             "title": "Fullstack .NET Developer",
@@ -389,20 +389,20 @@
             "job_link": "https://staff.am/am/jobs/quality-assurance/manual-tester-fully-remote-2"
         },
         {
-            "title": "AWS Cloud Engineer",
-            "company": "DevsData LLC",
-            "location": "Հայաստան (Բոլոր քաղաքները)",
-            "deadline": "2025-03-09",
-            "profile_image": "https://cdn.staff.am/staff.am/upload/5/0/3/0/50301f69.jpg",
-            "job_link": "https://staff.am/am/jobs/other-it/aws-cloud-engineer-2"
-        },
-        {
             "title": "Full Stack Engineer",
             "company": "List Group",
             "location": "Երևան",
             "deadline": "2025-02-26",
             "profile_image": "https://cdn.staff.am/staff.am/upload/f/f/e/8/ffe81d7e.jpg",
             "job_link": "https://staff.am/am/jobs/software-development/full-stack-engineer-49"
+        },
+        {
+            "title": "AWS Cloud Engineer",
+            "company": "DevsData LLC",
+            "location": "Հայաստան (Բոլոր քաղաքները)",
+            "deadline": "2025-03-09",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/5/0/3/0/50301f69.jpg",
+            "job_link": "https://staff.am/am/jobs/other-it/aws-cloud-engineer-2"
         },
         {
             "title": "PHP Laravel &amp; Vue.js Developer| Full Stack Expert",
@@ -485,6 +485,176 @@
             "deadline": "2025-02-28",
             "profile_image": "https://cdn.staff.am/staff.am/upload/1/5/4/a/154a236e.png",
             "job_link": "https://staff.am/am/jobs/software-development/senior-python-engineer-ai-technology-2"
+        },
+        {
+            "title": "Mid-Level Python Engineer",
+            "company": "Puzl, Inc",
+            "location": "Երևան",
+            "deadline": "2025-03-12",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/0/0/7/d/007d844b.png",
+            "job_link": "https://staff.am/am/jobs/software-development/mid-level-python-engineer-2"
+        },
+        {
+            "title": "",
+            "company": "Արդշինբանկ ՓԲԸ",
+            "location": "Երևան",
+            "deadline": "2025-02-17",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/f/d/c/2/fdc2b92d.png",
+            "job_link": "https://staff.am/am/jobs/banking/"
+        }
+    ],
+    "sql": [
+        {
+            "title": "Առաջատար SQL ծրագրավորող",
+            "company": "ООО Такском",
+            "location": "Երևան",
+            "deadline": "2025-02-27",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/e/d/c/1/edc137fa.jpg",
+            "job_link": "https://staff.am/am/jobs/software-development/arhajatar-sql-tsragravorogh"
+        },
+        {
+            "title": "MS SQL Server Տվյալների բազայի ադմինիստրատոր        ",
+            "company": " Viva (Վիվա Արմենիա ՓԲԸ) ",
+            "location": "Երևան",
+            "deadline": "2025-02-22",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/a/e/7/9/ae792d52.png",
+            "job_link": "https://staff.am/am/jobs/network/ms-sql-server-tvyalneri-bazayi-administrator-4"
+        },
+        {
+            "title": "Տվյալների բազաների մշակման մասնագետ",
+            "company": "Ameriabank CJSC",
+            "location": "Երևան",
+            "deadline": "2025-02-21",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/5/b/9/7/5b975f6c.png",
+            "job_link": "https://staff.am/am/jobs/data-science/tvyalneri-bazaneri-mshakman-masnaget-5"
+        },
+        {
+            "title": "Տվյալների վերլուծության և ավտոմատացման մասնագետ",
+            "company": "ԻՆԵԿՈԲԱՆԿ ՓԲԸ",
+            "location": "Երևան",
+            "deadline": "2025-03-07",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/b/7/e/4/b7e48387.png",
+            "job_link": "https://staff.am/am/jobs/data-science/tvyalneri-verlowtsowtyan-ew-avtomatatsman-masnaget-2"
+        },
+        {
+            "title": "Lead/Senior Data Engineer",
+            "company": "Quantori",
+            "location": "Երևան",
+            "deadline": "2025-02-12",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/a/3/7/2/a372de2e.png",
+            "job_link": "https://staff.am/am/jobs/data-science/leadsenior-data-engineer-15"
+        },
+        {
+            "title": "Senior DBA",
+            "company": "DataArt Armenia",
+            "location": "Երևան",
+            "deadline": "2025-03-02",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/a/f/f/4/aff4b4eb.png",
+            "job_link": "https://staff.am/am/jobs/software-development/senior-dba-2"
+        },
+        {
+            "title": "Մասնագետ, Ֆինանսական ռիսկերի կառավարման բաժին",
+            "company": "Ameriabank CJSC",
+            "location": "Երևան",
+            "deadline": "2025-02-21",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/5/b/9/7/5b975f6c.png",
+            "job_link": "https://staff.am/am/jobs/banking/masnaget-finansakan-rhiskeri-karhavarman-bazhin-5"
+        },
+        {
+            "title": "Lead Data Analyst",
+            "company": "Krisp",
+            "location": "Երևան",
+            "deadline": "2025-02-14",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/0/0/1/2/00122739.png",
+            "job_link": "https://staff.am/am/jobs/analytics/lead-data-analyst-5"
+        },
+        {
+            "title": "Data Analyst",
+            "company": "ԱՐՔԹԻՔՍ ՍՈԼՅՈՒՇՆ ՍՊԸ ",
+            "location": "Երևան",
+            "deadline": "2025-03-06",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/4/8/e/b/48ebfa1e.png",
+            "job_link": "https://staff.am/am/jobs/analytics/data-analyst-502"
+        },
+        {
+            "title": "Middle .NET Developer",
+            "company": "Digitain ",
+            "location": "Երևան",
+            "deadline": "2025-02-28",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/a/3/f/2/a3f2c966.png",
+            "job_link": "https://staff.am/am/jobs/software-development/middle-net-developer-225"
+        },
+        {
+            "title": "Համակարգերի վերլուծության և ինտեգրման մասնագետ",
+            "company": "Armenian Card CJSC",
+            "location": "Երևան",
+            "deadline": "2025-03-02",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/6/c/b/d/6cbd9707.jpg",
+            "job_link": "https://staff.am/am/jobs/other-it/hamakargeri-verlowtsowtyan-ew-integrman-masnaget-6"
+        },
+        {
+            "title": "Senior Database DevOps Engineer",
+            "company": "Picsart",
+            "location": "Երևան",
+            "deadline": "2025-02-20",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/d/a/d/3/dad332fa.jpg",
+            "job_link": "https://staff.am/am/jobs/devops-infrastructure/senior-database-devops-engineer-6"
+        },
+        {
+            "title": " Business Analyst",
+            "company": "Chartrics Software Solutions LLC",
+            "location": "Երևան",
+            "deadline": "2025-03-13",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/c/2/2/f/c22fa1cb.png",
+            "job_link": "https://staff.am/am/jobs/software-development/business-analyst-378"
+        },
+        {
+            "title": "Software Engineer",
+            "company": "Optimum Partners DWC LLC",
+            "location": "Երևան",
+            "deadline": "2025-02-28",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/2/0/9/b/209bc2c1.png",
+            "job_link": "https://staff.am/am/jobs/software-development/junior-software-engineer-44"
+        },
+        {
+            "title": "Fullstack .NET Developer",
+            "company": "DevSoft AM",
+            "location": "Հայաստան (Բոլոր քաղաքները)",
+            "deadline": "2025-02-21",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/6/6/6/e/666ea085.png",
+            "job_link": "https://staff.am/am/jobs/software-development/fullstack-net-developer-5"
+        },
+        {
+            "title": "Data Engineer",
+            "company": "Krisp",
+            "location": "Երևան",
+            "deadline": "2025-02-14",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/0/0/1/2/00122739.png",
+            "job_link": "https://staff.am/am/jobs/data-science/data-engineer-361"
+        },
+        {
+            "title": "",
+            "company": "ONEX LLC",
+            "location": "Երևան",
+            "deadline": "2025-03-12",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/4/b/5/f/4b5fd04e.jpg",
+            "job_link": "https://staff.am/am/jobs/quality-assurance/"
+        },
+        {
+            "title": "Product Analyst",
+            "company": "List Group",
+            "location": "Երևան",
+            "deadline": "2025-03-06",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/f/f/e/8/ffe81d7e.jpg",
+            "job_link": "https://staff.am/am/jobs/project-management/product-analyst-11"
+        },
+        {
+            "title": "Senior Analyst, Post Sales Strategy &amp; Operations",
+            "company": "ServiceTitan",
+            "location": "Երևան",
+            "deadline": "2025-03-01",
+            "profile_image": "https://cdn.staff.am/staff.am/upload/e/4/1/8/e418fe84.png",
+            "job_link": "https://staff.am/am/jobs/analytics/senior-analyst-post-sales-strategy-operations-2"
         }
     ]
 }

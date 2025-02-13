@@ -21,9 +21,9 @@ cookies = {
 }
 
 # URL for job search (with keyword HTML)
-url = "https://staff.am/_next/data/kZvPsz7z173Ncr6cM3T5b/am/jobs.json"
+url = "https://staff.am/_next/data/fdSaWq1vMK138bXfEcNsn/am/jobs.json"
 
-ls_jobs_type = ["python", "html", "javascript", "pandas"]
+ls_jobs_type = ["python", "html", "javascript", "pandas", "sql"]
 
 # File path
 file_path = "data/jobs.json"

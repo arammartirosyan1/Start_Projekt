@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LearnHub - JavaScript Tutorial</title>
+    <title>LearnHub - sql Tutorial</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -109,7 +109,6 @@
             color: #555;
         }
 
-
         .hidden {
             display: none;
         }
@@ -177,34 +176,25 @@
 
     </style>
     <script>
-        // Function to dynamically load footer text and js basics content from data.json
+        // Function to dynamically load footer text and sql basics content from data.json
         async function loadFooterText() {
             try {
-                const response = await fetch('data/js.json'); // Fetch the JSON file
+                const response = await fetch('data/sql.json'); // Fetch the JSON file
                 const data = await response.json(); // Parse the JSON data
 
                 // Update footer text
                 document.getElementById('footer-text').innerHTML = data.footer.text;
 
-                // Update js home content
-                const jsHomeSection = document.querySelector('#js-intro');
-                jsHomeSection.querySelector('h2:nth-of-type(1)').textContent = data['js-intro'].title1;
-                jsHomeSection.querySelector('p:nth-of-type(1)').innerHTML = data['js-intro'].text1;
-                jsHomeSection.querySelector('h2:nth-of-type(2)').textContent = data['js-intro'].title2;
-                jsHomeSection.querySelector('p:nth-of-type(2)').innerHTML = data['js-intro'].text2;
-                jsHomeSection.querySelector('h2:nth-of-type(3)').textContent = data['js-intro'].title3;
-                jsHomeSection.querySelector('p:nth-of-type(3)').innerHTML = data['js-intro'].text3;
-                jsHomeSection.querySelector('h2:nth-of-type(4)').textContent = data['js-intro'].title4;
-                jsHomeSection.querySelector('p:nth-of-type(4)').innerHTML = data['js-intro'].text4;
-
-                // Update js home content
-                const jsInstallSection = document.querySelector('#js-install');
-                jsInstallSection.querySelector('h2:nth-of-type(1)').textContent = data['js-install'].title1;
-                jsInstallSection.querySelector('p:nth-of-type(1)').innerHTML = data['js-install'].text1;
-                jsInstallSection.querySelector('h2:nth-of-type(2)').textContent = data['js-install'].title2;
-                jsInstallSection.querySelector('p:nth-of-type(2)').innerHTML = data['js-install'].text2;
-
-
+                // Update sql home content
+                const sqlHomeSection = document.querySelector('#sql-intro');
+                sqlHomeSection.querySelector('h2:nth-of-type(1)').textContent = data['sql-intro'].title1;
+                sqlHomeSection.querySelector('p:nth-of-type(1)').innerHTML = data['sql-intro'].text1;
+                sqlHomeSection.querySelector('h2:nth-of-type(2)').textContent = data['sql-intro'].title2;
+                sqlHomeSection.querySelector('p:nth-of-type(2)').innerHTML = data['sql-intro'].text2;
+                sqlHomeSection.querySelector('h2:nth-of-type(3)').textContent = data['sql-intro'].title3;
+                sqlHomeSection.querySelector('p:nth-of-type(3)').innerHTML = data['sql-intro'].text3;
+                sqlHomeSection.querySelector('h2:nth-of-type(4)').textContent = data['sql-intro'].title4;
+                sqlHomeSection.querySelector('p:nth-of-type(4)').innerHTML = data['sql-intro'].text4;
 
 
             } catch (error) {
@@ -249,35 +239,31 @@
 
     <div class="container">
         <aside class="sidebar">
-            <h3>JavaScript թեմաներ</h3>
+            <!-- <aside class="sidebar" style="max-height: 500px; overflow-y: auto;"> -->
+
+            <h3>Sql թեմաներ</h3>
             <ul>
-                <li><a href="jobs.html?type=javascript" onclick="navigateTo('jobs.html?type=javascript')">JavaScript Աշխատանք</a></li>
-                <li><a href="#js-intro" onclick="navigateTo('#js-intro')">Ներածություն (Intro)</a></li>
-                <li><a href="#js-install" onclick="navigateTo('#js-install')">Ներբեռնել (Install)</a></li>
+                <li><a href="jobs.html?type=sql" onclick="navigateTo('jobs.html?type=sql')">Sql Աշխատանք</a></li>
+
             </ul>
         </aside>
 
         <main class="content">
 
-
-
             <section id="welcome" style="flex-direction: column; align-items: flex-start;">
-                <a href="jobs.html?type=javascript">
-                    <button class="button-35" role="button" style="margin-bottom: 20px;">JavaScript Աշխատանք</button>
+                <a href="jobs.html?type=sql">
+                    <button class="button-35" role="button" style="margin-bottom: 20px;">Sql Աշխատանք</button>
                 </a>
                 <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
-                    <p style="width: 50%; margin-left: 5%; color: #000000;">
-                        JavaScript ծրագրավորման լեզուն ծնվել է 1995 թվականին և ստեղծվել է 10 օրում ծրագրավորող Բրենդան Էյխի կողմից։ Նա ստեղծել է Javascript՝ հիմնվելով այնպիսի լեզուների վրա, ինչպիսիք են՝ Java, Perl, Scheme, HyperTalk, Self և AWK:
+                    <p style="width: 45%; margin-left: 5%; color: #000000;">
+                        SQL-ը ժողովրդականություն ձեռք բերեց, երբ Ամերիկյան ազգային ստանդարտների ինստիտուտը (ANSI) ընդունեց առաջին SQL ստանդարտը 1986թ.-ին: Հարաբերական տվյալների բազաների վրա շարունակվող աշխատանքը հանգեցրեց SQL-ի բարելավմանը` դարձնելով այն գոյություն ունեցող տվյալների բազայի ամենատարածված լեզուներից մեկը:19 դեկ, 2024 թ։
                     </p>
-                    <img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/img/js.jpg" alt="LearnHub Logo" width="35%" style="margin-right: 5%;">
+                    <img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/img/sql.jpg" alt="LearnHub Logo" width="40%" style="margin-right: 5%;">
                 </div>
             </section>
-
-
-
-
-            <section id="js-intro" class="hidden">
-                <h1>JavaScript Ներածություն</h1>
+            
+            <section id="sql-intro" class="hidden">
+                <h1>Sql Ներածություն</h1>
                 <h2></h2>
                 <p></p><br>
                 <h2></h2>
@@ -289,20 +275,6 @@
             </section>
 
 
-            <section id="js-install" class="hidden">
-                <h1>JavaScript Ներբեռնում</h1>
-                <h2></h2>
-                <p></p><br>
-                <h2></h2>
-                <p></p>
-            </section>
-
-
-            <section id="js-resources" class="hidden">
-                <h1>js Resources</h1>
-                <p>Here are some great resources to learn js:</p>
-
-            </section>
         </main>
     </div>
 
