@@ -209,6 +209,28 @@
     "text4": "Կլասսի ատրիբուտները սահմանվում են կլասսի մեջ և կարող են լինել հետևյալ տեսքով:<br><br>Օրինակ<br>class Person:<br>&nbsp;&nbsp;&nbsp;&nbsp;def __init__(self, name, age):<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.name = name<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.age = age<br>p1 = Person('John', 36)<br>print(p1.name)<br>print(p1.age)<br><br>"
   },
 
+  "python-inheritance": {
+    "title1": "Inheritance",
+    "text1": "Ժառանգությունը մեզ թույլ է տալիս սահմանել դաս, որը ժառանգում է բոլոր մեթոդներն ու հատկությունները մեկ այլ դասից:<br><br>Ծնող դասը այն դասն է, որը ժառանգվում է, որը նաև կոչվում է բազային դաս:<br><br>Երեխաների դասը այն դասն է, որը ժառանգում է մեկ այլ դասից, որը նաև կոչվում է ածանցյալ դաս:<br><br>Ստեղծեք ծնողների դաս<br>Ցանկացած դաս կարող է լինել ծնող դաս, ուստի շարահյուսությունը նույնն է, ինչ ցանկացած այլ դաս ստեղծելու համար.<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>Create a Parent Class<br>class Person:<br>&nbsp;&nbsp;&nbsp;&nbsp;def __init__(self, fname, lname):<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.firstname = fname<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.lastname = lname<br>&nbsp;&nbsp;&nbsp;&nbsp;def printname(self):<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(self.firstname, self.lastname)<br>Use the Person class to create an object, and then execute the printname method:<br>x = Person('John', 'Doe')<br>x.printname()<br><br></div>",
+    "title2": "Երեխաների դաս",
+    "text2": "Երեխաների դասը ժառանգում է մեկ այլ դասից, որը նաև կոչվում է ածանցյալ դաս:<br><br>Ստեղծեք երեխաների դաս<br>Երեխաների դասը ժառանգվում է ծնողների դասից:<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>Create a Child Class<br>class Student(Person):<br>&nbsp;&nbsp;&nbsp;&nbsp;pass<br>Use the Student class to create an object, and then execute the printname method:<br>x = Student('Mike', 'Olsen')<br>x.printname()<br><br></div>"
+  },
+
+  "python-dates": {
+    "title1": "Datetime",
+    "text1": "Python-ում ամսաթվերը ինքնին տվյալների տեսակ չէ, բայց մենք կարող ենք ներմուծել datetime անունով մոդուլ՝ ամսաթվերի հետ աշխատելու համար որպես ամսաթվի օբյեկտ:<br><br>Օրինակ<brներմուծման ամսաթիվը<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>x = datetime.datetime.now()<br>print(x)</div>",
+    "title2": "Ամսաթիվ Արդյունք",
+    "text2": "Երբ մենք գործարկում ենք վերևի օրինակի կոդը, արդյունքը կլինի.<br><br>2025-02-15 19:10:30.785655<br>Ամսաթիվը պարունակում է տարի, ամիս, օր, ժամ, րոպե, վայրկյան և միկրովայրկյան:<br><br>Datetime մոդուլը ունի բազմաթիվ մեթոդներ՝ վերադարձնելու ամսաթիվ օբյեկտի մասին տեղեկատվությունը:<br><br>Ահա մի քանի օրինակներ, որոնց մասին ավելի ուշ կիմանաք այս գլխում.<br><br>Օրինակ<br>Վերադարձեք աշխատանքային օրվա տարին և անվանումը.<br><br>ներմուծման ամսաթիվը<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>x = datetime.datetime.now()<br>print(x.year)<br>print(x.strftime('%A'))</div>",
+    "title3": "Ամսաթվերի ստեղծում",
+    "text3": "Ամսաթիվ ստեղծելու համար մենք կարող ենք օգտագործել datetime() դասը (կոնստրուկտոր) datetime մոդուլի։<br><br>datetime() դասը պահանջում է երեք պարամետր՝ ամսաթիվ ստեղծելու համար՝ տարի, ամիս, օր:<br><br>Օրինակ<br>Ստեղծեք ամսաթվի օբյեկտ.<br><br>ներմուծման ամսաթիվը<br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>x = datetime.datetime(2020, 5, 17)<br>print(x)</div>"
+  },
+
+  "python-math":{
+    "title1": "Python Math",
+    "text1": "Python-ը ունի ներկառուցված մաթեմատիկական ֆունկցիաների մի շարք, ներառյալ մաթեմատիկական ընդարձակ մոդուլը, որը թույլ է տալիս մաթեմատիկական առաջադրանքներ կատարել թվերի վրա:<br><br>Ներկառուցված մաթեմատիկական գործառույթներ<br><br><span style=\"color:red;\"><b>Min()</b></span> և <span style=\"color:red;\"><b>max()</b></span> ֆունկցիաները կարող են օգտագործվել կրկնվողի ամենացածր<br><br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>x = min(5, 10, 25)<br>y = max(5, 10, 25)<br>print(x)<br>print(y)</div>",
+    "title2": "Մաթեմատիկայի մոդուլ",
+    "text2": "Python-ը ունի նաև ներկառուցված մոդուլ, որը կոչվում է մաթեմատիկա, որն ընդլայնում է մաթեմատիկական ֆունկցիաների ցանկը:<br><br>Այն օգտագործելու համար դուք պետք է ներմուծեք մաթեմատիկական մոդուլը:<br><br>ներմուծման մաթ<br><br>Երբ ներմուծեք մաթեմատիկական մոդուլը, կարող եք սկսել օգտագործել մոդուլի մեթոդներն ու հաստատունները:<br><br>Օրինակ, <span style=\"color:red;\"><b>math.sqrt()</b></span> մեթոդը վերադարձնում է թվի քառակուսի արմատը.<br><br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>import math<br>x = math.sqrt(64)<br>print(x)</div>"
+  },
     "python-advanced": {
       "title1": "Python python-advanced",
       "text1": "Կայքը նախատեսված է հայերեն լեզվով ծրագրավորում սովորելու համար։"

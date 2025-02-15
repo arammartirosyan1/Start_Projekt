@@ -397,7 +397,25 @@
                 python_classSection.querySelector('h2:nth-of-type(4)').textContent = data['python-class'].title4;
                 python_classSection.querySelector('p:nth-of-type(4)').innerHTML = data['python-class'].text4;
 
+                const python_inheritanceSection = document.querySelector('#python-inheritance');
+                python_inheritanceSection.querySelector('h2:nth-of-type(1)').textContent = data['python-inheritance'].title1;
+                python_inheritanceSection.querySelector('p:nth-of-type(1)').innerHTML = data['python-inheritance'].text1;
+                python_inheritanceSection.querySelector('h2:nth-of-type(2)').textContent = data['python-inheritance'].title2;
+                python_inheritanceSection.querySelector('p:nth-of-type(2)').innerHTML = data['python-inheritance'].text2;
 
+                const python_datesSection = document.querySelector('#python-dates');
+                python_datesSection.querySelector('h2:nth-of-type(1)').textContent = data['python-dates'].title1;
+                python_datesSection.querySelector('p:nth-of-type(1)').innerHTML = data['python-dates'].text1;
+                python_datesSection.querySelector('h2:nth-of-type(2)').textContent = data['python-dates'].title2;
+                python_datesSection.querySelector('p:nth-of-type(2)').innerHTML = data['python-dates'].text2;
+                python_datesSection.querySelector('h2:nth-of-type(3)').textContent = data['python-dates'].title3;
+                python_datesSection.querySelector('p:nth-of-type(3)').innerHTML = data['python-dates'].text3;
+
+                const python_mathSection = document.querySelector('#python-math');
+                python_mathSection.querySelector('h2:nth-of-type(1)').textContent = data['python-math'].title1;
+                python_mathSection.querySelector('p:nth-of-type(1)').innerHTML = data['python-math'].text1;
+                python_mathSection.querySelector('h2:nth-of-type(2)').textContent = data['python-math'].title2;
+                python_mathSection.querySelector('p:nth-of-type(2)').innerHTML = data['python-math'].text2;
 
             } catch (error) {
                 console.error("Error loading footer or content:", error);
@@ -462,6 +480,9 @@
                 <li><a href="#python-for-loop" onclick="navigateTo('#python-for-loop')">Ցուցակային(For-Loop)</a></li>
                 <li><a href="#python-functions" onclick="navigateTo('#python-functions')">Ֆունկցիաներ(Functions)</a></li>
                 <li><a href="#python-class" onclick="navigateTo('#python-class')">Դասեր(Classes)</a></li>
+                <li><a href="#python-inheritance" onclick="navigateTo('#python-inheritance')">Ժառանգություն (Inheritance)</a></li>
+                <li><a href="#python-dates" onclick="navigateTo('#python-dates')">Ամսաթվեր (Dates)</a></li>
+                <li><a href="#python-math" onclick="navigateTo('#python-math')">Մաթեմատիկա (Math)</a></li>
 
             </ul>
         </aside>
@@ -711,6 +732,33 @@
                 <h2></h2>
                 <p></p>
             </section>
+
+            <section id="python-inheritance" class="hidden">
+                <h1>Ժառանգություն</h1><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p>
+            </section>
+
+            <section id="python-dates" class="hidden">
+                <h1>Ամսաթվեր</h1><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p>
+            </section>
+
+            <section id="python-math" class="hidden">
+                <h1>Մաթեմատիկա</h1><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p>
+            </section>
+
 
 
             <section id="python-resources" class="hidden">
