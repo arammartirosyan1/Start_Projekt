@@ -221,7 +221,31 @@
                 js_outputSection.querySelector('p:nth-of-type(2)').innerHTML = data['js-output'].text2;
 
 
+                const jssintaxSection = document.querySelector('#js-sintax');
+                jssintaxSection.querySelector('h2:nth-of-type(1)').textContent = data['js-sintax'].title1;
+                jssintaxSection.querySelector('p:nth-of-type(1)').innerHTML = data['js-sintax'].text1;
+                jssintaxSection.querySelector('h2:nth-of-type(2)').textContent = data['js-sintax'].title2;
+                jssintaxSection.querySelector('p:nth-of-type(2)').innerHTML = data['js-sintax'].text2;
+                jssintaxSection.querySelector('h2:nth-of-type(3)').textContent = data['js-sintax'].title3;
+                jssintaxSection.querySelector('p:nth-of-type(3)').innerHTML = data['js-sintax'].text3;
+                jssintaxSection.querySelector('h2:nth-of-type(4)').textContent = data['js-sintax'].title4;
+                jssintaxSection.querySelector('p:nth-of-type(4)').innerHTML = data['js-sintax'].text4;
 
+                const jsvariablesSection = document.querySelector('#js-variables');
+                jsvariablesSection.querySelector('h2:nth-of-type(1)').textContent = data['js-variables'].title1;
+                jsvariablesSection.querySelector('p:nth-of-type(1)').innerHTML = data['js-variables'].text1;
+                jsvariablesSection.querySelector('h2:nth-of-type(2)').textContent = data['js-variables'].title2;
+                jsvariablesSection.querySelector('p:nth-of-type(2)').innerHTML = data['js-variables'].text2;
+                jsvariablesSection.querySelector('h2:nth-of-type(3)').textContent = data['js-variables'].title3;
+                jsvariablesSection.querySelector('p:nth-of-type(3)').innerHTML = data['js-variables'].text3;
+
+                const jsletSection = document.querySelector('#js-let');
+                jsletSection.querySelector('h2:nth-of-type(1)').textContent = data['js-let'].title1;
+                jsletSection.querySelector('p:nth-of-type(1)').innerHTML = data['js-let'].text1;
+                jsletSection.querySelector('h2:nth-of-type(2)').textContent = data['js-let'].title2;
+                jsletSection.querySelector('p:nth-of-type(2)').innerHTML = data['js-let'].text2;
+                jsletSection.querySelector('h2:nth-of-type(3)').textContent = data['js-let'].title3;
+                jsletSection.querySelector('p:nth-of-type(3)').innerHTML = data['js-let'].text3;
 
 
             } catch (error) {
@@ -273,6 +297,9 @@
                 <li><a href="#js-install" onclick="navigateTo('#js-install')">Ներբեռնել (Install)</a></li>
                 <li><a href="#js-writing-style" onclick="navigateTo('#js-writing-style')">Գրելաձև (Writing Style)</a></li>
                 <li><a href="#js-output" onclick="navigateTo('#js-output')">Ելք (Output)</a></li>
+                <li><a href="#js-sintax" onclick="navigateTo('#js-sintax')">Սինտաքս (Sintax)</a></li>
+                <li><a href="#js-variables" onclick="navigateTo('#js-variables')">Փոփոխականներ (Variables)</a></li>
+                <li><a href="#js-let" onclick="navigateTo('#js-let')">Let</a></li>
 
             </ul>
         </aside>
@@ -334,6 +361,39 @@
                 <h2></h2>
                 <p></p>
             </section>
+
+            <section id="js-sintax" class="hidden">
+                <h1>Սինտաքս</h1><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p>
+            </section>
+
+            <section id="js-variables" class="hidden">
+                <h1>Փոփոխականներ</h1><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+            </section>
+
+            <section id="js-let" class="hidden">
+                <h1>Թ</h1><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+            </section>
+
 
 
             <section id="js-resources" class="hidden">

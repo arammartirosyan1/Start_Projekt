@@ -34,10 +34,45 @@
         "text1": "JavaScript-ը կարող է «ցուցադրել» տվյալները տարբեր ձևերով.<ul><li>Գրել HTML տարրի մեջ՝ օգտագործելով<span style=\"color:red;\">innerHTML</span>:</li><li>Գրել HTML ելքի մեջ՝ օգտագործելով<span style=\"color:red;\">document.write()</span>:</li><li>Գրել նախազգուշացման վանդակում՝ օգտագործելով<span style=\"color:red;\">window.alert()</span>:</li><li>Բրաուզերի վահանակի մեջ գրելը` օգտագործելով<span style=\"color:red;\">console.log()</span>:</li></ul>",
         "title2": "Օգտագործելով ներքին HTML",
         "text2": "HTML տարր մուտք գործելու համար JavaScript-ը կարող է օգտագործել document.getElementById(id) մեթոդը:<br><br>ID հատկանիշը սահմանում է HTML տարրը: Ներքին HTML հատկությունը սահմանում է HTML բովանդակությունը.<br><br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;body&gt; &lt;h1&gt;My First Web Page&lt;/h1&gt; &lt;p&gt;My First Paragraph&lt;/p&gt; &lt;p id='demo'&gt;&lt;/p&gt;  &lt;script&gt; document.getElementById('demo').innerHTML = 5 + 6; &lt;/script&gt;  &lt;/body&gt; &lt;/html&gt;</div>"
-    }
+    },
 
-    
-    
+    "js-syntax" : {
+        "title1": "JavaScript Syntax",
+        "text1": "JavaScript կոդը կարող է գրվել մի քանի տարբեր ձևերով:<ul><li>Պարզ ստորակետով</li><li>Պարզ անկյունագծով</li><li>Պարզ անկյունագծով</li><li>Պարզ անկյունագծով</li></ul>",
+        "title2": "JavaScript Ստորակետներ",
+         "text2": "JavaScript հրամանները կարող են գրվել մի քանի տողում:<br><br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>var x = 5; var y = 6; var z = x + y;</div>",
+        "title3": "JavaScript Անկյունագծեր",
+        "text3": "JavaScript հրամանները կարող են գրվել մի քանի տողում:<br><br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>var x = 5; var y = 6; var z = x + y;</div>",
+        "title4": "JavaScript Անկյունագծեր",
+        "text4": "JavaScript հրամանները կարող են գրվել մի քանի տողում:<br><br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>var x = 5; var y = 6; var z = x + y;</div>"        
+    },
+
+    "js-variables" : {
+        "title1": "JavaScript Variables",
+        "text1": "JavaScript փոփոխականները կարող են պահպանել տվյալները:<ul><li>Անունը պետք է սկսվի տառով (կարող եք օգտագործել տառեր, թվեր, գծային նշաններ և գծային նշաններ):</li><li>Անունը չի կարող պահպանել բացատանիշները:</li><li>Անունը չի կարող պահպանել բացատանիշները:</li><li>Անունը չի կարող պահպանել բացատանիշները:</li></ul>",
+        "title2": "Փոփոխականների սահմանում",
+        "text2": "JavaScript փոփոխականը սահմանվում է հետևյալ մեթոդով:<br><br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>var carName;</div><br><br><span style=\"color:red;\"><b>Ծրագրավորման լավ պրակտիկա է համարվում օգտագործելուց առաջ փոփոխականները միշտ հայտարարելը:</b></span><br><br><ul><li>x-ը պահպանում է 5 արժեքը</li><li>y-ը պահպանում է 6 արժեքը</li><li>z-ն պահպանում է 11 արժեքը</li></ul><br<br><span style=\"color:red;\"><b>Var հիմնաբառը օգտագործվել է JavaScript-ի բոլոր կոդերում 1995-ից 2015 թվականներին:<br><br>Let և const հիմնաբառերն ավելացվել են JavaScript-ին 2015թ.<br><br>Var հիմնաբառը պետք է օգտագործվի միայն հին բրաուզերների համար գրված կոդում:</b></span>",
+        "title3": "JavaScript Տիպեր",
+        "text3": "JavaScript-ը անունները չեն պահպանում տիպը:<br>JavaScript-ը ավելի շատ է անունների տիպական լեզվում:<br>JavaScript-ը կարող է անունների տիպական լեզվում:<br>JavaScript-ը կարող է անունների տիպական լեզվում:"
+    },
+
+    "js-let" : {
+        "title1": "JavaScript Let",
+        "text1": "<div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>Let հիմնաբառը ներդրվել է ES6-ում (2015)<br><br>Փոփոխականները հայտարարագրված են let have Block Scope-ով<br><br>Let-ով հայտարարված փոփոխականները պետք է հայտարարվեն նախքան օգտագործումը<br><br>Let-ով հայտարարված փոփոխականները չեն կարող վերահայտարարվել նույն տիրույթում</div>",
+        "title2": "Արգելափակման շրջանակը",
+        "text2": "Արգելափակման շրջանակը<br>Մինչև ES6-ը (2015), JavaScript-ը չուներ Block Scope:<br><br>JavaScript-ն ուներ Global Scope և Function Scope:<br><br>ES6-ը ներկայացրեց երկու նոր JavaScript հիմնաբառեր՝ let և const:<br><br>Այս երկու հիմնաբառերը JavaScript-ում տրամադրեցին Block Scope.<br><br>Օրինակ<br>{ } բլոկի ներսում հայտարարված փոփոխականները չեն կարող մուտք գործել բլոկի դրսից.<br><br>{<br> թող x = 2;<br>}<br>// x-ն այստեղ ՉԻ կարող օգտագործվել",
+        "title3": "Գլոբալ շրջանակը",
+        "text3" : "Var-ով հայտարարված փոփոխականները միշտ ունեն Գլոբալ շրջանակ:<br><br>Var բանալի բառով հայտարարված փոփոխականները ՉԻ կարող ունենալ արգելափակման շրջանակ.<br><br>Օրինակ<br> Varinside a { } բլոկով հայտարարված փոփոխականներին կարելի է մուտք գործել բլոկի դրսից՝<br><br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>{<br> var x = 2;<br>}<br>// x այստեղ կարող է օգտագործվել</div>"
+    },
+
+    "js-let-and-const": {
+        "title1" : "Ինչը լավ է",
+        "text1" : "Let and const ունեն բլոկի շրջանակ:<br><br>Let-ը և const-ը չեն կարող վերահայտարարվել:<br><br>Let-ը և const-ը պետք է հայտարարվեն մինչև օգտագործելը:<br><br>Let and const-ը սրա հետ չի կապում:<br><br>Let and const չեն բարձրացվում:<br><br>",
+        "title2" : "Ինչը լավ չէ",
+        "text2" : "var-ը պարտադիր չէ, որ հայտարարվի:<br><br>var-ը բարձրանում է.<br><br>var կապում է սրա հետ:",
+        "title3" : "Բրաուզերի աջակցություն",
+        "text3" : "Let և const հիմնաբառերը չեն աջակցվում Internet Explorer 11-ում կամ ավելի վաղ:"
+    }
 
 
 }
