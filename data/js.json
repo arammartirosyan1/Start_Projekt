@@ -29,7 +29,7 @@
         "text3" : "Դուք կարող եք տեղադրել ցանկացած թվով սկրիպտներ HTML փաստաթղթում:<br>Սկրիպտները կարող են տեղադրվել &lt;body&gt;-ում կամ HTML էջի &lt;head&gt բաժնում կամ երկուսում:<br><br>Այս օրինակում JavaScript ֆունկցիան տեղադրված է HTML էջի &lt;head&gt բաժնում:<br>Ֆունկցիան կանչվում է (կանչվում), երբ կոճակը սեղմվում է.<br><br><div style='background-color:#b0e59b; padding:5px; display:inline-block; width:50%;'>&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;script&gt; function myFunction() { document.getElementById('demo').innerHTML = 'Paragraph changed.'; } &lt;/script&gt; &lt;/head&gt; &lt;body&gt; &lt;h2&gt;Demo JavaScript in Head&lt;/h2&gt; &lt;p id='demo'&gt;A Paragraph&lt;/p&gt; &lt;button type='button' onclick='myFunction()'&gt;Try it&lt;/button&gt; &lt;/body&gt; &lt;/html&gt;</div>"
     },
     
-    "js_output" : {
+    "js-output" : {
         "title1": "JavaScript Output",
         "text1": "JavaScript-ը կարող է «ցուցադրել» տվյալները տարբեր ձևերով.<ul><li>Գրել HTML տարրի մեջ՝ օգտագործելով<span style=\"color:red;\">innerHTML</span>:</li><li>Գրել HTML ելքի մեջ՝ օգտագործելով<span style=\"color:red;\">document.write()</span>:</li><li>Գրել նախազգուշացման վանդակում՝ օգտագործելով<span style=\"color:red;\">window.alert()</span>:</li><li>Բրաուզերի վահանակի մեջ գրելը` օգտագործելով<span style=\"color:red;\">console.log()</span>:</li></ul>",
         "title2": "Օգտագործելով ներքին HTML",

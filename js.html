@@ -204,6 +204,23 @@
                 jsInstallSection.querySelector('h2:nth-of-type(2)').textContent = data['js-install'].title2;
                 jsInstallSection.querySelector('p:nth-of-type(2)').innerHTML = data['js-install'].text2;
 
+                const jswriting_styleSection = document.querySelector('#js-writing-style');
+                jswriting_styleSection.querySelector('h2:nth-of-type(1)').textContent = data['js-writing-style'].title1;
+                jswriting_styleSection.querySelector('p:nth-of-type(1)').innerHTML = data['js-writing-style'].text1;
+                jswriting_styleSection.querySelector('h2:nth-of-type(2)').textContent = data['js-writing-style'].title2;
+                jswriting_styleSection.querySelector('p:nth-of-type(2)').innerHTML = data['js-writing-style'].text2;
+                jswriting_styleSection.querySelector('h2:nth-of-type(3)').textContent = data['js-writing-style'].title3;
+                jswriting_styleSection.querySelector('p:nth-of-type(3)').innerHTML = data['js-writing-style'].text3;
+
+
+                
+                const js_outputSection = document.querySelector('#js-output');
+                js_outputSection.querySelector('h2:nth-of-type(1)').textContent = data['js-output'].title1;
+                js_outputSection.querySelector('p:nth-of-type(1)').innerHTML = data['js-output'].text1;
+                js_outputSection.querySelector('h2:nth-of-type(2)').textContent = data['js-output'].title2;
+                js_outputSection.querySelector('p:nth-of-type(2)').innerHTML = data['js-output'].text2;
+
+
 
 
 
@@ -254,6 +271,9 @@
                 <li><a href="jobs.html?type=javascript" onclick="navigateTo('jobs.html?type=javascript')">JavaScript Աշխատանք</a></li>
                 <li><a href="#js-intro" onclick="navigateTo('#js-intro')">Ներածություն (Intro)</a></li>
                 <li><a href="#js-install" onclick="navigateTo('#js-install')">Ներբեռնել (Install)</a></li>
+                <li><a href="#js-writing-style" onclick="navigateTo('#js-writing-style')">Գրելաձև (Writing Style)</a></li>
+                <li><a href="#js-output" onclick="navigateTo('#js-output')">Ելք (Output)</a></li>
+
             </ul>
         </aside>
 
@@ -277,7 +297,7 @@
 
 
             <section id="js-intro" class="hidden">
-                <h1>JavaScript Ներածություն</h1>
+                <h1>JavaScript Ներածություն</h1><br>
                 <h2></h2>
                 <p></p><br>
                 <h2></h2>
@@ -290,7 +310,25 @@
 
 
             <section id="js-install" class="hidden">
-                <h1>JavaScript Ներբեռնում</h1>
+                <h1>JavaScript Ներբեռնում</h1><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p>
+            </section>
+
+            <section id="js-install" class="hidden">
+                <h1>Գրելաձև</h1><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p>
+                <h2></h2>
+                <p></p>
+            </section>
+
+            <section id="js-output" class="hidden">
+                <h1>Ելք</h1><br>
                 <h2></h2>
                 <p></p><br>
                 <h2></h2>

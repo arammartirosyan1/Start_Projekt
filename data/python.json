@@ -160,7 +160,54 @@
     "title6": "Ոչ (not)",
     "text6": "Not բառը օգտագործվում է պայմանի արժեքը շփված արժեքի համար:<br><br>Օրինակ<br>a = 200<br>b = 33<br>եթե not b > a:<br>&nbsp;&nbsp;&nbsp;&nbsp;print('b-ն մեծ չէ a-ից')<br><br>"
   },
-  
+
+  "python-while-loop": {
+    "title1": "While Loop",
+    "text1": "While ցիկլը թույլ է տալիս կրկնօրինակել կոդը, քանի որ պայմանը ճիշտ է:<br><br>Օրինակ<br>i = 1<br>while i < 6:<br>&nbsp;&nbsp;&nbsp;&nbsp;print(i)<br>&nbsp;&nbsp;&nbsp;&nbsp;i += 1<br><br>",
+    "title2": "ընդմիջման հայտարարություն (Break Statement)",
+    "text2": "Break հայտարարությունը թույլ է տալիս դադարեցնել ցիկլը, այնպես որ այն չի կրկնօրինակվի:<br><br>Օրինակ<br>i = 1<br>while i < 6:<br>&nbsp;&nbsp;&nbsp;&nbsp;print(i)<br>&nbsp;&nbsp;&nbsp;&nbsp;if i == 3:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break<br>&nbsp;&nbsp;&nbsp;&nbsp;i += 1<br><br>",
+    "title3": "Շարունակություն (Continue Statement)",
+    "text3": "Continue հայտարարությունը թույլ է տալիս անցնել մնացած ցիկլի մասը և կրկնօրինակել այն:<br><br>Օրինակ<br>i = 0<br>while i < 6:<br>&nbsp;&nbsp;&nbsp;&nbsp;i += 1<br>&nbsp;&nbsp;&nbsp;&nbsp;if i == 3:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue<br>&nbsp;&nbsp;&nbsp;&nbsp;print(i)<br><br>"
+  },
+
+  "python-for-loop": {
+    "title1": "For Loop",
+    "text1": "For ցիկլը թույլ է տալիս կրկնօրինակել կոդը մի քանի անգամ, երբ դա անհրաժեշտ է:<br><br>Օրինակ<br>fruits = ['խնձոր', 'բանան', 'բալ']<br>for x in fruits:<br>&nbsp;&nbsp;&nbsp;&nbsp;print(x)<br><br>",
+    "title2": "ընդմիջման հայտարարություն (Break Statement)",
+    "text2": "Break հայտարարությունը թույլ է տալիս դադարեցնել ցիկլը, այնպես որ այն չի կրկնօրինակվի:<br><br>Օրինակ<br>fruits = ['խնձոր', 'բանան', 'բալ']<br>for x in fruits:<br>&nbsp;&nbsp;&nbsp;&nbsp;print(x)<br>&nbsp;&nbsp;&nbsp;&nbsp;if x == 'բանան':<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break<br><br>",
+    "title3": "Շարունակություն (Continue Statement)",
+    "text3": "Continue հայտարարությունը թույլ է տալիս անցնել մնացած ցիկլի մասը և կրկնօրինակել այն:<br><br>Օրինակ<br>fruits = ['խնձոր', 'բանան', 'բալ']<br>for x in fruits:<br>&nbsp;&nbsp;&nbsp;&nbsp;if x == 'բանան':<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue<br>&nbsp;&nbsp;&nbsp;&nbsp;print(x)<br><br>",
+    "title4": "Պատկերացում (Range Function)",
+    "text4": "Range() ֆունկցիան թույլ է տալիս ստեղծել մի քանի անգամ կրկնօրինակելու ցիկլը:<br><br>Օրինակ<br>for x in range(6):<br>&nbsp;&nbsp;&nbsp;&nbsp;print(x)<br><br>",
+    "title5": "Շարունակություն (Else Statement)",
+    "text5": "Else հայտարարությունը թույլ է տալիս աշխատել, երբ ցիկլը ավարտվում է, այնպես որ այն չի դադարեցվի կրկնօրինակությունների:<br><br>Օրինակ<br>for x in range(6):<br>&nbsp;&nbsp;&nbsp;&nbsp;print(x)<br>else:<br>&nbsp;&nbsp;&nbsp;&nbsp;print('Ավարտ')<br><br>",
+    "title6": "Տողի ստուգում",
+    "text6": "Տողի ստուգումը թույլ է տալիս կրկնօրինակել կոդը ամբողջ տողի համար:<br><br>Օրինակ<br>for x in 'hello':<br>&nbsp;&nbsp;&nbsp;&nbsp;print(x)<br><br>"
+  },
+  "python-functions": {
+    "title1": "Function",
+    "text1": "Function-ը մի կոդի բլոկ է, որը կարող է կանչել այլ կոդից:<br><br>Օրինակ<br>def my_function():<br>&nbsp;&nbsp;&nbsp;&nbsp;print('Hello from a function')<br><br>",
+    "title2": "Արգումենտներ",
+    "text2": "Արգումենտները կարող են կանչվել ֆունկցիայի միջոցով:<br><br>Օրինակ<br>def my_function(fname):<br>&nbsp;&nbsp;&nbsp;&nbsp;print(fname + ' Refsnes')<br>my_function('Emil')<br>my_function('Tobias')<br>my_function('Linus')<br><br>",
+    "title3": "Արգումենտների քանակ",
+    "text3": "Արգումենտների քանակը չի սահմանված, որպեսզի կարող լինեն այնքան արգումենտներ, որոնք կարող են կանչվել:<br><br>Օրինակ<br>def my_function(*kids):<br>&nbsp;&nbsp;&nbsp;&nbsp;print('The youngest child is ' + kids[2])<br>my_function('Emil', 'Tobias', 'Linus')<br><br>",
+    "title4": "Արվեստի վերագրում",
+    "text4": "Արվեստի վերագրումը թույլ է տալիս վերագրել արվեստի արժեքը ֆունկցիայի միջոցով:<br><br>Օրինակ<br>def my_function(x):<br>&nbsp;&nbsp;&nbsp;&nbsp;return 5 * x<br>print(my_function(3))<br>print(my_function(5))<br>print(my_function(9))<br><br>",
+    "title5": "Արվեստի վերագրումը լուծում",
+    "text5": "Արվեստի վերագրումը թույլ է տալիս վերագրել արվեստի արժեքը ֆունկցիայի միջոցով:<br><br>Օրինակ<br>def my_function(x):<br>&nbsp;&nbsp;&nbsp;&nbsp;return 5 * x<br>print(my_function(3))<br>print(my_function(5))<br>print(my_function(9))<br><br>",
+    "title6": "Լամբդա ֆունկցիա",
+    "text6": "Լամբդա ֆունկցիան կարող է պարզապես սահմանվել մի տողով:<br><br>Օրինակ<br>x = lambda a : a + 10<br>print(x(5))<br><br>Լամբդա ֆունկցիան կարող է ունենալ ավելի քան մեկ արգումենտ:<br><br>Օրինակ<br>x = lambda a, b : a * b<br>print(x(5, 6))<br><br>"
+  },
+  "python-class": {
+    "title1": "Class",
+    "text1": "Python-ում դասերը սահմանվում են հետևյալ կառուցվածում:<br><ul><li>Կլասսի անունը</li><li>Կլասսի ատրիբուտներ</li><li>Կլասսի մեթոդներ</li></ul><br>Դասը սահմանվում է հետևյալ կառուցվածում:<br><br>Օրինակ<br>class MyClass:<br>&nbsp;&nbsp;&nbsp;&nbsp;x = 5<br><br>",
+    "title2": "Կլասսի օբյեկտ",
+    "text2": "Կլասսի օբյեկտը սահմանվում է հետևյալ կառուցվածում:<br><ul><li>Կլասսի անունը</li><li>Կլասսի ատրիբուտներ</li><li>Կլասսի մեթոդներ</li></ul><br>Դասը սահմանվում է հետևյալ կառուցվածում:<br><br>Օրինակ<br>class MyClass:<br>&nbsp;&nbsp;&nbsp;&nbsp;x = 5<br>p1 = MyClass()<br>print(p1.x)<br><br>",
+    "title3": "Կլասսի մեթոդներ",
+    "text3": "Python-ում մեթոդները սահմանվում են կլասսի մեջ:<br><br>Օրինակ<br>class Person:<br>&nbsp;&nbsp;&nbsp;&nbsp;def __init__(self, name, age):<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.name = name<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.age = age<br>&nbsp;&nbsp;&nbsp;&nbsp;def myfunc(self):<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('Hello my name is ' + self.name)<br>p1 = Person('John', 36)<br>p1.myfunc()<br><br>",
+    "title4": "Կլասսի ատրիբուտներ",
+    "text4": "Կլասսի ատրիբուտները սահմանվում են կլասսի մեջ և կարող են լինել հետևյալ տեսքով:<br><br>Օրինակ<br>class Person:<br>&nbsp;&nbsp;&nbsp;&nbsp;def __init__(self, name, age):<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.name = name<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.age = age<br>p1 = Person('John', 36)<br>print(p1.name)<br>print(p1.age)<br><br>"
+  },
 
     "python-advanced": {
       "title1": "Python python-advanced",

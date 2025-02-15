@@ -348,6 +348,56 @@
                 pythonif_elseSection.querySelector('h2:nth-of-type(6)').textContent = data['python-if-else'].title6;
                 pythonif_elseSection.querySelector('p:nth-of-type(6)').innerHTML = data['python-if-else'].text6;
 
+                const pythonwhile_loopSection = document.querySelector('#python-while-loop');
+                pythonwhile_loopSection.querySelector('h2:nth-of-type(1)').textContent = data['python-while-loop'].title1;
+                pythonwhile_loopSection.querySelector('p:nth-of-type(1)').innerHTML = data['python-while-loop'].text1;
+                pythonwhile_loopSection.querySelector('h2:nth-of-type(2)').textContent = data['python-while-loop'].title2;
+                pythonwhile_loopSection.querySelector('p:nth-of-type(2)').innerHTML = data['python-while-loop'].text2;
+                pythonwhile_loopSection.querySelector('h2:nth-of-type(3)').textContent = data['python-while-loop'].title3;
+                pythonwhile_loopSection.querySelector('p:nth-of-type(3)').innerHTML = data['python-while-loop'].text3;
+
+
+                const pythonfor_loopSection = document.querySelector('#python-for-loop');
+                pythonfor_loopSection.querySelector('h2:nth-of-type(1)').textContent = data['python-for-loop'].title1;
+                pythonfor_loopSection.querySelector('p:nth-of-type(1)').innerHTML = data['python-for-loop'].text1;
+                pythonfor_loopSection.querySelector('h2:nth-of-type(2)').textContent = data['python-for-loop'].title2;
+                pythonfor_loopSection.querySelector('p:nth-of-type(2)').innerHTML = data['python-for-loop'].text2;
+                pythonfor_loopSection.querySelector('h2:nth-of-type(3)').textContent = data['python-for-loop'].title3;
+                pythonfor_loopSection.querySelector('p:nth-of-type(3)').innerHTML = data['python-for-loop'].text3;
+                pythonfor_loopSection.querySelector('h2:nth-of-type(4)').textContent = data['python-for-loop'].title4;
+                pythonfor_loopSection.querySelector('p:nth-of-type(4)').innerHTML = data['python-for-loop'].text4;
+                pythonfor_loopSection.querySelector('h2:nth-of-type(5)').textContent = data['python-for-loop'].title5;
+                pythonfor_loopSection.querySelector('p:nth-of-type(5)').innerHTML = data['python-for-loop'].text5;
+                pythonfor_loopSection.querySelector('h2:nth-of-type(6)').textContent = data['python-for-loop'].title6;
+                pythonfor_loopSection.querySelector('p:nth-of-type(6)').innerHTML = data['python-for-loop'].text6;
+
+
+                const python_functionSection = document.querySelector('#python-functions');
+                python_functionSection.querySelector('h2:nth-of-type(1)').textContent = data['python-functions'].title1;
+                python_functionSection.querySelector('p:nth-of-type(1)').innerHTML = data['python-functions'].text1;
+                python_functionSection.querySelector('h2:nth-of-type(2)').textContent = data['python-functions'].title2;
+                python_functionSection.querySelector('p:nth-of-type(2)').innerHTML = data['python-functions'].text2;
+                python_functionSection.querySelector('h2:nth-of-type(3)').textContent = data['python-functions'].title3;
+                python_functionSection.querySelector('p:nth-of-type(3)').innerHTML = data['python-functions'].text3;
+                python_functionSection.querySelector('h2:nth-of-type(4)').textContent = data['python-functions'].title4;
+                python_functionSection.querySelector('p:nth-of-type(4)').innerHTML = data['python-functions'].text4;
+                python_functionSection.querySelector('h2:nth-of-type(5)').textContent = data['python-functions'].title5;
+                python_functionSection.querySelector('p:nth-of-type(5)').innerHTML = data['python-functions'].text5;
+                python_functionSection.querySelector('h2:nth-of-type(6)').textContent = data['python-functions'].title6;
+                python_functionSection.querySelector('p:nth-of-type(6)').innerHTML = data['python-functions'].text6;
+
+
+                const python_classSection = document.querySelector('#python-class');
+                python_classSection.querySelector('h2:nth-of-type(1)').textContent = data['python-class'].title1;
+                python_classSection.querySelector('p:nth-of-type(1)').innerHTML = data['python-class'].text1;
+                python_classSection.querySelector('h2:nth-of-type(2)').textContent = data['python-class'].title2;
+                python_classSection.querySelector('p:nth-of-type(2)').innerHTML = data['python-class'].text2;
+                python_classSection.querySelector('h2:nth-of-type(3)').textContent = data['python-class'].title3;
+                python_classSection.querySelector('p:nth-of-type(3)').innerHTML = data['python-class'].text3;
+                python_classSection.querySelector('h2:nth-of-type(4)').textContent = data['python-class'].title4;
+                python_classSection.querySelector('p:nth-of-type(4)').innerHTML = data['python-class'].text4;
+
+
 
             } catch (error) {
                 console.error("Error loading footer or content:", error);
@@ -407,7 +457,11 @@
                 <li><a href="#python-tuple" onclick="navigateTo('#python-tuple')">Կորդինատներ (Tuple)</a></li>
                 <li><a href="#python-set" onclick="navigateTo('#python-set')">Հավաքածու (Set)</a></li>
                 <li><a href="#python-dictionary" onclick="navigateTo('#python-dictionary')">Բառարան (Dictionary)</a></li>
-                <li><a href="#python-if-else" onclick="navigateTo('#python-if-else')">Բառարան (Dictionary)</a></li>
+                <li><a href="#python-if-else" onclick="navigateTo('#python-if-else')">Եթե-Ուրիշ(If-Else)</a></li>
+                <li><a href="#python-while-loop" onclick="navigateTo('#python-while-loop')">Մինչդեռ(If-Else)</a></li>
+                <li><a href="#python-for-loop" onclick="navigateTo('#python-for-loop')">Ցուցակային(For-Loop)</a></li>
+                <li><a href="#python-functions" onclick="navigateTo('#python-functions')">Ֆունկցիաներ(Functions)</a></li>
+                <li><a href="#python-class" onclick="navigateTo('#python-class')">Դասեր(Classes)</a></li>
 
             </ul>
         </aside>
@@ -425,128 +479,125 @@
                     <img src="https://github.com/arammartirosyan1/Start_Projekt/raw/main/img/python.jpg" alt="LearnHub Logo" width="35%" style="margin-right: 5%;">
                 </div>
             </section>
-            
-
-
 
             <section id="python-intro" class="hidden">
-                <h1>Python Ներածություն</h1>
+                <h1>Python Ներածություն</h1><br>
                 <h2></h2>
-                <p></p>
+                <p></p><br>
                 <h2></h2>
-                <p></p>
+                <p></p><br>
                 <h2></h2>
-                <p></p>
+                <p></p><br>
                 <h2></h2>
                 <p></p>
             </section>
 
             <section id="python-install" class="hidden">
-                <h1>Ներբեռնել Python</h1>
+                <h1>Ներբեռնել Python</h1><br>
                 <h2></h2>
-                <p></p>
+                <p></p><br>
                 <h2></h2>
-                <p></p>
+                <p></p><br>
                 <h2></h2>
-                <p></p>
+                <p></p><br>
                 <h2></h2>
                 <p></p>
             </section>
 
             <section id="python-variables" class="hidden">
-                <h1>Python փոփոխականներ</h1>
+                <h1>Python փոփոխականներ</h1><br>
                 <h2></h2>
-                <p></p>
+                <p></p><br>
                 <h2></h2>
-                <p></p>
+                <p></p><br>
                 <h2></h2>
-                <p></p>
+                <p></p><br>
                 <h2></h2>
                 <p></p>
             </section>
 
             <section id="python-datatype" class="hidden">
-                <h1>Տվյալների տեսակներ</h1>
+                <h1>Տվյալների տեսակներ</h1><br>
                 <h2></h2>
-                <p></p>
+                <p></p><br>
                 <h2></h2>
-                <p></p>
+                <p></p><br>
                 <h2></h2>
-                <p></p>
+                <p></p><br>
                 <h2></h2>
                 <p></p>
             </section>
 
             <section id="python-numbers" class="hidden">
-                <h1>Թվեր</h1>
+                <h1>Թվեր</h1><br>
                 <h2></h2>
-                <p></p>
+                <p></p><br>
                 <h2></h2>
-                <p></p>
+                <p></p><br>
                 <h2></h2>
-                <p></p>
+                <p></p><br>
                 <h2></h2>
-                <p></p>
+                <p></p><br>
                 <h2></h2>
                 <p></p>
             </section>
 
             <section id="python-string" class="hidden">
-                <h1>Տողեր</h1>
+                <h1>Տողեր</h1><br>
                 <h2></h2>
-                <p></p>
+                <p></p><br>
                 <h2></h2>
-                <p></p>
+                <p></p><br>
                 <h2></h2>
-                <p></p>
+                <p></p><br>
                 <h2></h2>
-                <p></p>
+                <p></p><br>
                 <h2></h2>
-                <p></p>
+                <p></p><br>
                 <h2></h2>
-                <p></p>
+                <p></p><br>
                 <h2></h2>
-                <p></p>
+                <p></p><br>
                 <h2></h2>
                 <p></p>
             </section>
 
 
             <section id="python-booleans" class="hidden">
-                <h1>Բուլյան</h1>
+                <h1>Բուլյան</h1><br>
                 <h2></h2>
-                <p></p>
+                <p></p><br>
                 <h2></h2>
-                <p></p>
+                <p></p><br>
                 <h2></h2>
-                <p></p>
+                <p></p><br>
                 <h2></h2>
                 <p></p>
             </section>
 
 
             <section id="python-list" class="hidden">
-                <h1>Ցուցակ</h1>
+                <h1>Ցուցակ</h1><br>
                 <h2></h2>
-                <p></p>
+                <p></p><br>
                 <h2></h2>
-                <p></p>
+                <p></p><br>
                 <h2></h2>
-                <p></p>
+                <p></p><br>
                 <h2></h2>
-                <p></p>
+                <p></p><br>
                 <h2></h2>
-                <p></p>
+                <p></p><br>
                 <h2></h2>
-                <p></p>
+                <p></p><br>
                 <h2></h2>
-                <p></p>
+                <p></p><br>
                 <h2></h2>
                 <p></p>
             </section>
 
             <section id="python-tuple" class="hidden">
-                <h1>Կորդինատներ</h1>
+                <h1>Կորդինատներ</h1><br>
                 <h2></h2>
                 <p></p><br>
                 <h2></h2>
@@ -560,7 +611,7 @@
             </section>
 
             <section id="python-set" class="hidden">
-                <h1>Հավաքածուներ</h1>
+                <h1>Հավաքածուներ</h1><br>
                 <h2></h2>
                 <p></p><br>
                 <h2></h2>
@@ -574,7 +625,7 @@
             </section>
 
             <section id="python-dictionary" class="hidden">
-                <h1>Բառարաններ</h1>
+                <h1>Բառարաններ</h1><br>
                 <h2></h2>
                 <p></p><br>
                 <h2></h2>
@@ -590,7 +641,7 @@
             </section>
 
             <section id="python-if-else" class="hidden">
-                <h1>Եթե-Ուրիշ</h1>
+                <h1>Եթե-Ուրիշ</h1><br>
                 <h2></h2>
                 <p></p><br>
                 <h2></h2>
@@ -606,6 +657,60 @@
             </section>
 
 
+            <section id="python-while-loop" class="hidden">
+                <h1>Մինչդեռ</h1><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p>
+            </section>
+
+            <section id="python-for-loop" class="hidden">
+                <h1>Ցուցակային</h1><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p>
+            </section>
+
+            
+            <section id="python-functions" class="hidden">
+                <h1>Ֆունկցիաներ</h1><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p>
+            </section>
+
+            <section id="python-class" class="hidden">
+                <h1>Դասեր</h1><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p><br>
+                <h2></h2>
+                <p></p>
+            </section>
 
 
             <section id="python-resources" class="hidden">
